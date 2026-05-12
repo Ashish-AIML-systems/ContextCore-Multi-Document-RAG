@@ -1,0 +1,1313 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-03-15T19:13:17.650053",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Extract the first paragraph from the Introduction section.",
+    "sub_questions": [
+      "Extract the first paragraph from the Introduction section.?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "Understanding handwriting from images has long been a challenging research problem in the document analysis community. The MNIST dataset, introduced by LeCun et al. [15] in 1998, was a widely known dataset containing 70,000 grayscale images with 10 classes of handwritten digits. In the age of deep learn-",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Extract the first paragraph from the Introduction section."
+    ],
+    "failure_reason": "The provided answer is incomplete and truncated, and it cannot be confirmed that it is the exact first paragraph from the Introduction section.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-03-15T19:13:35.517264",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Extract the dataset comparison table and return it in structured format (Dataset, #Texts, #Lines, Image Type)",
+    "sub_questions": [
+      "Extract the dataset comparison table and return it in structured format (Dataset, #Texts, #Lines, Image Type)?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "| Dataset | #Texts | #Lines | Image Type |\n|---------|--------|--------|------------|\n| IAM | 115,320 | 13,353 | Flatbed-scanned |\n| RIMES | 66,982 | 12,093 | Flatbed-scanned |\n| Ours | 39,026 | 9,363 | Camera-captured |",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-03-15T19:14:21.915769",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "From Table 3, list the number of characters and lines for each region.",
+    "sub_questions": [
+      "From Table 3, list the number of characters and lines for each region.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "- Europe (EU): 58,982 characters, 3,306 lines  \n- North America (NA): 47,361 characters, 2,099 lines  \n- Asia (AS): 39,593 characters, 2,780 lines  \n- Africa (AF): 27,000 characters, 1,178 lines",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "From Table 3, list the number of characters and lines for each region."
+    ],
+    "failure_reason": "The answer only provides data for four regions and may be missing other regions present in Table 3, so the sub-question is not fully answered.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-03-15T19:14:35.301073",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Identify the chart that shows the “top 40 frequently used characters” and explain what the chart represents.",
+    "sub_questions": [
+      "Identify the chart that shows the “top 40 frequently used characters” and explain what the chart represents.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "**Chart:** Figure 6  \n\n**What it represents:** Figure 6 displays the frequency of the 40 most frequently used characters in the dataset. It shows how often each of these characters appears (e.g., counts ranging from 3 to 17 887 occurrences), summarizing the distribution of the top‑40 characters among the 96 unique characters present.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-03-15T19:15:23.216404",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Read the handwritten text visible in the left notebook image.",
+    "sub_questions": [
+      "Read the handwritten text visible in the left notebook image.?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Read the handwritten text visible in the left notebook image."
+    ],
+    "failure_reason": "The response says there is insufficient context and does not provide the requested handwritten text, leaving the sub-question unanswered.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-03-15T19:16:29.712627",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Describe what Figure 8 illustrates in the context of text localisation",
+    "sub_questions": [
+      "Describe what Figure 8 illustrates in the context of text localisation?"
+    ],
+    "pipeline_used": "E",
+    "pipeline_name": "Hybrid+Reranker",
+    "answer": "Figure 8 displays three example instance‑segmentation results produced by Mask R‑CNN for text localisation. The images show that the network detects most of the text, while a few short characters are missed (e.g., “*” in Fig. 8(a) and “of” in Fig. 8(b)). In Fig. 8(c) the model correctly separates overlapping words, distinguishing the “f” in “Jennifer” from the word “mankind” below.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 7,
+    "timestamp": "2026-03-15T19:17:39.370141",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What was the highest character accuracy rate achieved in the benchmark and under which configuration?",
+    "sub_questions": [
+      "What was the highest character accuracy rate achieved in the benchmark and under which configuration?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "The benchmark’s highest character accuracy rate (CAR) was **0.861**, achieved with the configuration that uses **attention‑based decoding, TPS (thin‑plate spline) for image transformation, and BiLSTM for sequential modelling**.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 8,
+    "timestamp": "2026-03-15T19:18:12.968649",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Analyze this PDF and perform the following:",
+    "sub_questions": [
+      "Analyze this PDF and perform the following:?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "- **Dataset and Benchmark**\n  - Introduces the **GNHK** benchmark dataset for offline English handwriting “in the wild.”\n  - Images are collected from **Europe, North America, Asia, and Africa**, covering diverse document types such as shopping lists, sticky notes, and diaries.\n  - The dataset is **modeled after scene‑text datasets**, enabling research on localisation with instance‑segmentation or object‑detection frameworks and on text‑recognition techniques.  \n  - The dataset and benchmark are publicly available at **https://github.com/GoodNotes/GNHK-dataset**.\n\n- **Contributions**\n  1. Provision of the GNHK benchmark dataset.\n  2. Presentation of benchmark results for text localisation and recognition using well‑studied architectures.\n\n- **Performance Insight**\n  - Experiments show that **attention‑based decoders significantly outperform CTC‑based decoders** for sequential modelling (e.g., using BiLSTM).\n\n- **Future Work**\n  - Explore **end‑to‑end approaches** that perform localisation and recognition sequentially within a single framework.\n\n- **Acknowledgements**\n  - Thanks to Paco Wong, Felix Kok, David Cai, Anh Duc Le, Eric Pan, and Elizabeth Ching for feedback, discussions, and proofreading.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 9,
+    "timestamp": "2026-03-15T19:18:26.720786",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "1. Extract all text from page 1.",
+    "sub_questions": [
+      "1. Extract all text from page 1.?"
+    ],
+    "pipeline_used": "E",
+    "pipeline_name": "Hybrid+Reranker",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "1. 1. Extract all text from page 1.?"
+    ],
+    "failure_reason": "The response states insufficient context and does not provide any extracted text, leaving the sub-question unanswered.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 10,
+    "timestamp": "2026-03-15T19:19:42.536504",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "3. Read any handwritten text in figures.",
+    "sub_questions": [
+      "3. Read any handwritten text in figures.?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "Use an end‑to‑end handwritten‑text recognizer that jointly segments lines and transcribes the content. Examples from the literature include:\n\n* **Joint line segmentation and transcription** (Bluche, 2016) – combines line detection with paragraph transcription in a single model.  \n* **Scan, attend and read** (Bluche, Louradour & Messina, 2017) – employs MDLSTM‑based attention to read whole paragraphs without separate line segmentation.  \n* **Start, follow, read** (Wigington et al., 2018) – performs full‑page handwriting recognition by sequentially following and reading text lines.\n\nThese approaches are designed to handle the large variation in handwriting style and layout that makes detecting and recognizing sequences of handwritten text in images a significant challenge.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 11,
+    "timestamp": "2026-03-15T19:20:01.806787",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "4. Identify charts and explain what they represent.",
+    "sub_questions": [
+      "4. Identify charts and explain what they represent.?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "**Chart:** Table 4 – “Considered configurations of the text recognition benchmark.”  \n\n**What it represents:** The table lists the eight possible benchmark configurations, detailing component settings such as the transformation step (None or thin‑plate spline), the use of BiLSTM, and the CTC prediction method. It also notes that VGG image features were excluded because their performance was lower than that of ResNet.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "4. Identify charts and explain what they represent."
+    ],
+    "failure_reason": "The answer only identifies a single chart (Table 4) and does not cover any other charts that may be present, thus not fully addressing the request to identify charts (plural) and explain their representations.",
+    "corrected_answer": "- **Fig. 4** – A set of histograms that display the distributions of the number of characters, texts, and lines for each geographic region (Europe, North America, Africa, Asia). Each plot contains four histograms with bin widths of 100 (characters), 50 (texts), and 10 (lines); the bars are color‑coded by region and normalized so that the total height for each region equals 1.0.\n\n- **Fig. 6** – A bar chart showing the 40 most frequently used characters in the dataset. It reflects the frequency of each of the 96 unique characters (ranging from 3 to 17 887 occurrences), with the median count 486 and the mean count 1 801.",
+    "correcting_pipeline": "A",
+    "correcting_pipeline_name": "Dense/FAISS"
+  },
+  {
+    "id": 12,
+    "timestamp": "2026-03-15T19:45:55.559704",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Using Table 3 and the surrounding text, calculate the total number of characters in the dataset and verify whether it matches the total reported in the paper.",
+    "sub_questions": [
+      "Using Table 3 and the surrounding text, calculate the total number of characters in the dataset and verify whether it matches the total reported in the paper.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "The dataset contains **172,936 characters** (58,982 EU + 47,361 NA + 39,593 AS + 27,000 AF). This total matches the figure reported elsewhere in the paper (“there are 172,936 … characters”).",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 13,
+    "timestamp": "2026-03-15T19:46:09.900565",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Identify which figures visualize dataset statistics and explain how each one supports the analysis of handwriting diversity.",
+    "sub_questions": [
+      "Identify which figures visualize dataset statistics and explain how each one supports the analysis of handwriting diversity.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "- **Fig. 4** – “Distributions of characters, texts, and lines for each region.” The figure presents four histograms (bin widths 100, 50, 10) for the number of characters, texts, and lines, with each histogram colored by region and normalized so the bar heights sum to 1.0. By comparing these regional histograms, the figure reveals how character, text, and line counts vary across Europe, North America, Africa, and Asia, directly illustrating the geographic diversity of the handwriting samples.\n\n- **Fig. 5** – Shows the “top 40 frequently used text in the dataset.” This visualization lists the most common words, ASCII symbols, and math expressions, highlighting which textual elements dominate the corpus and providing insight into the lexical variety present in the collected handwriting.\n\n- **Fig. 6** – Illustrates the “top 40 frequently used characters in the dataset.” By ranking character frequencies, the figure exposes the distribution of individual letters and symbols, helping to assess the breadth of character-level diversity across the handwriting collection.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 14,
+    "timestamp": "2026-03-15T19:46:22.567984",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Explain why the authors collected handwriting samples from multiple geographic regions and how this improves the dataset.",
+    "sub_questions": [
+      "Explain why the authors collected handwriting samples from multiple geographic regions and how this improves the dataset.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "The authors gathered samples from Europe, North America, Asia and Africa because “penmanship can vary from country to country” (Chunk 18). By sourcing images across these regions they created a “diverse set of English handwriting” and a more “representative ‘in the wild’ dataset” (Chunk 11). This geographic diversity introduces a wide range of handwriting styles and document types, reducing writer‑specific bias and improving the dataset’s overall variability and usefulness for handwriting‑recognition research.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 15,
+    "timestamp": "2026-03-15T19:46:35.591980",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Describe the architecture used for text recognition in the benchmark and explain the role of each component.",
+    "sub_questions": [
+      "Describe the architecture used for text recognition in the benchmark and explain the role of each component.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "The benchmark employs the Clova AI deep‑text‑recognition framework, which is built from four sequential components:\n\n- **Transformation** – optionally applies a thin‑plate‑spline (TPS) geometric warp to normalize the input word image.  \n- **Feature extraction** – uses a ResNet‑based CNN (VGG was omitted because it performed worse) to produce visual feature maps from the transformed image.  \n- **Sequence modelling** – processes the extracted features with a Bidirectional Long Short‑Term Memory (BiLSTM) network to capture contextual dependencies along the text line.  \n- **Prediction** – converts the sequential BiLSTM outputs into the final character string using Connectionist Temporal Classification (CTC).  ",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 16,
+    "timestamp": "2026-03-15T19:46:48.902201",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Based on the benchmark results, explain why attention-based decoding performs better than CTC for handwriting recognition in this dataset.",
+    "sub_questions": [
+      "Based on the benchmark results, explain why attention-based decoding performs better than CTC for handwriting recognition in this dataset.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "The benchmark shows that configurations using attention‑based decoding achieve substantially higher recognition scores than those using CTC. For example, the best attention‑based model (TPS + BiLSTM + attention) reaches a CAR of 0.861 and a WAR of 0.502, while attention‑only setups still obtain CARs above 0.58 and WARs around 0.43. In contrast, all CTC‑based configurations obtain much lower CARs (≈0.40–0.42) and WARs that are essentially zero (≈0.000). These results indicate that attention decoding captures the alignment between image features and characters more effectively than CTC, leading to markedly better character‑ and word‑level accuracy on this handwriting dataset.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 17,
+    "timestamp": "2026-03-15T19:57:31.969206",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "1. Extract Table 2 showing number of images collected per region including Europe, Africa and Asia.",
+    "sub_questions": [
+      "1. Extract Table 2 showing number of images collected per region including Europe, Africa and Asia.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "**Table 2 – Number of images per region**\n\n| Region | # Images |\n|--------|----------|\n| Europe (EU) | 330 |\n| Africa (AF) | 117 |\n| Asia (AS)   | 94 |",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 18,
+    "timestamp": "2026-03-15T19:57:41.532347",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "2. What are the CAR and WAR scores for the TPS BiLSTM attention configuration?",
+    "sub_questions": [
+      "2. What are the CAR and WAR scores for the TPS BiLSTM attention configuration?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "CAR: 0.861  \nWAR: 0.502",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 19,
+    "timestamp": "2026-03-15T19:57:49.344657",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "3. List the recall and precision values for Mask R-CNN and Faster R-CNN from the localisation results table.",
+    "sub_questions": [
+      "3. List the recall and precision values for Mask R-CNN and Faster R-CNN from the localisation results table.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "- **Mask R-CNN** – Recall: 0.8237, Precision: 0.9079  \n- **Faster R-CNN** – Recall: 0.8077, Precision: 0.9215",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 20,
+    "timestamp": "2026-03-15T19:57:53.275533",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "4. Extract Table 3 showing characters, texts and lines broken down by region.",
+    "sub_questions": [
+      "4. Extract Table 3 showing characters, texts and lines broken down by region.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "Region | # Characters | # Texts | # Lines\n--- | --- | --- | ---\nEurope (EU) | 58,982 | 13,592 | 3,306\nNorth America (NA) | 47,361 | 10,967 | 2,099\nAsia (AS) | 39,593 | 8,586 | 2,780\nAfrica (AF) | 27,000 | 5,881 | 1,178\nTOTAL | 172,936 | 39,026 | 9,363",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 21,
+    "timestamp": "2026-03-15T19:57:58.931280",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "5. What percentage improvement in WAR does TPS provide over no transformation when using BiLSTM with attention decoding?",
+    "sub_questions": [
+      "5. What percentage improvement in WAR does TPS provide over no transformation when using BiLSTM with attention decoding?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "TPS improves the WAR by 12.5 % when the sequence modelling is BiLSTM and the prediction uses attention decoding.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 22,
+    "timestamp": "2026-03-15T19:58:03.884143",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "6. How many images were collected from Africa compared to Asia in the GNHK dataset?",
+    "sub_questions": [
+      "6. How many images were collected from Africa compared to Asia in the GNHK dataset?"
+    ],
+    "pipeline_used": "A",
+    "pipeline_name": "Dense/FAISS",
+    "answer": "- Africa: 117 images  \n- Asia: 94 images",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 23,
+    "timestamp": "2026-03-15T19:58:26.777995",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "7. Extract Table 6 showing all 8 recognition configurations with their CAR and WAR scores.",
+    "sub_questions": [
+      "7. Extract Table 6 showing all 8 recognition configurations with their CAR and WAR scores.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "7. Extract Table 6 showing all 8 recognition configurations with their CAR and WAR scores."
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and cannot provide the requested table.",
+    "corrected_answer": "**Table 6 – Text recognition results**\n\n| Transformation (TPS) | Sequence modelling (BiLSTM) | Decoding (Prediction) | CAR  | WAR |\n|----------------------|-----------------------------|-----------------------|------|------|\n| TPS                  | BiLSTM                      | Attention             | 0.861 | 0.502 |\n| None                 | BiLSTM                      | Attention             | 0.808 | 0.377 |\n| TPS                  | None                        | Attention             | 0.764 | 0.453 |\n| None                 | None                        | Attention             | 0.587 | 0.430 |\n| TPS                  | BiLSTM                      | CTC                   | 0.416 | ≈0.000 |\n| None                 | BiLSTM                      | CTC                   | 0.403 | ≈0.000 |\n| TPS                  | None                        | CTC                   | 0.399 | ≈0.000 |\n| None                 | None                        | CTC                   | 0.405 | ≈0.000 |",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Hybrid+Reranker"
+  },
+  {
+    "id": 24,
+    "timestamp": "2026-03-15T19:58:36.390010",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "8. What is the IOU threshold used to evaluate text localisation results and what f-measure did Mask R-CNN achieve?",
+    "sub_questions": [
+      "8. What is the IOU threshold used to evaluate text localisation results and what f-measure did Mask R-CNN achieve?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "The evaluation used an intersection‑over‑union (IoU) threshold of **> 0.5**, and Mask R‑CNN achieved an **f‑measure of 0.864**.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 25,
+    "timestamp": "2026-03-15T19:58:49.424006",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "9. How many total characters and lines are in the GNHK dataset according to the statistics table?",
+    "sub_questions": [
+      "9. How many total characters and lines are in the GNHK dataset according to the statistics table?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "The statistics table reports **172,936 total characters** and **9,363 total lines** in the GNHK dataset.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 26,
+    "timestamp": "2026-03-15T19:59:01.039138",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "10. Extract Table 1 comparing IAM, RIMES and GNHK by number of texts, lines and image type.",
+    "sub_questions": [
+      "10. Extract Table 1 comparing IAM, RIMES and GNHK by number of texts, lines and image type.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "**Table 1 – Comparison of IAM, RIMES and GNHK**\n\n| Dataset | # Texts | # Lines | Image Type |\n|---------|---------|---------|------------|\n| IAM     | 115,320 | 13,353  | Flatbed‑scanned |\n| RIMES   | 66,982  | 12,093  | Flatbed‑scanned |\n| GNHK (our dataset) | 39,026 | 9,363 | Camera‑captured |",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 27,
+    "timestamp": "2026-03-18T10:16:11.425334",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "In the Transformer architecture variations table, what happens to BLEU score when the number of attention heads is reduced to 1?",
+    "sub_questions": [
+      "In the Transformer architecture variations table, what happens to BLEU score when the number of attention heads is reduced to 1?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "In the Transformer architecture variations table, what happens to BLEU score when the number of attention heads is reduced to 1?"
+    ],
+    "failure_reason": "The answer explicitly says there is insufficient context and does not provide any information about the BLEU score change.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 28,
+    "timestamp": "2026-03-18T10:16:58.858441",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What is scaled dot-product attention, how does it differ from additive attention, and why is scaling by 1/sqrt(dk) necessary?",
+    "sub_questions": [
+      "What is scaled dot-product attention, how does it differ from additive attention, and why is scaling by 1/sqrt(dk) necessary?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What is scaled dot-product attention, how does it differ from additive attention, and why is scaling by 1/sqrt(dk) necessary?"
+    ],
+    "failure_reason": "Answer contains insufficiency signal. (heuristic fallback — Groq error: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 29,
+    "timestamp": "2026-03-18T10:19:42.091400",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "List the number of characters, texts, and lines for each region in the GNHK dataset — Europe, North America, Asia, and Africa.",
+    "sub_questions": [
+      "List the number of characters, texts, and lines for each region in the GNHK dataset — Europe, North America, Asia, and Africa.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **Europe (EU)**: 58,982 characters, 13,592 texts, 3,306 lines  \n- **North America (NA)**: 47,361 characters, 10,967 texts, 2,099 lines  \n- **Asia (AS)**: 39,593 characters, 8,586 texts, 2,780 lines  \n- **Africa (AF)**: 27,000 characters, 5,881 texts, 1,178 lines",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 30,
+    "timestamp": "2026-03-18T10:20:37.449477",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What is the capital of France?",
+    "sub_questions": [
+      "What is the capital of France?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What is the capital of France?"
+    ],
+    "failure_reason": "The answer explicitly states 'insufficient context' and cannot provide the requested information.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 31,
+    "timestamp": "2026-03-18T11:29:31.732502",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "How many images are in the GNHK dataset and how many regions were they collected from?",
+    "sub_questions": [
+      "How many images are in the GNHK dataset and how many regions were they collected from?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "The GNHK dataset contains **687 images**.  \nThese images were collected from **four regions**: Europe, North America, Africa, and Asia.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 32,
+    "timestamp": "2026-03-18T11:29:48.832929",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What are the recall, precision, and f-measure scores for both Mask R-CNN and Faster R-CNN on the GNHK text localisation benchmark?",
+    "sub_questions": [
+      "What are the recall, precision, and f-measure scores for both Mask R-CNN and Faster R-CNN on the GNHK text localisation benchmark?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **Mask R-CNN**: Recall 0.8237, Precision 0.9079, F‑measure 0.864  \n- **Faster R-CNN**: Recall 0.8077, Precision 0.9215, F‑measure 0.860",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 33,
+    "timestamp": "2026-03-18T11:30:13.861827",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "In the Transformer architecture variations table, what happens to BLEU score when the number of attention heads is reduced to 1?",
+    "sub_questions": [
+      "In the Transformer architecture variations table, what happens to BLEU score when the number of attention heads is reduced to 1?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "In the Transformer architecture variations table, what happens to BLEU score when the number of attention heads is reduced to 1?"
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and cannot provide the requested information about BLEU score change.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 34,
+    "timestamp": "2026-03-18T11:31:05.628726",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What is scaled dot-product attention, how does it differ from additive attention, and why is scaling by 1/sqrt(dk) necessary?",
+    "sub_questions": [
+      "What is scaled dot-product attention, how does it differ from additive attention, and why is scaling by 1/sqrt(dk) necessary?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "What is scaled dot-product attention, how does it differ from additive attention, and why is scaling by 1/sqrt(dk) necessary?"
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and does not provide any explanation.",
+    "corrected_answer": "Scaled Dot‑Product Attention computes attention by taking the dot product between each query vector **q** and all key vectors **k**, dividing the result by √dₖ, applying a softmax to obtain attention weights, and then weighting the corresponding value vectors **v**:\n\n\\[\n\\text{Attention}(Q,K,V)=\\text{softmax}\\!\\left(\\frac{QK^{\\top}}{\\sqrt{d_k}}\\right)V .\n\\]\n\n**Difference from additive attention**  \nAdditive attention determines the query‑key compatibility with a feed‑forward network that has a single hidden layer, whereas dot‑product attention uses the simple dot product (with the scaling factor). Apart from this scaling, the two mechanisms are theoretically similar, but dot‑product attention is much faster and more space‑efficient because it can be implemented with optimized matrix‑multiplication code.\n\n**Why scaling by 1/√dₖ is needed**  \nWhen the dimensionality dₖ is large, the dot products q·k have variance dₖ (they grow in magnitude), which can push the softmax into regions where its gradients are extremely small. Dividing by √dₖ normalizes the magnitude of the dot products, preventing this saturation and keeping the gradients stable.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Hybrid+Reranker"
+  },
+  {
+    "id": 35,
+    "timestamp": "2026-03-18T11:44:13.339286",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "In the GNHK dataset, what is the median number of texts per image and what is the mean?",
+    "sub_questions": [
+      "In the GNHK dataset, what is the median number of texts per image and what is the mean?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "Median = 57 texts per image; Mean = 44 texts per image.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 36,
+    "timestamp": "2026-03-18T11:44:43.017429",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What are the three types of regularization used during Transformer training, what dropout rate was used for the base model, and what label smoothing value was applied?",
+    "sub_questions": [
+      "What are the three types of regularization used during Transformer training, what dropout rate was used for the base model, and what label smoothing value was applied?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "What are the three types of regularization used during Transformer training, what dropout rate was used for the base model, and what label smoothing value was applied?"
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and does not provide any of the requested information.",
+    "corrected_answer": "The Transformer training uses three regularization techniques: attention dropout, residual dropout, and label smoothing.  \nThe base model applies a dropout rate of 0.1.  \nThe label‑smoothing value (ϵ_ls) for the base model is 0.1.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Hybrid+Reranker"
+  },
+  {
+    "id": 37,
+    "timestamp": "2026-03-18T11:45:03.182755",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "In the GNHK benchmark, which text recognition configuration achieved the highest CAR, what was that CAR score, and how much did TPS improve WAR compared to the same config without TPS",
+    "sub_questions": [
+      "In the GNHK benchmark, which text recognition configuration achieved the highest CAR, what was that CAR score, and how much did TPS improve WAR compared to the same config without TPS?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "**Configuration:** Attention‑based decoding + TPS + BiLSTM  \n**Highest CAR:** 0.861  \n\n**TPS impact on WAR:** With TPS the WAR is 0.502 versus 0.377 without TPS, a rise of **12.5 %** (≈0.125 absolute).  ",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 38,
+    "timestamp": "2026-03-18T11:45:45.990269",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Why does the Transformer use sinusoidal positional encoding instead of learned positional embeddings, and what property of sinusoids makes relative position learning possible?",
+    "sub_questions": [
+      "Why does the Transformer use sinusoidal positional encoding instead of learned positional embeddings, and what property of sinusoids makes relative position learning possible?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "Why does the Transformer use sinusoidal positional encoding instead of learned positional embeddings, and what property of sinusoids makes relative position learning possible?"
+    ],
+    "failure_reason": "The answer explicitly says there is insufficient context and provides no explanation, leaving the sub-question unanswered.",
+    "corrected_answer": "The Transformer adopts fixed sinusoidal positional encodings (using sine and cosine functions of varying frequencies) instead of learned embeddings, providing a deterministic way to inject position information that does not require additional parameters.  \n\nBecause each dimension of the encoding is a sinusoid whose wavelength follows a geometric progression, a shift in position corresponds to a linear transformation of the encoding; this property lets the model infer relative positions directly from the sinusoidal values.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "D",
+    "correcting_pipeline_name": "Dense+Reranker"
+  },
+  {
+    "id": 39,
+    "timestamp": "2026-03-18T11:49:10.702245",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What is the total number of texts in the GNHK dataset, and how does the RAG survey define retrieval granularity at the chunk level?",
+    "sub_questions": [
+      "What is the total number of texts in the GNHK dataset, and how does the RAG survey define retrieval granularity at the chunk level?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "39,026 texts are present in the GNHK dataset.  \n\nThe retrieved chunks do not contain information about how the RAG survey defines retrieval granularity at the chunk level.  \n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 40,
+    "timestamp": "2026-03-18T11:50:18.046686",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What was the accuracy of GPT-4 on the GNHK handwriting recognition benchmark?",
+    "sub_questions": [
+      "What was the accuracy of GPT-4 on the GNHK handwriting recognition benchmark?"
+    ],
+    "pipeline_used": "A",
+    "pipeline_name": "Dense/FAISS",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What was the accuracy of GPT-4 on the GNHK handwriting recognition benchmark?"
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and cannot provide the requested numeric accuracy.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 41,
+    "timestamp": "2026-03-18T12:09:09.092121",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What are the recall, precision, and F1 scores for both Mask R-CNN and Faster R-CNN in the GNHK dataset, and which model performs better overall?",
+    "sub_questions": [
+      "What are the recall, precision?",
+      "F1 scores for both Mask R-CNN and Faster R-CNN in the GNHK dataset?",
+      "which model performs better overall?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "- **Mask R-CNN**  \n  - Recall: 0.8237  \n  - Precision: 0.9079  \n  - F1 (f‑measure): 0.864  \n\n- **Faster R-CNN**  \n  - Recall: 0.8077  \n  - Precision: 0.9215  \n  - F1 (f‑measure): 0.860  \n\nOverall, Mask R-CNN achieves a higher F1 score (0.864 vs. 0.860) and therefore performs slightly better overall on the GNHK dataset.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 42,
+    "timestamp": "2026-03-18T12:09:41.722326",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "How many images are included in the GNHK dataset, and from how many geographical regions were they collected?",
+    "sub_questions": [
+      "How many images are included in the GNHK dataset?",
+      "from how many geographical regions were they collected?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "The GNHK dataset contains **687 images**, which were collected from **four geographical regions**: Europe, North America, Africa, and Asia.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 43,
+    "timestamp": "2026-03-18T12:09:56.776942",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What is scaled dot-product attention, and why is the scaling factor 1/√dₖ necessary compared to additive attention?",
+    "sub_questions": [
+      "What is scaled dot-product attention?",
+      "why is the scaling factor 1/√dₖ necessary compared to additive attention?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "What is scaled dot-product attention?",
+      "why is the scaling factor 1/√dₖ necessary compared to additive attention?"
+    ],
+    "failure_reason": "The answer explicitly says there is insufficient context and provides no explanation for either sub-question.",
+    "corrected_answer": "Scaled Dot‑Product Attention computes the compatibility between a query **q** and each key **k** by taking their dot product, scaling the result by \\(1/\\sqrt{d_k}\\), applying a softmax, and using the resulting weights to combine the values **v**:\n\n\\[\n\\text{Attention}(Q,K,V)=\\text{softmax}\\!\\left(\\frac{QK^{\\top}}{\\sqrt{d_k}}\\right)V .\n\\]\n\nThe scaling factor \\(1/\\sqrt{d_k}\\) is the only difference between this operation and plain dot‑product attention; it is not present in additive attention, which computes compatibility with a feed‑forward network that has a single hidden layer. The factor is introduced to adjust the magnitude of the dot products (which grow with the dimension \\(d_k\\)) so that the softmax operates on a comparable scale to the scores produced by additive attention.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "D",
+    "correcting_pipeline_name": "Dense+Reranker"
+  },
+  {
+    "id": 44,
+    "timestamp": "2026-03-18T12:12:37.394136",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Describe the complete training setup of the Transformer base model, including dataset, hardware, optimizer, learning rate schedule, and regularization techniques.",
+    "sub_questions": [
+      "Describe the complete training setup of the Transformer base model, including dataset, hardware, optimizer, learning rate schedule?",
+      "regularization techniques.?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Describe the complete training setup of the Transformer base model, including dataset, hardware, optimizer, learning rate schedule?",
+      "regularization techniques."
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and provides no information for either sub-question.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 45,
+    "timestamp": "2026-03-18T12:54:02.369829",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "\"How many total images are in the GNHK dataset, and which region contributed the most?\"",
+    "sub_questions": [
+      "\"How many total images are in the GNHK dataset?",
+      "which region contributed the most?"
+    ],
+    "pipeline_used": "A",
+    "pipeline_name": "Dense/FAISS",
+    "answer": "The GNHK dataset contains **687 images** in total.  \nThe region with the highest contribution is **Europe (EU)**, providing **330 images**.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 46,
+    "timestamp": "2026-03-18T12:54:39.488168",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Describe the complete training setup of the Transformer base model including the dataset size, hardware used, number of training steps, optimizer, learning rate schedule, and regularization techniques.",
+    "sub_questions": [
+      "Describe the complete training setup of the Transformer base model including the dataset size, hardware used, number of training steps, optimizer, learning rate schedule?",
+      "regularization techniques.?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer states insufficient context and does not provide any information for either sub-question.",
+    "corrected_answer": "- **Dataset** – The base Transformer was trained on the WMT 2014 English‑German and English‑French translation corpora (the exact number of sentences or tokens is not given in the provided chunks).  \n\n- **Hardware** – The retrieved text does not specify the hardware used for the base model; it only notes that the larger “big” model was trained on 8 P100 GPUs.  \n\n- **Training steps** – The base model was trained for **100 000 steps**, which took about **12 hours** in total (≈ 0.4 s per step).  \n\n- **Optimizer** – **Adam** optimizer with parameters **β₁ = 0.9**, **β₂ = 0.98**, and **ε = 1e‑9**.  \n\n- **Learning‑rate schedule** –  \n  \\[\n  \\text{lrate}=d^{-0.5}\\;\\times\\;\\min\\big(\\text{step\\_num}^{-0.5},\\;\\text{step\\_num}\\times\\text{warmup\\_steps}^{-1.5}\\big)\n  \\]  \n  with **warmup_steps = 4000**. This schedule linearly increases the learning rate during the first 4000 steps and then decays it proportionally to the inverse square root of the step number.  \n\n- **Regularization** – Three regularization techniques are mentioned; the chunks detail **dropout**:  \n  * Dropout is applied to the output of each sub‑layer before it is added to the sub‑layer input and normalized.  \n  * Dropout is also applied to the sum of the token embeddings and positional encodings.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "D",
+    "correcting_pipeline_name": "Dense+Reranker"
+  },
+  {
+    "id": 47,
+    "timestamp": "2026-03-18T12:55:32.665591",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "List the number of characters, texts, and lines for each of the four regions in the GNHK dataset",
+    "sub_questions": [
+      "List the number of characters, texts?",
+      "lines for each of the four regions in the GNHK dataset?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **Europe (EU)** – 58,982 characters, 13,592 texts, 3,306 lines  \n- **North America (NA)** – 47,361 characters, 10,967 texts, 2,099 lines  \n- **Asia (AS)** – 39,593 characters, 8,586 texts, 2,780 lines  \n- **Africa (AF)** – 27,000 characters, 5,881 texts, 1,178 lines",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 48,
+    "timestamp": "2026-03-19T10:46:48.126402",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What was the F1 score of BERT-large on the GNHK handwriting benchmark?\"",
+    "sub_questions": [
+      "What was the F1 score of BERT-large on the GNHK handwriting benchmark?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What was the F1 score of BERT-large on the GNHK handwriting benchmark?"
+    ],
+    "failure_reason": "The answer explicitly states it cannot answer due to insufficient context and provides no numeric value.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 49,
+    "timestamp": "2026-03-19T11:04:39.675972",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "In the GNHK paper, what framework was used for text localisation and on what dataset was it pretrained?",
+    "sub_questions": [
+      "In the GNHK paper, what framework was used for text localisation and on what dataset was it pretrained?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **Framework for text localisation:** Mask R‑CNN was employed to localise handwritten text.  \n- **Pretraining dataset:** The retrieved chunks do not specify the dataset on which the Mask R‑CNN model was pretrained.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "In the GNHK paper, what framework was used for text localisation and on what dataset was it pretrained?"
+    ],
+    "failure_reason": "The answer provides the framework (Mask R-CNN) but does not specify the pretraining dataset, leaving part of the sub-question unanswered.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 50,
+    "timestamp": "2026-03-19T11:05:01.992001",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What does Table 3 in the Transformer paper show about the effect of reducing the key dimension dk to 32?",
+    "sub_questions": [
+      "What does Table 3 in the Transformer paper show about the effect of reducing the key dimension dk to 32?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer explicitly states it cannot answer the question, providing no information about Table 3.",
+    "corrected_answer": "Reducing the attention‑key dimension \\(d_k\\) to 32 degrades performance: the model’s training perplexity rises from 4.92 (base \\(d_k=64\\)) to 5.01, and BLEU falls from 25.8 to 25.4. This shows that a smaller key size hurts model quality.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 51,
+    "timestamp": "2026-03-19T11:36:02.494745",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "\"In the GNHK paper, what framework was used for text localisation and on what dataset was it pretrained?\"",
+    "sub_questions": [
+      "\"In the GNHK paper, what framework was used for text localisation and on what dataset was it pretrained?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "The GNHK paper used **Mask R-CNN** as the framework for text localisation.  \nThe specific dataset on which this Mask R-CNN model was pretrained is not mentioned in the provided excerpts.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "In the GNHK paper, what framework was used for text localisation and on what dataset was it pretrained?"
+    ],
+    "failure_reason": "The answer provides the framework (Mask R-CNN) but does not specify the dataset it was pretrained on, stating it is not mentioned.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 52,
+    "timestamp": "2026-03-19T11:36:39.957181",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "\"What are the two main challenges of semi-structured data in RAG, and give one concrete example system mentioned for each challenge?\"",
+    "sub_questions": [
+      "\"What are the two main challenges of semi-structured data in RAG?",
+      "give one concrete example system mentioned for each challenge?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer explicitly states insufficient context and does not provide any information for either sub-question.",
+    "corrected_answer": "The two main challenges are:\n\n1. Text‑splitting procedures can unintentionally break tables apart, causing data corruption during retrieval.  \n2. Incorporating tables makes semantic similarity searches more difficult.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 53,
+    "timestamp": "2026-03-19T11:43:59.516996",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "In the GNHK paper, what framework was used for text localisation and on what dataset was it pretrained?",
+    "sub_questions": [
+      "In the GNHK paper, what framework was used for text localisation and on what dataset was it pretrained?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "The GNHK paper used **Mask R-CNN** as the framework for text localisation.  \nThe retrieved excerpts do not specify which dataset Mask R-CNN was pretrained on.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "In the GNHK paper, what framework was used for text localisation and on what dataset was it pretrained?"
+    ],
+    "failure_reason": "The answer provides the framework (Mask R-CNN) but does not specify the dataset on which it was pretrained, leaving part of the sub-question unanswered.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 54,
+    "timestamp": "2026-03-19T11:47:52.051963",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "\"What are the key differences between the GNHK dataset and existing offline handwriting datasets like IAM and RIMES, and why did the authors argue a new dataset was necessary?\"",
+    "sub_questions": [
+      "\"What are the key differences between the GNHK dataset and existing offline handwriting datasets like IAM and RIMES?",
+      "why did the authors argue a new dataset was necessary?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Key differences**\n\n- **Image acquisition**\n  - **IAM & RIMES:** Images are obtained with flatbed scanners, producing uniformly oriented, high‑quality scans.  \n  - **GNHK:** Images are captured with unconstrained cameras, often at different angles and under varied lighting conditions (“in the wild”).\n\n- **Content and layout**\n  - **IAM & RIMES:** Contain distinct, mostly horizontally oriented text lines from scanned documents.  \n  - **GNHK:** Includes whole‑page document images; “texts” comprise words, ASCII symbols, and mathematical expressions, reflecting more diverse content.\n\n- **Scale and format**\n  - **IAM:** 115,320 texts, 13,353 lines.  \n  - **RIMES:** 66,982 texts, 12,093 lines.  \n  - **GNHK:** 39,026 texts, 9,363 lines from 687 camera‑captured documents (172,936 characters).\n\n- **Diversity**\n  - **GNHK** draws handwritten samples from different regions worldwide, providing greater stylistic and cultural variation than the primarily scanned datasets.\n\n**Why a new dataset was deemed necessary**\n\n- Existing offline Latin‑based handwriting datasets have been built almost exclusively from flatbed‑scanned images, limiting the variety of capture conditions and document orientations.  \n- The authors argue that a “modern” dataset with camera‑captured, unconstrained images will bring diversity and a contemporary challenge to researchers working on offline English handwriting recognition, addressing the real‑world variability of handwriting in the wild.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 55,
+    "timestamp": "2026-03-19T11:50:11.277856",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "\"What is SCUT-HCCDoc and how does it relate to the motivation for creating the GNHK dataset?\"",
+    "sub_questions": [
+      "\"What is SCUT-HCCDoc and how does it relate to the motivation for creating the GNHK dataset?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "SCUT‑HCCDoc is a benchmark dataset of Chinese handwritten text captured in unconstrained, camera‑taken documents. Its release demonstrated the value of a “handwritten‑in‑the‑wild” dataset and highlighted the absence of a comparable resource for offline English handwriting, which motivated the authors to create the GNHK dataset as the English‑language counterpart.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 56,
+    "timestamp": "2026-03-19T11:56:54.388070",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "\"In the Transformer paper, what is the scaled dot-product attention formula and what does the notation in that formula represent?\"",
+    "sub_questions": [
+      "\"In the Transformer paper, what is the scaled dot-product attention formula and what does the notation in that formula represent?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer explicitly states it cannot answer the question, providing no information about the formula or its notation.",
+    "corrected_answer": "**Scaled dot‑product attention formula**\n\n\\[\n\\text{Attention}(Q, K, V)=\\operatorname{softmax}\\!\\left(\\frac{QK^{\\top}}{\\sqrt{d_k}}\\right)V\n\\]\n\n**Notation**\n\n- **\\(Q\\)** – matrix containing the *queries* (each query vector has dimension \\(d_k\\)).  \n- **\\(K\\)** – matrix containing the *keys* (each key vector also has dimension \\(d_k\\)).  \n- **\\(V\\)** – matrix containing the *values* (each value vector has dimension \\(d_v\\)).  \n- **\\(d_k\\)** – dimensionality of the query and key vectors; the dot products are scaled by \\(\\sqrt{d_k}\\) to avoid large magnitudes.  \n- **\\(QK^{\\top}\\)** – matrix of dot products between every query and every key.  \n- **\\(\\operatorname{softmax}(\\cdot)\\)** – applied row‑wise to convert the scaled dot products into attention weights.  \n- **Multiplication by \\(V\\)** – weights the value vectors according to the computed attention distribution.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 57,
+    "timestamp": "2026-03-19T15:54:15.900193",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "\"How many images are in the GNHK dataset and which region contributed the most images?\"",
+    "sub_questions": [
+      "\"How many images are in the GNHK dataset and which region contributed the most images?"
+    ],
+    "pipeline_used": "A",
+    "pipeline_name": "Dense/FAISS",
+    "answer": "The GNHK dataset contains **687 images** in total.  \nThe region that contributed the most images is **Europe**, with **330 images**.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 58,
+    "timestamp": "2026-03-19T15:54:46.907159",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "\"What does the Transformer paper say about how multi-head attention is applied in three different ways in the model?\"",
+    "sub_questions": [
+      "\"What does the Transformer paper say about how multi-head attention is applied in three different ways in the model?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer explicitly states it cannot answer the question, providing no information.",
+    "corrected_answer": "- **Encoder‑decoder attention** – In these layers the queries come from the previous decoder layer, while the keys and values come from the encoder’s output, allowing every decoder position to attend to all positions of the input sequence.  \n\n- **Encoder self‑attention** – All queries, keys, and values are taken from the same source: the output of the preceding encoder layer. Each encoder position can therefore attend to every other position in the previous encoder layer.  \n\n- **Decoder self‑attention** – Similar to the encoder, but applied within the decoder. Each decoder position attends to all earlier (and the current) decoder positions; later positions are masked (set to −∞ before the softmax) to preserve the auto‑regressive property.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 59,
+    "timestamp": "2026-03-19T15:57:45.517787",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "\"In the GNHK benchmark, what configuration achieved the highest CAR, what was that score, and how much did TPS improve WAR compared to without TPS?\"",
+    "sub_questions": [
+      "\"In the GNHK benchmark, what configuration achieved the highest CAR, what was that score?",
+      "how much did TPS improve WAR compared to without TPS?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "- **Configuration:** TPS (thin‑plate spline) transformation + BiLSTM sequence modelling + attention‑based decoding.  \n- **Highest CAR:** 0.861.  \n- **TPS impact on WAR:** TPS increases WAR by **12.5 %** compared with the same setup without TPS.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 60,
+    "timestamp": "2026-03-19T15:58:51.617127",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "\"In the GNHK paper, what framework was used for text localisation, on what datasets was it pretrained, and what backbone architecture did it use?\"",
+    "sub_questions": [
+      "\"In the GNHK paper, what framework was used for text localisation, on what datasets was it pretrained?",
+      "what backbone architecture did it use?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **Text‑localisation framework:** Mask R‑CNN was employed as the baseline instance‑segmentation framework for localising handwritten text.  \n\n- **Pretraining datasets:** The retrieved excerpts do not specify which datasets were used to pre‑train the Mask R‑CNN model.  \n\n- **Backbone architecture:** The backbone network used by the Mask R‑CNN model is not mentioned in the provided chunks.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer provides the localisation framework (Mask R-CNN) but does not specify the pretraining datasets, and it does not mention the backbone architecture.",
+    "corrected_answer": "- **Framework used for text localisation:** Mask R‑CNN (instance‑segmentation framework).\n\n- **Pretraining datasets:** *Not specified in the provided excerpts.*\n\n- **Backbone architecture:** *Not specified in the provided excerpts.*\n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 61,
+    "timestamp": "2026-03-19T15:59:37.287916",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What was the Word Error Rate of GPT-4 on the GNHK speech recognition benchmark?",
+    "sub_questions": [
+      "What was the Word Error Rate of GPT-4 on the GNHK speech recognition benchmark?"
+    ],
+    "pipeline_used": "A",
+    "pipeline_name": "Dense/FAISS",
+    "answer": "The provided chunks give word‑accuracy rates (WAR) for several handwriting‑recognition configurations on the GNHK dataset, but they do not report a Word Error Rate (WER) for GPT‑4—or any speech‑recognition results involving GPT‑4.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What was the Word Error Rate of GPT-4 on the GNHK speech recognition benchmark?"
+    ],
+    "failure_reason": "The answer explicitly states that the Word Error Rate for GPT-4 is not reported, providing no numeric value.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 62,
+    "timestamp": "2026-04-18T01:21:00.780681",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What is the GNHK dataset, and how is it different from earlier offline Latin-based handwriting datasets like IAM and RIMES?",
+    "sub_questions": [
+      "What is the GNHK dataset?",
+      "how is it different from earlier offline Latin-based handwriting datasets like IAM and RIMES?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**GNHK (GoodNotes Handwriting Kollection)**  \n- A newly released dataset of **offline English handwritten images captured “in the wild.”**  \n- Consists of **687 document images** that together contain **172 936 characters, 39 026 texts (words, ASCII symbols and math expressions), and 9 363 lines**.  \n- The images were taken with **mobile‑phone cameras under unconstrained conditions** (various angles, lighting, backgrounds).  \n- Handwritten material includes **shopping lists, sticky notes, diaries, etc.**  \n- To ensure diversity, the documents were sourced from **Europe, North America, Africa and Asia**, with **no more than five images per writer**.\n\n**Differences from earlier offline Latin‑based handwriting datasets (IAM, RIMES)**  \n\n| Dataset | #Texts | #Lines | Image acquisition |\n|---------|--------|--------|--------------------|\n| **IAM** | 115 320 | 13 353 | Flatbed‑scanned |\n| **RIMES**| 66 982 | 12 093 | Flatbed‑scanned |\n| **GNHK** | 39 026 | 9 363 | **Camera‑captured** (unconstrained) |\n\n- **Acquisition method:** IAM and RIMES consist of **flatbed‑scanned** documents, whereas GNHK consists of **camera‑captured** images taken at different angles and in varied real‑world settings.  \n- **Content and diversity:** GNHK focuses on **English handwritten notes** from a wide geographic spread, while earlier datasets are primarily scanned documents and do not explicitly target such diverse, informal note‑taking material.  \n- **Scale:** GNHK is smaller in the number of texts and lines but introduces **modern, “in‑the‑wild” variability** that is absent from the largely controlled scans of IAM and RIMES.  \n\nThus, GNHK provides a **diverse, contemporary, camera‑based collection of English handwriting**, contrasting with the traditional flatbed‑scanned datasets like IAM and RIMES.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 63,
+    "timestamp": "2026-04-18T01:21:19.256532",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "How is the GNHK dataset annotated, and what do the special tokens %math%, %SC%, and %NA% mean?",
+    "sub_questions": [
+      "How is the GNHK dataset annotated?",
+      "what do the special tokens %math%, %SC%?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Annotation format**\n\nThe GNHK dataset is stored as a collection of JSON objects, one per handwritten region.  \nEach object contains at least the following fields:\n\n| Field | Meaning |\n|-------|---------|\n| `text` | The transcription of the handwritten content inside the polygon. When the content cannot be expressed as plain ASCII characters, a special token is used (see below). |\n| `polygon` | The four‑point quadrilateral that encloses the handwritten stroke, given as `(x0, y0) … (x3, y3)`. |\n| `line_idx` | The index of the line to which the polygon belongs. |\n| `type` | A label for the object type (e.g., `\"H\"` for handwritten text). |\n\nThus every handwritten snippet is localized by its polygon and linked to a textual label, either a literal string or a placeholder token.\n\n**Special tokens in the `text` field**\n\nWhen the annotator cannot provide a normal ASCII transcription, one of three placeholder tokens is inserted:\n\n1. **`%math%`** – Used for polygons that contain mathematical expressions that cannot be represented with printable ASCII characters (e.g., symbols such as ∞, integral signs, etc.).\n\n2. **`%SC%`** – Indicates *illegible scribbles*: the annotator can see that the region contains characters, but they are too unclear to be read.\n\n3. **`%NA%`** – Marks polygons that do **not** contain any characters or mathematical symbols at all (e.g., decorative marks, noise). The annotator labeled the region as “text” during collection, but it turned out to be non‑text.\n\nThese tokens allow the dataset to retain the spatial information of every region while explicitly flagging cases where a conventional ASCII transcription is impossible or unnecessary.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 64,
+    "timestamp": "2026-04-18T01:22:21.495007",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "What kinds of global health indicators are listed in World Health Statistics 2008, especially under mortality, health service coverage, risk factors, and health expenditure?",
+    "sub_questions": [
+      "What kinds of global health indicators are listed in World Health Statistics 2008, especially under mortality, health service coverage, risk factors?",
+      "health expenditure?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer provides no information, stating only \"INSUFFICIENT CONTEXT.\"",
+    "corrected_answer": "**Global health indicators included in *World Health Statistics 2008***  \n\nThe 2008 edition groups its more than 70 key indicators into several thematic families. The categories that are explicitly listed in the publication are:\n\n1. **Mortality and burden of disease** – indicators that describe deaths, causes of death and overall disease burden.  \n2. **Health‑service coverage** – indicators that measure the extent to which populations receive essential health services (e.g., reproductive‑health services, births attended by skilled personnel).  \n3. **Risk factors** – indicators that capture exposure to health‑related risks such as tobacco use, nutrition, environmental hazards, etc.  \n4. **Health‑systems resources** – indicators that reflect the inputs and financing of health systems, which include health‑expenditure measures.  \n5. **Inequities in health‑care coverage and health outcomes** – disaggregated indicators that show differences across population groups.  \n6. **Basic demographic and socioeconomic statistics** – background data such as population size, age structure, education, and income that contextualize health outcomes.\n\nThese families constitute the “global health indicators” presented in *World Health Statistics 2008*. Specific indicator titles (e.g., life expectancy, mortality rates, skilled‑birth attendance) are drawn from the underlying WHO databases, but the text does not enumerate individual health‑expenditure indicators.\n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "C",
+    "correcting_pipeline_name": "Hybrid"
+  },
+  {
+    "id": 65,
+    "timestamp": "2026-04-18T01:23:05.518360",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "Compare the challenges discussed in the GNHK handwriting dataset paper with the broader document-processing or retrieval challenges discussed in the RAG survey.",
+    "sub_questions": [
+      "Compare the challenges discussed in the GNHK handwriting dataset paper with the broader document-processing or retrieval challenges discussed in the RAG survey.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer explicitly states it cannot answer (insufficient context), providing no comparison.",
+    "corrected_answer": "**Comparison of Challenges**\n\n| Aspect | GNHK Handwriting Dataset (paper) | RAG Survey (document‑processing / retrieval) |\n|--------|----------------------------------|---------------------------------------------|\n| **Data source & variability** | Images are captured with consumer cameras “in the wild.” They contain **mixed content**: handwritten text, printed text, and other visual elements (e.g., images). This uncontrolled capture leads to large variations in lighting, perspective, background clutter, and resolution. | Retrieval‑augmented generation (RAG) systems must handle **heterogeneous document collections** (web pages, PDFs, scanned PDFs, slide decks, etc.). The sources differ in format, encoding, and quality, producing similar variability in noise, layout, and visual artifacts. |\n| **Segmentation / localisation** | The dataset explicitly requires **text localisation** before recognition because the images are not pre‑segmented into lines or words. Handwritten regions must be detected amid non‑text objects. | In document‑processing pipelines for RAG, a key step is **document chunking / passage retrieval**: identifying relevant spans of text (or visual regions) from large, unstructured corpora. The need to locate the right fragment mirrors the localisation problem in GNHK. |\n| **Handwriting diversity** | Handwriting styles vary widely across **different regions of the world**, leading to diverse pen strokes, slants, and character shapes. | RAG must cope with **linguistic and stylistic diversity** across documents (different authors, domains, and writing conventions). While not limited to handwriting, the same issue of varied expression affects retrieval quality. |\n| **Absence of explicit segmentation** | Many prior handwriting works assume pre‑segmented lines; GNHK deliberately **omits explicit segmentation**, forcing models to operate on full‑page images. | RAG surveys note that many retrieval pipelines avoid manual annotation of passage boundaries, instead relying on **automatic chunking** or end‑to‑end neural retrievers that work on raw documents. |\n| **Benchmarking & baselines** | The paper provides **baseline localisation and recognition models** to quantify the difficulty of the dataset. | The RAG survey discusses **standard benchmarks** (e.g., MS‑MARCO, Natural Questions) and baseline retrievers (BM25, dense vectors) that expose the challenges of relevance ranking and factual grounding. |\n| **Evaluation metrics** | Performance is measured with **character‑level and word‑level accuracy** (e.g., WAR, CAR) that reflect both localisation and recognition quality. | RAG evaluation focuses on **retrieval metrics** (Recall@k, MRR) and **generation metrics** (BLEU, ROUGE, factuality), highlighting the dual challenge of finding the right source and generating correct answers. |\n\n### Synthesis\n\nBoth the GNHK dataset and the broader document‑processing challenges highlighted in the RAG survey share a core difficulty: **working with unstructured, noisy, and heterogeneous visual/textual inputs** where the system must first locate the relevant segment before performing downstream tasks (recognition or generation).  \n\n- **GNHK** concentrates on the visual‑level obstacles of handwritten text in uncontrolled camera images, emphasizing localisation amid mixed content and extreme style variation.  \n- **RAG** expands the problem to the textual‑retrieval level, where documents of many formats must be indexed, chunked, and searched efficiently, and the retrieved passages must be faithfully incorporated into generated answers.\n\nThus, while GNHK’s challenges are specific to **handwritten scene‑text localisation and recognition**, they exemplify the same fundamental issues of **segmentation, variability, and evaluation** that the RAG community addresses in the context of large‑scale document retrieval and generation.",
+    "correcting_pipeline": "D",
+    "correcting_pipeline_name": "Dense+Reranker"
+  },
+  {
+    "id": 66,
+    "timestamp": "2026-04-18T01:47:19.063287",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "From the GNHK paper, explain how the dataset was collected, how geographic diversity was incorporated, and why the authors limit the number of images per writer.",
+    "sub_questions": [
+      "From the GNHK paper, explain how the dataset was collected, how geographic diversity was incorporated?",
+      "why the authors limit the number of images per writer.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Dataset collection** – The GNHK images were obtained by commissioning a data‑labeling firm to capture them on the authors’ request.\n\n**Geographic diversity** – To reflect the fact that handwriting styles differ from country to country, the authors deliberately sourced the images from four continents: Europe, North America, Africa, and Asia (Table 2 shows the number of images per region). This multi‑regional sampling ensures a wide variety of English penmanship.\n\n**Limiting images per writer** – The collection restricts any single writer to at most five images. This cap prevents a few writers from dominating the dataset, thereby preserving writer‑level diversity and reducing bias toward any particular handwriting style.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 67,
+    "timestamp": "2026-04-18T01:47:54.019410",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "According to the GNHK paper, describe the annotation format in detail, including the meaning of the polygon, line_idx, and type fields, and explain when %math%, %SC%, and %NA% are used.",
+    "sub_questions": [
+      "According to the GNHK paper, describe the annotation format in detail, including the meaning of the polygon, line_idx?",
+      "type fields?",
+      "explain when %math%, %SC%?",
+      "%NA% are used.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Annotation format (per JSON object)**  \n\n```json\n{\n  \"text\": \"...\",          // the transcribed content or a special token\n  \"polygon\": {            // a quadrilateral that encloses the word\n    \"x0\": ..., \"y0\": ...,\n    \"x1\": ..., \"y1\": ...,\n    \"x2\": ..., \"y2\": ...,\n    \"x3\": ..., \"y3\": ...\n  },\n  \"line_idx\": ...,        // integer identifying the line on which the word appears\n  \"type\": \"...\"           // a label indicating the kind of annotation (e.g., \"H\")\n}\n```\n\n* **`polygon`** – The region of the image that contains the word is described by a quadrilateral. It is stored as four coordinate pairs \\((x_0,y_0), (x_1,y_1), (x_2,y_2), (x_3,y_3)\\). The polygon is used both as a segmentation mask and, via its extreme x‑ and y‑values, to derive a bounding box for detection models.\n\n* **`line_idx`** – This integer marks the line number (starting from 0) to which the annotated word belongs. It allows the dataset to preserve the line structure of the handwritten document.\n\n* **`type`** – A string field that categorises the annotation. In the example the value is `\"H\"`; the paper presents it as a generic type label for each object.\n\n---\n\n### Special tokens for the `text` field  \n\nWhen the content inside a polygon cannot be expressed as ordinary ASCII characters, the annotators replace the `text` value with one of three special tokens:\n\n| Token   | When it is used |\n|--------|-----------------|\n| **`%math%`** | The polygon contains a mathematical expression whose symbols (e.g., ∞) are not representable by printable ASCII characters. |\n| **`%SC%`**   | The polygon holds a sequence of characters that is essentially illegible or unreadable (scribbles). |\n| **`%NA%`**   | The polygon was labelled as “text” but actually contains no characters or math symbols (e.g., a blank or decorative mark). |\n\nThese tokens allow the dataset to retain the spatial annotation while indicating that a conventional textual transcription is unavailable.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 68,
+    "timestamp": "2026-04-18T01:49:53.405971",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "ompare the challenges of unconstrained handwriting recognition in GNHK with the challenges of heterogeneous document retrieval in the RAG survey, especially in terms of localisation, noise, segmentation, and evaluation.",
+    "sub_questions": [
+      "ompare the challenges of unconstrained handwriting recognition in GNHK with the challenges of heterogeneous document retrieval in the RAG survey, especially in terms of localisation, noise, segmentation?",
+      "evaluation.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**INSUFFICIENT CONTEXT**",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "ompare the challenges of unconstrained handwriting recognition in GNHK with the challenges of heterogeneous document retrieval in the RAG survey, especially in terms of localisation, noise, segmentation?",
+      "evaluation.?"
+    ],
+    "failure_reason": "The answer only says \"INSUFFICIENT CONTEXT\" and does not address any of the sub-questions.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 69,
+    "timestamp": "2026-04-29T00:01:19.415302",
+    "pdf": "gnhk-a-dataset-for-english-handwriting-in-the-wild",
+    "question": "The GNHK dataset for handwriting recognition uses a JSON structure to annotate each text instance with a polygon, its textual label, and a line index to group words. The RAG survey discusses using \"Knowledge Graph (KG) index\" as a structural index for documents. How could the annotation structure of the GNHK dataset (especially the polygon and line index) be conceptually reformed into a Knowledge Graph to improve a RAG system's context retrieval over a collection of handwritten documents? Provide a specific schema sketch.",
+    "sub_questions": [
+      "The GNHK dataset for handwriting recognition uses a JSON structure to annotate each text instance with a polygon, its textual label?",
+      "a line index to group words. The RAG survey discusses using \"Knowledge Graph (KG) index\" as a structural index for documents. How could the annotation structure of the GNHK dataset (especially the polygon and line index) be conceptually reformed into a Knowledge Graph to improve a RAG system's context retrieval over a collection of handwritten documents?",
+      "Provide a specific schema sketch.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "**Answer – Re‑casting the GNHK JSON annotation as a Knowledge‑Graph (KG) schema**\n\nA Knowledge Graph can turn the flat JSON objects of the GNHK dataset into a network of typed entities and explicit relations.  \nThe graph captures **what the text is**, **where it is drawn**, and **how the words are grouped into lines** – the three pieces of information that the original annotation already provides.\n\n---\n\n### 1. Core node types  \n\n| Node label | Key properties (taken directly from the JSON) | Description |\n|------------|-----------------------------------------------|-------------|\n| **Document** | `doc_id` (filename or image id) | The whole handwritten image. |\n| **Word** | `text` (string), `type` (e.g., “H”), `polygon` (x0‑y0 … x3‑y3) | One annotated text instance. |\n| **Line** | `line_idx` (integer) | Logical line that groups words sharing the same `line_idx`. |\n\n*(The polygon is stored exactly as the four coordinate pairs that appear in the JSON.)*\n\n---\n\n### 2. Edge types (relations)\n\n| Edge label | Source → Target | Meaning (derived from the annotation) |\n|------------|----------------|---------------------------------------|\n| `contains_word` | Document → Word | The word appears in this image. |\n| `belongs_to_line` | Word → Line | The word’s `line_idx` equals the line’s identifier. |\n| `next_word` / `prev_word` | Word ↔ Word | Sequential ordering of words that share the same `line_idx` (derived from the order in the JSON list). |\n| `spatial_adjacent` | Word ↔ Word | Two words whose polygons touch or overlap in the x‑direction (can be computed from the polygon coordinates). |\n\nThese edges give the KG a **structural index**: a query can follow `belongs_to_line` to retrieve all words on a line, or follow `next_word` to reconstruct the reading order, while the `polygon` attribute supplies the exact visual location.\n\n---\n\n### 3. Example sketch (RDF‑style Turtle)\n\n```turtle\n# Document node\n:doc_001 a :Document ;\n        :contains_word :word_001 , :word_002 , :word_003 .\n\n# Word nodes (taken from the sample JSON)\n:word_001 a :Word ;\n          :text \"Proof\" ;\n          :type \"H\" ;\n          :polygon [\n              :x0 845 ; :y0 1592 ;\n              :x1 859 ; :y1 1809 ;\n              :x2 1188 ; :y2 1888 ;\n              :x3 1300 ; :y3 1588\n          ] ;\n          :belongs_to_line :line_4 .\n\n:word_002 a :Word ;\n          :text \"of\" ;\n          :type \"H\" ;\n          :polygon [...] ;\n          :belongs_to_line :line_4 ;\n          :next_word :word_001 .\n\n:word_003 a :Word ;\n          :text \"the\" ;\n          :type \"H\" ;\n          :polygon [...] ;\n          :belongs_to_line :line_4 ;\n          :prev_word :word_001 ;\n          :next_word :word_002 .\n\n# Line node\n:line_4 a :Line ;\n        :line_idx 4 .\n```\n\n*Each `:polygon` literal stores the four `(x, y)` pairs exactly as they appear in the original JSON; no new geometry format is introduced.*\n\n---\n\n### 4. Why this KG helps a RAG system  \n\n1. **Fine‑grained retrieval** – A query such as “words on line 4 that contain the word *Proof*” can be answered by traversing `belongs_to_line` and filtering on the `text` property, without scanning the whole image collection.  \n2. **Spatial context** – The `polygon` attribute lets the retriever rank results by visual proximity (e.g., using `spatial_adjacent`).  \n3. **Reading order** – `next_word` / `prev_word` edges let the generator reconstruct the exact sequence of tokens, which is crucial for coherent answer synthesis.  \n4. **Document‑level grounding** – The `contains_word` edge ties every word back to its source image (`Document`), enabling the RAG pipeline to fetch the original image or its OCR transcription when needed.\n\n---\n\n### 5. Minimal schema diagram  \n\n```\nDocument\n   │ contains_word\n   ▼\n Word ── belongs_to_line ──► Line\n  │\n  ├─ next_word ──► Word\n  └─ spatial_adjacent ──► Word\n```\n\nAll properties (`text`, `type`, `polygon`, `line_idx`) are stored on the **Word** node; the **Line** node only carries the identifier (`line_idx`). This graph‑based representation turns the flat JSON annotation into a **structured knowledge index** that a Retrieval‑Augmented Generation (RAG) system can query efficiently, improving context selection for handwritten document collections.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  }
+]

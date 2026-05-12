@@ -1,0 +1,92 @@
+{
+  "title": "World Health Statistics 2008",
+  "authors": [
+    "World Health Organization"
+  ],
+  "year": "2008",
+  "venue": "unknown",
+  "tldr": "A comprehensive global health report providing statistics on mortality, disease burden, health service coverage, and socioeconomic indicators for 193 WHO Member States.",
+  "abstract": "This publication presents an expanded set of over 70 key health indicators to monitor global health trends and progress toward Millennium Development Goals. It provides detailed data on mortality, health service coverage, risk factors, and health systems resources across 193 WHO Member States. The report highlights critical issues such as maternal mortality, coverage gaps in child health interventions, and revised HIV/AIDS estimates. By utilizing both empirical data and statistical modeling, it aims to maximize the accessibility and comparability of global health statistics.",
+  "problem_statement": "Global health monitoring faces significant challenges due to incomplete civil registration systems, which result in only one in eight births occurring in countries with accurate death and cause-of-death recording. Furthermore, many high-mortality countries lack recent, nationally representative surveys, leading to large uncertainties in maternal mortality and HIV prevalence estimates.",
+  "key_contributions": [
+    "Provided an expanded set of over 70 key health indicators for 193 WHO Member States",
+    "Introduced trend data for indicators where statistics are of acceptable quality",
+    "Developed a coverage gap index to measure the difference between observed and ideal universal coverage for maternal and child health interventions",
+    "Provided revised, downwardly adjusted HIV/AIDS estimates based on improved survey data and estimation methodologies"
+  ],
+  "architecture": {
+    "overview": "The publication is structured into two main parts: topical highlights and a comprehensive statistical compendium.",
+    "components": [
+      "Part 1: 10 topical highlights based on recent publications or new analyses",
+      "Part 2: Six statistical tables covering mortality, service coverage, risk factors, health systems, inequities, and demographics",
+      "WHO Statistical Information System: An online platform for accessing tables, maps, and graphs"
+    ],
+    "key_design_choices": [
+      "Indicator selection based on relevance to global health monitoring, data availability, accuracy, and comparability",
+      "Use of statistical modeling to generate predicted maternal mortality estimates for countries lacking good data"
+    ]
+  },
+  "methods": [
+    "Statistical modeling for predicted maternal mortality based on observations from 73 developing countries",
+    "Coverage gap index calculation as an aggregate measure of the difference between observed and 'ideal' coverage",
+    "Downward adjustment of HIV estimates using improved survey data and new estimation methodologies",
+    "Peer-reviewed estimation methods used by regional offices and technical programmes"
+  ],
+  "training_details": {
+    "datasets_used": [
+      "Demographic and Health Surveys (DHS)",
+      "UNICEF’s Multiple Indicator Cluster Surveys (MICS)",
+      "National civil registration",
+      "Special studies (13% coverage)",
+      "Sample civil registration (16% coverage)"
+    ],
+    "optimizer": "unknown",
+    "hardware": "not specified",
+    "training_time": "not specified",
+    "other": [
+      "Data collated from WHO technical programmes, regional offices, and publicly accessible databases"
+    ]
+  },
+  "results": [
+    "Maternal mortality ratio in developing countries was 450 per 100,000 live births, compared to 9 per 100,000 in developed countries",
+    "The estimated number of maternal deaths in 2005 was 536,000",
+    "The mean overall coverage gap across 54 analyzed countries was 43%",
+    "The 2006 best estimate for people living with HIV was 32 million (range: 30.6 to 36.1 million), revised down from 39.5 million",
+    "In sub-Saharan Africa, the maternal mortality ratio was 900 per 100,000 live births",
+    "The maternal mortality ratio showed a total fall of 5.4% between 1990 and 2005"
+  ],
+  "baselines_compared": [
+    "Previous HIV/AIDS estimates (e.g., 39.5 million people living with HIV revised to 32 million)",
+    "Millennium Development Goal (MDG) 5 targets (requiring a 5.5% annual decline in maternal mortality)"
+  ],
+  "ablation_findings": [
+    "The coverage gap in 40 countries fell by an average of 0.9 percentage points per year, with immunization being the largest contributor to the decline"
+  ],
+  "datasets": [
+    "WHO Member State health data — 193 countries",
+    "Maternal and child health intervention data — 54 countries representing >90% of deaths"
+  ],
+  "limitations": [
+    "Maternal mortality estimates acknowledge large uncertainty due to few or no data available for most high-mortality countries",
+    "Predicted maternal mortality estimates are subject to bias from different data collection methods and global adjustments",
+    "Disaggregated data reporting is currently limited to a small number of countries",
+    "Coverage statistics from household surveys rely on the accuracy of respondent responses, which can vary by socioeconomic status",
+    "Inequity data is available only for a limited number of countries"
+  ],
+  "future_work": [
+    "Include a broader set of interventions in coverage gap analyses, such as insecticide-treated bednets or vitamin A supplementation",
+    "Include adult health interventions like antiretroviral therapy coverage in future coverage gap studies",
+    "Increase the number of countries reporting disaggregated data"
+  ],
+  "related_work_context": "This report builds on the Millennium Development Goals (MDGs) framework, specifically targeting MDG 4 and 5. It departs from previous years by including trend data and utilizing more advanced estimation methodologies for HIV and maternal mortality.",
+  "impact_and_significance": "This report serves as a critical tool for global health monitoring, providing the official WHO estimates used to track progress toward international health targets. It highlights the massive inequities in health service coverage and the urgent need for improved civil registration systems.",
+  "keywords": [
+    "World Health Statistics",
+    "Maternal Mortality",
+    "HIV/AIDS",
+    "Millennium Development Goals",
+    "Health Coverage Gap",
+    "Global Health Indicators"
+  ],
+  "_pdf_name": "en-whs08-full"
+}

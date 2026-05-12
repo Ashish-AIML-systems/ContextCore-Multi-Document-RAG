@@ -1,0 +1,91 @@
+{
+  "title": "GoodNotes Handwriting Kollection (GNHK)",
+  "authors": [
+    "unknown"
+  ],
+  "year": "unknown",
+  "venue": "unknown",
+  "tldr": "The paper introduces GNHK, a new dataset of unconstrained, camera-captured English handwriting images designed to bridge the gap between document analysis and scene text recognition.",
+  "abstract": "The authors present the GoodNotes Handwriting Kollection (GNHK), a dataset consisting of 687 unconstrained camera-captured images of English handwritten text sourced globally. Unlike existing datasets that rely on flatbed scans, GNHK captures the noise, distortion, and varying lighting found in real-world mobile phone photography. The paper provides benchmark results for both text localisation using Mask R-CNN and text recognition using the Clova AI framework, establishing a baseline for future research in 'in the wild' handwriting recognition.",
+  "problem_statement": "Existing handwriting datasets like IAM and RIMES primarily consist of flatbed-scanned images, which lack the noise, distortion, and unconstrained orientation found in real-world camera-captured documents. Furthermore, most handwriting research focuses on scanned documents with horizontal lines, whereas real-world handwriting involves diverse layouts and unconstrained settings similar to scene text.",
+  "key_contributions": [
+    "Introduced the GoodNotes Handwriting Kollection (GNHK), a dataset of 687 camera-captured images containing 172,936 characters, 39,026 texts, and 9,363 lines of English handwriting.",
+    "Provided a text localisation benchmark using Mask R-CNN based on the Detectron2 framework, achieving an f-measure of 0.864.",
+    "Provided a text recognition benchmark using the Clova AI framework, achieving a peak Character Accuracy Rate (CAR) of 0.861 and Word Accuracy Rate (WAR) of 0.502.",
+    "Demonstrated the necessity of localisation steps for 'in the wild' datasets that contain non-handwritten content (printed text and images)."
+  ],
+  "architecture": {
+    "overview": "The benchmark utilizes a two-stage approach: first, an instance segmentation model for text localisation, followed by a segmented offline handwriting recognition framework.",
+    "components": [
+      "Mask R-CNN for text localisation (instance segmentation)",
+      "ResNet-50 with FPN as the backbone for localisation",
+      "Clova AI deep text recognition framework for recognition",
+      "Thin-Plate Spline (TPS) for image transformation",
+      "BiLSTM for sequence modelling",
+      "Attention or CTC for prediction"
+    ],
+    "key_design_choices": [
+      "Used Mask R-CNN instead of Faster R-CNN to treat localisation as an instance segmentation problem, better handling overlapping characters and descenders.",
+      "Chose a segmented recognition approach over segmentation-free methods because the dataset includes non-handwritten content.",
+      "Selected ResNet over VGG for feature extraction due to superior performance."
+    ]
+  },
+  "methods": [
+    "Instance segmentation via Mask R-CNN to handle complex text layouts and character descenders.",
+    "Thin-Plate Spline (TPS) transformation to normalize cropped word images.",
+    "Bidirectional Long Short-Term Memory (BiLSTM) for capturing sequential dependencies in handwriting.",
+    "Attention-based decoding for text prediction, which outperformed CTC-based decoding."
+  ],
+  "training_details": {
+    "datasets_used": [
+      "ImageNet (for ResNet-50 pretraining)",
+      "MSCOCO (for Mask R-CNN pretraining)"
+    ],
+    "optimizer": "not specified",
+    "hardware": "not specified",
+    "training_time": "not specified",
+    "other": [
+      "Dataset split: 75% training, 25% test (randomly selected)",
+      "Data pre-processing: removal of unknown words, scribbles, math symbols, and pure punctuation"
+    ]
+  },
+  "results": [
+    "Text localisation (Mask R-CNN): Recall 0.8237, Precision 0.9079, f-measure 0.864 (IOU > 0.5).",
+    "Text localisation (Faster R-CNN): Recall 0.8077, Precision 0.9215, f-measure 0.860.",
+    "Best recognition configuration [TPS, BiLSTM, Attention]: CAR 0.861, WAR 0.502.",
+    "TPS impact: Improved CAR by 5.3% and WAR by 12.5% when used with BiLSTM and Attention."
+  ],
+  "baselines_compared": [
+    "Faster R-CNN — compared against Mask R-CNN for text localisation.",
+    "CTC-based decoding — compared against Attention-based decoding for text recognition."
+  ],
+  "ablation_findings": [
+    "Removing BiLSTM (with TPS and Attention) decreased CAR from 0.861 to 0.764.",
+    "Removing TPS (with BiLSTM and Attention) decreased CAR from 0.861 to 0.808.",
+    "Attention-based decoding significantly outperformed CTC-based decoding in all tested configurations."
+  ],
+  "datasets": [
+    "GNHK — 687 images, 172,936 characters, 39,026 texts, 9,363 lines; unconstrained camera-captured English handwriting.",
+    "IAM Handwriting Database — 115,320 texts, 13,353 lines; flatbed-scanned English Latin scripts.",
+    "RIMES Database — 66,982 texts, 12,093 lines; flatbed-scanned French Latin scripts.",
+    "SCUT-HCCDoc — Unconstrained camera-captured Chinese handwritten documents."
+  ],
+  "limitations": [
+    "The GNHK dataset does not contain pixel-level segmentation masks separating words from non-words.",
+    "Character ascenders and descenders (e.g., 'y', 'g') cause bounding box overlaps and complicate localization.",
+    "The dataset includes non-handwritten content (printed text/images) which complicates simple recognition pipelines."
+  ],
+  "future_work": [
+    "Explore end-to-end approaches to perform localisation and recognition sequentially within a single framework."
+  ],
+  "related_work_context": "The work builds on scene text recognition research and departs from traditional handwriting recognition (like IAM/RIMES) by moving from flatbed scans to unconstrained, camera-captured 'in the wild' images. It also draws parallels to the SCUT-HCCDoc dataset but focuses on English.",
+  "impact_and_significance": "GNHK provides a much-needed benchmark for the intersection of document analysis and scene text recognition. It enables researchers to develop more robust models that can handle the noise, lighting, and layout complexities of real-world mobile photography.",
+  "keywords": [
+    "handwriting recognition",
+    "scene text",
+    "text localisation",
+    "unconstrained images",
+    "GNHK"
+  ],
+  "_pdf_name": "gnhk-a-dataset-for-english-handwriting-in-the-wild"
+}

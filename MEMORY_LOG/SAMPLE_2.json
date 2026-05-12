@@ -1,0 +1,821 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-03-12T09:59:22.329033",
+    "pdf": "SAMPLE_2",
+    "question": "How has this research been cited by other papers published after it?",
+    "sub_questions": [
+      "How has this research been cited by other papers published after it?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "How has this research been cited by other papers published after it?"
+    ],
+    "failure_reason": "The response states insufficient context and does not provide any information about how the research has been cited, leaving the sub-question unanswered.",
+    "corrected_answer": "- Cited in an arXiv preprint arXiv:2310.13682 (2023).  \n- Cited in **PaperQA: Retrieval‑augmented generative agent for scientific research** (arXiv:2312.07559, 2023).  \n- Cited in **The power of noise: Redefining retrieval for RAG systems** (arXiv:2401.14887, 2024).",
+    "correcting_pipeline": "A",
+    "correcting_pipeline_name": "Dense/FAISS"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-03-12T10:00:03.342435",
+    "pdf": "SAMPLE_2",
+    "question": "What would happen if the dataset size was doubled?",
+    "sub_questions": [
+      "What would happen if the dataset size was doubled?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What would happen if the dataset size was doubled?"
+    ],
+    "failure_reason": "The response indicates insufficient context and does not address the effects of doubling the dataset size, leaving the sub-question unanswered.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-03-12T10:08:47.158502",
+    "pdf": "SAMPLE_2",
+    "question": "What are the three RAG paradigms described in the RAG survey, and how does each one improve upon the previous?",
+    "sub_questions": [
+      "What are the three RAG paradigms described in the RAG survey, and how does each one improve upon the previous?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **Naive RAG** – the earliest paradigm, consisting of three sequential components: indexing, retrieval, and generation.  \n\n- **Advanced RAG** – extends Naive RAG by adding multiple optimization strategies around the pre‑retrieval and post‑retrieval stages, improving the efficiency and quality of the retrieval‑generation chain while retaining a similar overall structure.  \n\n- **Modular RAG** – builds on Advanced RAG, introducing a more flexible, modular architecture that inherits the previous improvements and further enhances adaptability and overall flexibility.  ",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-03-12T10:09:16.037745",
+    "pdf": "SAMPLE_2",
+    "question": "What limitations of Naive RAG does Advanced RAG specifically address, and what techniques does it use?",
+    "sub_questions": [
+      "What limitations of Naive RAG does Advanced RAG specifically address, and what techniques does it use?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "Advanced RAG tackles two key shortcomings of Naive RAG:\n\n* **Over‑reliance on augmented information** – Naive RAG often produces answers that merely echo retrieved content without adding insight or synthesis.  \n* **Indexing problems** – Naive RAG’s indexing can be inadequate for retrieving the most relevant passages.\n\nTo address these, Advanced RAG employs **pre‑retrieval and post‑retrieval optimization strategies** that improve retrieval quality, and it **refines its indexing using a sliding‑window technique**.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-03-15T19:12:33.000072",
+    "pdf": "SAMPLE_2",
+    "question": "Extract the full title and author names from the first page.",
+    "sub_questions": [
+      "Extract the full title and author names from the first page.?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Extract the full title and author names from the first page."
+    ],
+    "failure_reason": "The response indicates insufficient context and does not provide the requested title or author names.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-03-15T19:16:21.026107",
+    "pdf": "SAMPLE_2",
+    "question": "List the main sections of the paper in order.",
+    "sub_questions": [
+      "List the main sections of the paper in order.?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "- Section II – introduces the main concept and current paradigms of RAG  \n- Retrieval (core component)  \n- Generation (core component)  \n- Augmentation (core component)  \n- Section III – optimization methods in retrieval (indexing, query, and embedding optimization)  \n- Section IV – post‑retrieval methods  ",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "List the main sections of the paper in order."
+    ],
+    "failure_reason": "The answer only lists some sections (II, III, IV) and includes non-section items, missing other main sections and not providing a complete ordered list.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 7,
+    "timestamp": "2026-03-15T19:17:15.920043",
+    "pdf": "SAMPLE_2",
+    "question": "Extract the formulas used for CAR and WAR evaluation metrics.",
+    "sub_questions": [
+      "Extract the formulas used for CAR and WAR evaluation metrics.?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Extract the formulas used for CAR and WAR evaluation metrics."
+    ],
+    "failure_reason": "The answer states insufficient context and does not provide any formulas, leaving the sub-question unanswered.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 8,
+    "timestamp": "2026-03-15T19:20:59.315381",
+    "pdf": "SAMPLE_2",
+    "question": "5. Extract mathematical formulas.",
+    "sub_questions": [
+      "5. Extract mathematical formulas.?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "5. Extract mathematical formulas.?"
+    ],
+    "failure_reason": "The response indicates insufficient context and does not provide any extracted mathematical formulas, leaving the sub-question unanswered.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 9,
+    "timestamp": "2026-03-15T19:48:33.955595",
+    "pdf": "SAMPLE_2",
+    "question": "Extract the dataset comparison table and return it in structured format",
+    "sub_questions": [
+      "Extract the dataset comparison table and return it in structured format?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "| Task | Sub Task | Dataset | Method (citations) |\n|------|----------|---------|--------------------|\n| QA | Single‑hop | Natural Question (NQ) | [26], [30], [34], [42], [45], [50], [52], [59], [64], [82]; [3], [4], [22], [27], [40], [43], [54], [62], [71], [112]; [20], [44], [72] |\n| QA | Single‑hop | TriviaQA (TQA) | [13], [30], [34], [45], [50], [64]; [4], [27], [59], [62], [112]; [22], [25], [43], [44], [71], [72] |\n| QA | Single‑hop | SQuAD | [20], [23], [30], [32], [45], [69], [112] |\n| QA | Single‑hop | Web Questions (WebQ) | [3], [4], [13], [30], [50], [68] |",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 10,
+    "timestamp": "2026-03-15T19:48:59.018541",
+    "pdf": "SAMPLE_2",
+    "question": "Convert Table 3 into JSON",
+    "sub_questions": [
+      "Convert Table 3 into JSON?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Convert Table 3 into JSON?"
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and cannot provide the requested JSON conversion.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 11,
+    "timestamp": "2026-03-15T19:49:56.760810",
+    "pdf": "SAMPLE_2",
+    "question": "Extract the formulas used for CAR and WAR evaluation metrics",
+    "sub_questions": [
+      "Extract the formulas used for CAR and WAR evaluation metrics?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Extract the formulas used for CAR and WAR evaluation metrics?"
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and cannot provide the requested formulas.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 12,
+    "timestamp": "2026-03-15T19:50:52.917824",
+    "pdf": "SAMPLE_2",
+    "question": "Extract all text from page 1",
+    "sub_questions": [
+      "Extract all text from page 1?"
+    ],
+    "pipeline_used": "E",
+    "pipeline_name": "Hybrid+Reranker",
+    "answer": "1  \nRetrieval-Augmented Generation for Large  \nLanguage Models: A Survey  \nYunfan Gaoa, Yun Xiong b, Xinyu Gao b, Kangxiang Jia b, Jinliu Pan b, Yuxi Bi c, Yi Dai a, Jiawei Sun a, Meng  \nWangc, and Haofen Wang a,c  \naShanghai Research Institute for Intelligent Autonomous Systems, Tongji University  \nbShanghai Key Laboratory of Data Science, School of Computer Science, Fudan University  \ncCollege of Design and Innovation, Tongji University  \n\nAbstract—Large Language Models (LLMs) showcase impres-  \nsive capabilities but encounter challenges like hallucination,  \noutdated knowledge, and non-transparent, untraceable reasoning  \nprocesses. Retrieval-Augmented Generation (RAG) has emerged  \nas a promising solution by incorporating knowledge from external  \ndatabases. This enhances the accuracy and credibility of the  \ngeneration, particularly for knowledge-intensive tasks, and allows  \nfor continuous knowledge updates and integration of domain-  \nspecific information. RAG synergistically merges LLMs’ intrin-  \nsic knowledge with the vast, dynamic repositories of external  \ndatabases. This comprehensive review paper offers a detailed  \nexamination of the progression of RAG paradigms, encompassing  \nthe Naive RAG, the Advanced RAG, and the Modular RAG.  \nIt meticulously scrutinizes the tripartite foundation of RAG  \nframeworks, which includes the retrieval, the generation and the  \naugmentation techniques. The paper highlights the state-of-the-  \nart technologies embedded in each of these critical components,  \nproviding a profound understanding of the advancements in RAG  \nsystems. Furthermore, this paper introduces up-to-date evalua-  \ntion framework and benchmark. At the end, this article delineates  \nthe challenges currently faced and points out prospective avenues  \nfor research and development 1.  \n\nIndex Terms—Large language model, retrieval-augmented gen-  \neration, natural language processing, information retrieval  \n\nI. I NTRODUCTION  \nL  \nARGE language models (LLMs) have achieved remark-  \nable success, though they still face significant limitations,  \nespecially in domain-specific or knowledge-intensive tasks [1],  \nnotably producing “hallucinations” [2] when handling queries  \nbeyond their training data or requiring current information. To  \novercome challenges, Retrieval-Augmented Generation (RAG)  \nenhances LLMs by retrieving relevant document chunks from  \nexternal knowledge base through semantic similarity calcu-  \nlation. By referencing external knowledge, RAG effectively  \nreduces the problem of generating factually incorrect content.  \nIts integration into LLMs has resulted in widespread adoption,  \nestablishing RAG as a key technology in advancing chatbots  \nand enhancing the suitability of LLMs for real-world applica-  \ntions.  \n\nRAG technology has rapidly developed in recent years, and  \nthe technology tree summarizing related research is shown  \nCorresponding Author.Email:haofen.wang@tongji.edu.cn  \n1Resources are available at https://github.com/Tongji-KGLLM/  \nRAG-Survey  \nin Figure 1. The development trajectory of RAG in the era  \nof large models exhibits several distinct stage characteristics.  \nInitially, RAG’s inception coincided with the rise of the  \nTransformer architecture, focusing on enhancing language  \nmodels by incorporating additional knowledge through Pre-  \nTraining Models (PTM). This early stage was characterized  \nby foundational work aimed at refining pre-training techniques  \n[3]–[5].The subsequent arrival of ChatGPT [6] marked a  \npivotal moment, with LLM demonstrating powerful in context  \nlearning (ICL) capabilities. RAG research shifted towards  \nproviding better information for LLMs to answer more com-  \nplex and knowledge-intensive tasks during the inference stage,  \nleading to rapid development in RAG studies. As research  \nprogressed, the enhancement of RAG was no longer limited  \nto the inference stage but began to incorporate more with LLM  \nfine-tuning techniques.  \n\nThe burgeoning field of RAG has experienced swift growth,  \nyet it has not been accompanied by a systematic synthesis that  \ncould clarify its broader trajectory. This survey endeavors to  \nfill this gap by mapping out the RAG process and charting  \nits evolution and anticipated future paths, with a focus on the  \nintegration of RAG within LLMs. This paper considers both  \ntechnical paradigms and research methods, summarizing three  \nmain research paradigms from over 100 RAG studies, and  \nanalyzing key technologies in the core stages of “Retrieval,”  \n“Generation,” and “Augmentation.” On the other hand, current  \nresearch tends to focus more on methods, lacking analysis and  \nsummarization of how to evaluate RAG. This paper compre-  \nhensively reviews the downstream tasks, datasets, benchmarks,  \nand evaluation methods applicable to RAG. Overall, this  \npaper sets out to meticulously compile and categorize the  \nfoundational technical concepts, historical progression, and  \nthe spectrum of RAG methodologies and applications that  \nhave emerged post-LLMs. It is designed to equip readers and  \nprofessionals with a detailed and structured understanding of  \nboth large models and RAG. It aims to illuminate the evolution  \nof retrieval augmentation techniques, assess the strengths and  \nweaknesses of various approaches in their respective contexts,  \nand speculate on upcoming trends and innovations.  \n\nOur contributions are as follows:  \n• In this survey, we present a thorough and systematic  \nreview of the state-of-the-art RAG methods, delineating  \nits evolution through paradigms including naive RAG,  \narXiv:2312.10997v5  [cs.CL]  27 Mar 2024",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Extract all text from page 1?"
+    ],
+    "failure_reason": "Heuristic keyword check (Groq error: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 13,
+    "timestamp": "2026-03-15T19:51:49.758837",
+    "pdf": "SAMPLE_2",
+    "question": "From Table 3, list the number of characters and lines for each region",
+    "sub_questions": [
+      "From Table 3, list the number of characters and lines for each region?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "From Table 3, list the number of characters and lines for each region?"
+    ],
+    "failure_reason": "The answer explicitly states it cannot answer due to insufficient context, providing no information for the requested sub-question.",
+    "corrected_answer": "- Europe (EU): 58,982 characters, 3,306 lines  \n- North America (NA): 47,361 characters, 2,099 lines  \n- Asia (AS): 39,593 characters, 2,780 lines  \n- Africa (AF): 27,000 characters, 1,178 lines",
+    "correcting_pipeline": "C",
+    "correcting_pipeline_name": "Hybrid"
+  },
+  {
+    "id": 14,
+    "timestamp": "2026-03-18T10:17:44.789005",
+    "pdf": "SAMPLE_2",
+    "question": "What are the three RAG paradigms, what are the key limitations of Naive RAG, and how does Advanced RAG address them?",
+    "sub_questions": [
+      "What are the three RAG paradigms, what are the key limitations of Naive RAG, and how does Advanced RAG address them?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "What are the three RAG paradigms, what are the key limitations of Naive RAG, and how does Advanced RAG address them?"
+    ],
+    "failure_reason": "Answer contains insufficiency signal. (heuristic fallback — Groq error: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)",
+    "corrected_answer": "- **Three RAG paradigms**: Naive RAG, Advanced RAG, and Modular RAG.  \n\n- **Key limitations of Naive RAG**: The chunks note that Naive RAG “exhibit several limitations,” which motivated the development of the later paradigms, but they do not list the specific shortcomings.  \n\n- **How Advanced RAG addresses them**: Advanced RAG introduces multiple optimization strategies around the pre‑retrieval and post‑retrieval stages, refining the same chain‑like process used in Naive RAG to overcome its identified weaknesses.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "C",
+    "correcting_pipeline_name": "Hybrid"
+  },
+  {
+    "id": 15,
+    "timestamp": "2026-03-18T10:18:32.270708",
+    "pdf": "SAMPLE_2",
+    "question": "Both the Transformer paper and the RAG survey mention attention mechanisms — what role does attention play in RAG retrieval compared to its role in the Transformer architecture?",
+    "sub_questions": [
+      "Both the Transformer paper and the RAG survey mention attention mechanisms — what role does attention play in RAG retrieval compared to its role in the Transformer architecture?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Both the Transformer paper and the RAG survey mention attention mechanisms — what role does attention play in RAG retrieval compared to its role in the Transformer architecture?"
+    ],
+    "failure_reason": "Answer contains insufficiency signal. (heuristic fallback — Groq error: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 16,
+    "timestamp": "2026-03-18T11:32:25.898856",
+    "pdf": "SAMPLE_2",
+    "question": "What are the three RAG paradigms, what are the key limitations of Naive RAG, and how does Advanced RAG address them?",
+    "sub_questions": [
+      "What are the three RAG paradigms, what are the key limitations of Naive RAG, and how does Advanced RAG address them?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What are the three RAG paradigms, what are the key limitations of Naive RAG, and how does Advanced RAG address them?"
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and cannot provide the requested information.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 17,
+    "timestamp": "2026-03-18T11:47:17.270748",
+    "pdf": "SAMPLE_2",
+    "question": "What is the difference between iterative, recursive, and adaptive retrieval in RAG, and give one example system for each type?",
+    "sub_questions": [
+      "What is the difference between iterative, recursive, and adaptive retrieval in RAG, and give one example system for each type?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Iterative retrieval** – The RAG loop alternates between retrieving documents and generating text, so each generation step can request new, more targeted context from the knowledge base.  \n\n**Recursive retrieval** – The user query is progressively refined and decomposed into sub‑problems; each sub‑problem triggers its own retrieval, allowing the system to solve a complex task step‑by‑step.  \n\n**Adaptive retrieval** – The system autonomously decides whether external knowledge is needed and when to stop retrieving, often using LLM‑generated control tokens to manage the retrieval‑generation cycle.  \n\n*Example systems*  \n- Adaptive retrieval: **Flare** (also Self‑RAG) — methods that let the LLM judge the optimal moments and content for retrieval.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What is the difference between iterative, recursive, and adaptive retrieval in RAG, and give one example system for each type?"
+    ],
+    "failure_reason": "The answer defines iterative, recursive, and adaptive retrieval but only provides an example system for adaptive retrieval (Flare). It lacks example systems for iterative and recursive retrieval, so the request for one example per type is not fully satisfied.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 18,
+    "timestamp": "2026-03-18T11:47:53.970641",
+    "pdf": "SAMPLE_2",
+    "question": "For the Transformer big model specifically — how many training steps did it run, on what hardware, and what BLEU score did it achieve on English-to-French?",
+    "sub_questions": [
+      "For the Transformer big model specifically — how many training steps did it run, on what hardware, and what BLEU score did it achieve on English-to-French?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "For the Transformer big model specifically — how many training steps did it run, on what hardware, and what BLEU score did it achieve on English-to-French?"
+    ],
+    "failure_reason": "FIX 2 — Numerical completeness check failed: the answer contains no numeric values for sub-questions that explicitly require numbers or counts: ['For the Transformer big model specifically — how many training steps did it run, on what hardware, and what BLEU score did it achieve on English-to-French?']",
+    "corrected_answer": "300 000 training steps, trained on 8 P100 GPUs, achieving a BLEU score of 41.0 on the English‑to‑French test.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Hybrid+Reranker"
+  },
+  {
+    "id": 19,
+    "timestamp": "2026-03-18T12:10:24.412447",
+    "pdf": "SAMPLE_2",
+    "question": "What are the three RAG paradigms described in the survey, and how does Advanced RAG specifically address the limitations of Naive RAG?",
+    "sub_questions": [
+      "What are the three RAG paradigms described in the survey?",
+      "how does Advanced RAG specifically address the limitations of Naive RAG?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **The three RAG paradigms** described in the survey are **Naive RAG, Advanced RAG, and Modular RAG**.\n\n- **How Advanced RAG addresses Naive RAG’s limitations**:  \n  Advanced RAG adds optimization strategies before and after retrieval (“pre‑retrieval and post‑retrieval” strategies) to improve retrieval quality. It refines indexing—e.g., using a sliding‑window approach—to overcome the indexing problems of Naive RAG, and reduces the tendency to simply echo retrieved content by enhancing the generation step with more synthesized, insightful output.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 20,
+    "timestamp": "2026-03-18T12:10:44.151620",
+    "pdf": "SAMPLE_2",
+    "question": "According to the RAG survey, what are the major challenges in the retrieval stage, and how do they impact downstream generation quality?",
+    "sub_questions": [
+      "According to the RAG survey, what are the major challenges in the retrieval stage?",
+      "how do they impact downstream generation quality?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "The survey identifies **precision and recall problems** as the main challenges in the retrieval stage. These issues cause the system to select **misaligned or irrelevant chunks** and to miss **crucial information**. When the retrieved context is inaccurate or incomplete, the downstream generation model is more likely to **hallucinate**—producing content not supported by the context—and to generate **irrelevant, toxic, or biased** responses, thereby degrading the overall quality and reliability of the output.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 21,
+    "timestamp": "2026-03-18T12:11:16.948666",
+    "pdf": "SAMPLE_2",
+    "question": "In the GNHK dataset, list the number of characters, texts, and lines for each region, and identify which region has the highest text density.",
+    "sub_questions": [
+      "In the GNHK dataset, list the number of characters, texts?",
+      "lines for each region?",
+      "identify which region has the highest text density.?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "In the GNHK dataset, list the number of characters, texts?"
+    ],
+    "failure_reason": "FIX 2 — Numerical completeness check failed: the answer contains no numeric values for sub-questions that explicitly require numbers or counts: ['In the GNHK dataset, list the number of characters, texts?']",
+    "corrected_answer": "- **Europe (EU)** – 58,982 characters, 13,592 texts, 3,306 lines  \n- **North America (NA)** – 47,361 characters, 10,967 texts, 2,099 lines  \n- **Asia (AS)** – 39,593 characters, 8,586 texts, 2,780 lines  \n- **Africa (AF)** – 27,000 characters, 5,881 texts, 1,178 lines  \n\n**Highest text density (texts per line):** North America (≈ 5.23 texts per line).",
+    "correcting_pipeline": "D",
+    "correcting_pipeline_name": "Dense+Reranker"
+  },
+  {
+    "id": 22,
+    "timestamp": "2026-03-18T12:55:43.763748",
+    "pdf": "SAMPLE_2",
+    "question": "What are the three RAG paradigms, what are the specific limitations of Naive RAG, and how does Advanced RAG fix each one specifically?",
+    "sub_questions": [
+      "What are the three RAG paradigms, what are the specific limitations of Naive RAG?",
+      "how does Advanced RAG fix each one specifically?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **The three RAG paradigms**  \n  1. **Naive RAG** – the earliest, chain‑like pipeline of indexing, retrieval, and generation.  \n  2. **Advanced RAG** – builds on Naive RAG with additional optimization steps before and after retrieval.  \n  3. **Modular RAG** – extends the previous paradigms with greater flexibility and modular components.\n\n- **Specific limitations of Naive RAG**  \n  * Over‑reliance on augmented information, causing the model to echo retrieved passages without adding insightful or synthesized content.  \n  * Indexing problems that reduce the effectiveness of the retrieval step.  \n  * Limited retrieval quality because the pipeline lacks pre‑retrieval and post‑retrieval refinements.\n\n- **How Advanced RAG addresses each limitation**  \n  * **Echo/low synthesis** – Introduces pre‑retrieval and post‑retrieval strategies that improve the relevance and integration of retrieved material, encouraging the generator to produce more original, synthesized answers.  \n  * **Indexing issues** – Refines indexing techniques using a sliding‑window approach, which creates more granular and comprehensive indexes for better matching.  \n  * **Retrieval quality** – The same pre‑retrieval and post‑retrieval optimizations enhance the selection of pertinent documents, leading to higher‑quality retrieved context.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 23,
+    "timestamp": "2026-03-18T12:55:54.300293",
+    "pdf": "SAMPLE_2",
+    "question": "What is scaled dot-product attention, how is it different from additive attention, and what happens to softmax gradients when dk is large?",
+    "sub_questions": [
+      "What is scaled dot-product attention, how is it different from additive attention?",
+      "what happens to softmax gradients when dk is large?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What is scaled dot-product attention, how is it different from additive attention?",
+      "what happens to softmax gradients when dk is large?"
+    ],
+    "failure_reason": "The answer states insufficient context and does not provide any explanation for either sub-question.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 24,
+    "timestamp": "2026-03-19T10:47:23.070443",
+    "pdf": "SAMPLE_2",
+    "question": "According to the RAG survey, what are the two main challenges of semi-structured data, and give one concrete example system mentioned for each challenge?\"",
+    "sub_questions": [
+      "According to the RAG survey, what are the two main challenges of semi-structured data?",
+      "give one concrete example system mentioned for each challenge?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **Challenge 1:** Text‑splitting processes can inadvertently separate tables from surrounding text, causing data corruption during retrieval.  \n  *No specific system is cited in the provided chunks for this challenge.*\n\n- **Challenge 2:** Incorporating tables into the corpus complicates semantic‑similarity searches.  \n  *Example system:* **TableGPT** – a system that uses LLM code capabilities to run Text‑2‑SQL queries on tables.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "FIX A — PARTIAL CONTEXT detected with provably uncovered sub-questions (< 30% keyword overlap): ['According to the RAG survey, what are the two main challenges of semi-structured data?']",
+    "corrected_answer": "The RAG survey identifies two main challenges of semi‑structured data:  \n\n1. Text‑splitting processes can unintentionally separate tables, causing data corruption during retrieval.  \n2. Incorporating tables complicates semantic similarity searches.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Hybrid+Reranker"
+  },
+  {
+    "id": 25,
+    "timestamp": "2026-03-19T11:05:24.324147",
+    "pdf": "SAMPLE_2",
+    "question": "In the RAG survey, what specific metrics are listed in Table III for evaluating context relevance?\"",
+    "sub_questions": [
+      "In the RAG survey, what specific metrics are listed in Table III for evaluating context relevance?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "**Metrics listed in Table III for evaluating **Context Relevance**:**\n\n- Accuracy  \n- Precision  \n- Cosine Similarity  \n- Hit Rate  \n- MRR (Mean Reciprocal Rank)  \n- NDCG (Normalized Discounted Cumulative Gain)  \n- BLEU  \n- ROUGE / ROUGE‑L  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 26,
+    "timestamp": "2026-03-19T11:06:07.820959",
+    "pdf": "SAMPLE_2",
+    "question": "According to the Transformer paper, what does Figure 3 in the attention visualization appendix demonstrate about long-distance dependencies?",
+    "sub_questions": [
+      "According to the Transformer paper, what does Figure 3 in the attention visualization appendix demonstrate about long-distance dependencies?"
+    ],
+    "pipeline_used": "E",
+    "pipeline_name": "Page Index",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer explicitly states insufficient context and does not provide any information.",
+    "corrected_answer": "Figure 3 illustrates that, in encoder self‑attention (layer 5 of 6), multiple attention heads attend to a distant word that completes the phrase “making … more difficult.” This demonstrates that the Transformer’s attention mechanism can follow long‑distance dependencies.",
+    "correcting_pipeline": "D",
+    "correcting_pipeline_name": "Dense+Reranker"
+  },
+  {
+    "id": 27,
+    "timestamp": "2026-03-19T11:37:02.949616",
+    "pdf": "SAMPLE_2",
+    "question": "\"Describe the complete training setup of the Transformer base model including the dataset size, hardware used, number of training steps, optimizer, learning rate schedule, and regularization techniques.\"",
+    "sub_questions": [
+      "\"Describe the complete training setup of the Transformer base model including the dataset size, hardware used, number of training steps, optimizer, learning rate schedule?",
+      "regularization techniques.\"?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "The retrieved passages do not contain specific information about the Transformer‑base model’s training setup such as the dataset size, hardware configuration, number of training steps, optimizer choice, learning‑rate schedule, or regularization methods. They only note that training can involve techniques like contrastive loss, KL‑divergence supervision, fine‑tuning, and RLHF, without providing concrete details.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 28,
+    "timestamp": "2026-03-19T12:08:13.826580",
+    "pdf": "SAMPLE_2",
+    "question": "“Identify inconsistencies or anomalies in the financial tables and explain possible reasons.”",
+    "sub_questions": [
+      "“Identify inconsistencies or anomalies in the financial tables and explain possible reasons.”?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Identify inconsistencies or anomalies in the financial tables and explain possible reasons."
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and cannot answer the sub-question.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 29,
+    "timestamp": "2026-03-19T12:09:06.785034",
+    "pdf": "SAMPLE_2",
+    "question": "“Compare two specific columns and explain the relationship between them.”",
+    "sub_questions": [
+      "“Compare two specific columns and explain the relationship between them.”?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer explicitly states it cannot answer due to insufficient context, providing no explanation or comparison.",
+    "corrected_answer": "**Task vs. Dataset columns**\n\n- The **Task** column enumerates the downstream RAG tasks (e.g., Single‑hop QA, Multi‑hop QA, Dialog Generation, Recommendation, IE, Reasoning, Language Modeling, etc.).\n- The **Dataset** column lists the benchmark datasets that are used to evaluate each corresponding task (e.g., Natural Question, TriviaQA, SQuAD, HotpotQA, 2WikiMultiHopQA, MuSiQue, ELI5, NarrativeQA, Wizard of Wikipedia, Amazon, WikiEvent, T‑REx, HellaSwag, MMLU, WikiText‑103, etc.).\n\n**Relationship:** Each task is paired with one or more datasets that provide the concrete data on which the task is trained or tested. The dataset column therefore specifies the concrete source of examples that instantiate the abstract task described in the Task column.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 30,
+    "timestamp": "2026-03-19T12:11:49.616031",
+    "pdf": "SAMPLE_2",
+    "question": "“Summarize the statistical trend shown across all tables in the document.”",
+    "sub_questions": [
+      "“Summarize the statistical trend shown across all tables in the document.”?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Summarize the statistical trend shown across all tables in the document."
+    ],
+    "failure_reason": "The answer explicitly states it cannot answer due to insufficient context.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 31,
+    "timestamp": "2026-03-19T12:12:46.991285",
+    "pdf": "SAMPLE_2",
+    "question": "“What information is conveyed in Figure 2 and how does it relate to the main argument?”",
+    "sub_questions": [
+      "“What information is conveyed in Figure 2 and how does it relate to the main argument?"
+    ],
+    "pipeline_used": "E",
+    "pipeline_name": "Page Index",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer explicitly states it cannot answer due to insufficient context, providing no information about Figure 2.",
+    "corrected_answer": "Figure 2 depicts a typical Retrieval‑Augmented Generation (RAG) scenario: a user asks ChatGPT about a recent, widely discussed news item. Because ChatGPT relies on its pre‑training data, it cannot provide up‑to‑date information on its own. RAG resolves this gap by retrieving relevant external knowledge and incorporating it into the model’s response. This illustration supports the paper’s central argument that RAG enhances large language models by supplying current information that the base model alone lacks.",
+    "correcting_pipeline": "D",
+    "correcting_pipeline_name": "Dense+Reranker"
+  },
+  {
+    "id": 32,
+    "timestamp": "2026-03-19T12:13:33.918471",
+    "pdf": "SAMPLE_2",
+    "question": "“Extract key insights from the diagrams and explain their significance.”",
+    "sub_questions": [
+      "“Extract key insights from the diagrams and explain their significance.”?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "**Key insights from the diagrams**\n\n1. **Figure 1 – Technology tree of RAG research**  \n   - RAG development is organized into three stages: **pre‑training**, **fine‑tuning**, and **inference**.  \n   - Early work (with the rise of LLMs) concentrated on the **inference stage**, exploiting in‑context learning.  \n   - Later research shifted toward **fine‑tuning** LLMs with retrieved knowledge, and current efforts are exploring **pre‑training** enhancements through retrieval‑augmented techniques.\n\n2. **Figure 2 – Typical RAG application**  \n   - A user query is first sent to an LLM (e.g., ChatGPT).  \n   - Because the LLM’s pre‑training data may be outdated, **RAG retrieves relevant external documents** (e.g., recent news articles).  \n   - The retrieved texts are combined with the original query to form a **comprehensive prompt**, enabling the LLM to generate an up‑to‑date, well‑informed answer.\n\n3. **Figure 3 – Evolution of RAG paradigms**  \n   - The research landscape is divided into three paradigms: **Naïve RAG**, **Advanced RAG**, and **Modular RAG**.  \n   - Each successive paradigm addresses limitations of the previous one, reflecting the field’s continuous refinement.\n\n4. **Figure 6 – Summary of RAG’s impact**  \n   - RAG markedly **enhances LLM capabilities** by merging **parameterized knowledge** (the LLM’s internal weights) with **extensive non‑parameterized data** from external knowledge bases.  \n   - The figure highlights the **evolution of RAG technologies** and their broad application across many tasks, underscoring the three developmental paradigms (Naïve, Advanced, Modular).\n\n**Significance**\n\n- The diagrams collectively illustrate how RAG transforms LLMs from static, pre‑trained models into **dynamic systems** that can access up‑to‑date external information, thereby overcoming knowledge‑staleness.  \n- The progression from inference‑only approaches to integrated pre‑training and fine‑tuning signals a **maturing research field** that seeks tighter coupling between retrieval and generation.  \n- By categorizing the paradigms (Naïve → Advanced → Modular), the visualizations provide a roadmap for future work, indicating where current challenges lie and how newer designs aim to improve robustness, scalability, and modularity.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 33,
+    "timestamp": "2026-03-19T15:55:40.144288",
+    "pdf": "SAMPLE_2",
+    "question": "\"In the RAG survey, what are the three quality scores used to evaluate RAG models and how is each one defined?\"",
+    "sub_questions": [
+      "\"In the RAG survey, what are the three quality scores used to evaluate RAG models and how is each one defined?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **Context Relevance** – Measures the precision and specificity of the retrieved context, ensuring that the retrieved passages are directly relevant to the query and minimizing the processing of extraneous content.  \n\n- **Answer Faithfulness** – Checks that the generated answer stays true to the retrieved context, preserving consistency with the source information and avoiding contradictions.  \n\n- **Answer Relevance** – Identified as one of the three primary quality scores for RAG models, but the retrieved chunks do not provide an explicit definition of this metric.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer fails to provide a definition for the third quality score (Answer Relevance), leaving the sub-question incompletely addressed.",
+    "corrected_answer": "- **Context relevance** – measures how well the retrieved passages match the user’s query or the information need.  \n- **Answer faithfulness** – assesses whether the generated answer stays true to the facts present in the retrieved context, avoiding hallucinations.  \n- **Answer relevance** – evaluates how pertinent the generated answer is to the original question, regardless of factual correctness.  \n\nThese three quality scores are used to evaluate a RAG model’s efficiency from different perspectives in the retrieval‑generation process.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "C",
+    "correcting_pipeline_name": "Hybrid"
+  },
+  {
+    "id": 34,
+    "timestamp": "2026-03-19T15:57:24.806603",
+    "pdf": "SAMPLE_2",
+    "question": "\"Describe the complete training setup of the Transformer base model including dataset size, hardware, training steps, optimizer, learning rate schedule, and regularization.\"",
+    "sub_questions": [
+      "\"Describe the complete training setup of the Transformer base model including dataset size, hardware, training steps, optimizer, learning rate schedule?",
+      "regularization.\"?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "regularization."
+    ],
+    "failure_reason": "The answer states insufficient context and does not provide any information for either sub-question.",
+    "corrected_answer": "- **Dataset** – The base model is trained on the WMT 2014 English‑to‑German (and English‑to‑French) translation tasks; the exact number of sentence pairs is not specified in the provided excerpts.  \n\n- **Hardware** – No specific hardware configuration for the base model is given in the retrieved chunks.  \n\n- **Training steps** – The base model is trained for **100 000 steps**, which corresponds to roughly **12 hours** of wall‑clock time (each step ≈ 0.4 s).  \n\n- **Optimizer** – **Adam** with parameters **β₁ = 0.9**, **β₂ = 0.98**, and **ε = 10⁻⁹**.  \n\n- **Learning‑rate schedule** –  \n  \\[\n  \\text{lrate}=d^{-0.5}\\;\\min\\bigl(\\text{step\\_num}^{-0.5},\\;\\text{step\\_num}\\times\\text{warmup\\_steps}^{-1.5}\\bigr)\n  \\]  \n  where **warmup_steps = 4000**. This schedule linearly increases the learning rate during the first 4000 steps and then decays it proportionally to the inverse square root of the step number.  \n\n- **Regularization** – Three regularization techniques are employed. The excerpts explicitly mention **dropout** (applied to the output of each sub‑layer and to the sum of embeddings, with a rate of **0.1** for the base model) and **label smoothing** (also set to **0.1**). The third technique is not detailed in the provided text.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "D",
+    "correcting_pipeline_name": "Dense+Reranker"
+  },
+  {
+    "id": 35,
+    "timestamp": "2026-03-19T15:58:13.318849",
+    "pdf": "SAMPLE_2",
+    "question": "\"What are the three RAG paradigms, what are the specific limitations of Naive RAG, and how does Advanced RAG fix each limitation specifically?\"",
+    "sub_questions": [
+      "\"What are the three RAG paradigms, what are the specific limitations of Naive RAG?",
+      "how does Advanced RAG fix each limitation specifically?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- **The three RAG paradigms**  \n  1. **Naive RAG** – the earliest methodology, consisting of indexing, retrieval, and generation.  \n  2. **Advanced RAG** – builds on Naive RAG with multiple optimization strategies around pre‑retrieval and post‑retrieval.  \n  3. **Modular RAG** – extends the previous paradigms to provide greater flexibility and modularity.\n\n- **Specific limitations of Naive RAG**  \n  1. **Over‑reliance on augmented information** – the system tends to echo retrieved content without adding insightful or synthesized information.  \n  2. **Insufficient retrieval quality** – the basic retrieval process does not guarantee that the most relevant or useful documents are selected.  \n  3. **Indexing issues** – the original indexing approach can be sub‑optimal, limiting effective retrieval.\n\n- **How Advanced RAG fixes each limitation**  \n  1. **Echoing problem** – by introducing pre‑retrieval and post‑retrieval strategies that improve the relevance and integration of retrieved material, Advanced RAG encourages generation that goes beyond simple repetition.  \n  2. **Retrieval quality** – the same pre‑retrieval and post‑retrieval optimizations directly target and enhance the quality of the retrieved documents.  \n  3. **Indexing issues** – Advanced RAG refines its indexing technique using a sliding‑window approach, which mitigates the shortcomings of the Naive RAG indexing process.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 36,
+    "timestamp": "2026-04-01T09:40:02.408979",
+    "pdf": "SAMPLE_2",
+    "question": "wht is reranking in rag",
+    "sub_questions": [
+      "wht is reranking in rag?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "Reranking in Retrieval‑Augmented Generation (RAG) is the post‑retrieval step that **reorders the retrieved document chunks**, placing the most relevant pieces first. This reordering both filters out less useful material and supplies a refined, higher‑quality context for the language model, improving the precision of the generated answer.\n\n**How it is done**\n- **Rule‑based methods**: use predefined metrics such as Diversity, Relevance, and Mean Reciprocal Rank (MRR).\n- **Model‑based methods**: employ encoder‑decoder models (e.g., SpanBERT), specialized rerankers (e.g., Cohere rerank, bge‑raranker‑large), or general large language models like GPT.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 37,
+    "timestamp": "2026-04-01T09:41:57.150474",
+    "pdf": "SAMPLE_2",
+    "question": "wht is cat",
+    "sub_questions": [
+      "wht is cat"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "wht is cat"
+    ],
+    "failure_reason": "The answer explicitly states it cannot answer due to insufficient context, providing no explanation or information about the sub-question.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 38,
+    "timestamp": "2026-04-18T01:19:58.907469",
+    "pdf": "SAMPLE_2",
+    "question": "How does the RAG survey distinguish between naive RAG, advanced RAG, and modular RAG?",
+    "sub_questions": [
+      "How does the RAG survey distinguish between naive RAG, advanced RAG?",
+      "modular RAG?"
+    ],
+    "pipeline_used": "A",
+    "pipeline_name": "Dense/FAISS",
+    "answer": "**Distinction among the three RAG paradigms**\n\n| Paradigm | Core structure | What sets it apart |\n|----------|----------------|--------------------|\n| **Naïve RAG** | A simple three‑step pipeline: **indexing → retrieval → generation**. | It is the earliest, “plain‑vanilla” approach with no extra optimization or modularization. |\n| **Advanced RAG** | Retains the same chain‑like flow as Naïve RAG but inserts **multiple optimization strategies** around the retrieval stage (pre‑retrieval) and after retrieval (post‑retrieval). | These optimizations aim to overcome the limitations of the naïve pipeline while keeping the overall linear structure. |\n| **Modular RAG** | Builds on the previous paradigms but **decomposes the system into more flexible, interchangeable modules**. | Greater overall flexibility; components can be re‑combined or replaced, allowing richer augmentation and adaptation beyond the fixed chain of Naïve/Advanced RAG. |\n\nIn summary, the survey classifies RAG evolution as:\n\n1. **Naïve RAG** – a straightforward indexing‑retrieval‑generation pipeline.  \n2. **Advanced RAG** – the same pipeline enriched with pre‑ and post‑retrieval optimizations.  \n3. **Modular RAG** – a more flexible, component‑based architecture that extends and refines the earlier designs.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 39,
+    "timestamp": "2026-04-18T01:43:44.831743",
+    "pdf": "SAMPLE_2",
+    "question": "From the RAG survey, explain how iterative retrieval, recursive retrieval, and adaptive retrieval differ, and what problem each one is trying to solve.",
+    "sub_questions": [
+      "From the RAG survey, explain how iterative retrieval, recursive retrieval?",
+      "adaptive retrieval differ?",
+      "what problem each one is trying to solve.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Iterative retrieval** – *not described in the provided survey excerpts.*  \n\n**Recursive retrieval**  \n- **What it is:** A retrieval strategy that repeatedly applies the retrieval process, using the output of one round as input for the next.  \n- **Problem it solves:** By chaining retrieval steps, it “enhances the efficiency and relevance of the retrieval,” allowing the system to drill down to more pertinent documents rather than relying on a single, static fetch.\n\n**Adaptive retrieval**  \n- **What it is:** A dynamic retrieval approach in which the LLM decides *when* and *what* to retrieve, rather than following a fixed retrieval schedule. Methods such as **Flare** [24] and **Self‑RAG** [25] exemplify this paradigm.  \n- **Problem it solves:** It overcomes the limitation of a “fixed RAG retrieval process” by evaluating the necessity of retrieval for each scenario, thereby preventing unnecessary or redundant queries and enabling the generation of more relevant, context‑aware responses.\n\n**Summary of differences**  \n| Approach | Retrieval pattern | Core idea | Issue addressed |\n|----------|-------------------|-----------|-----------------|\n| Iterative retrieval | – | – | – |\n| Recursive retrieval | Multiple successive retrieval passes, each building on the previous results | Improves relevance and efficiency by refining the document set step‑by‑step | Single‑shot retrieval may miss deeper or more specific information |\n| Adaptive retrieval | Retrieval is triggered conditionally by the model (e.g., via Flare, Self‑RAG) | The model actively determines the optimal moments and content for retrieval | Fixed, always‑on retrieval can waste resources and produce irrelevant context |\n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 40,
+    "timestamp": "2026-04-18T01:44:38.531106",
+    "pdf": "SAMPLE_2",
+    "question": "Using the RAG survey, explain how indexing, retrieval, and generation interact in Naive RAG, and why chunking is necessary before retrieval.",
+    "sub_questions": [
+      "Using the RAG survey, explain how indexing, retrieval?",
+      "generation interact in Naive RAG?",
+      "why chunking is necessary before retrieval.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**In Naive RAG the three stages form a linear pipeline:**\n\n1. **Indexing** creates a searchable vector store from the source material.  \n2. **Retrieval** uses the same embedding model to turn the user query into a vector, finds the most similar stored vectors, and returns the top‑K chunks.  \n3. **Generation** feeds the original question together with the retrieved chunks to a large language model, which synthesizes the final answer.\n\n---\n\n### How the stages interact  \n\n| Stage | What happens | How it connects to the next stage |\n|-------|--------------|-----------------------------------|\n| **Indexing** | • Raw documents (PDF, HTML, Word, Markdown, etc.) are cleaned and converted to plain text.<br>• The text is split into **chunks** (fixed‑size token groups).<br>• Each chunk is encoded by an embedding model into a vector and stored in a vector database. | The vector database holds the representations that the retrieval step will compare against the query vector. |\n| **Retrieval** | • The user’s query is encoded with the *same* embedding model used during indexing.<br>• Similarity scores are computed between the query vector and all chunk vectors.<br>• The system selects the top‑K chunks with the highest similarity. | The selected chunks become the expanded context that is concatenated with the query for the generation step. |\n| **Generation** | • The query and the retrieved chunks are combined into a prompt.<br>• A large language model (LLM) generates a response, either drawing on its internal knowledge or restricting itself to the supplied chunks.<br>• In multi‑turn dialogs, prior conversation history can also be added to the prompt. | The output is the final answer presented to the user. |\n\n---\n\n### Why chunking is required before retrieval  \n\n* **Context‑length limits** – LLMs can only process a limited number of tokens; splitting documents into smaller, digestible chunks ensures the retrieved material fits within those limits.  \n* **Efficient similarity search** – Vectors are computed for each chunk; searching a database of many small vectors is faster and more precise than comparing whole documents.  \n* **Noise control** – Smaller chunks contain less extraneous information, reducing the chance that irrelevant text will be retrieved. Larger chunks capture more context but “generate more noise, requiring longer processing time and higher costs” (Chunk 93).  \n* **Granularity for relevance** – Fixed‑size token chunks (e.g., 100, 256, 512) allow the system to retrieve the most pertinent pieces of information; without chunking, the retrieval phase would struggle with precision and recall, often selecting misaligned or irrelevant passages (Chunk 25, 94).  \n\nThus, chunking prepares the corpus for effective indexing, enables accurate retrieval, and ultimately supports the generation of coherent, context‑aware answers in Naive RAG.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "Heuristic keyword check (error: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)",
+    "corrected_answer": "**In Naive RAG the three stages form a linear pipeline:**\n\n1. **Indexing** creates a searchable vector store from the source material.  \n2. **Retrieval** uses the same embedding model to turn the user query into a vector, finds the most similar stored vectors, and returns the top‑K chunks.  \n3. **Generation** feeds the original question together with the retrieved chunks to a large language model, which synthesizes the final answer.\n\n---\n\n### How the stages interact  \n\n| Stage | What happens | How it connects to the next stage |\n|-------|--------------|-----------------------------------|\n| **Indexing** | • Raw documents (PDF, HTML, Word, Markdown, etc.) are cleaned and converted to plain text.<br>• The text is split into **chunks** (fixed‑size token groups).<br>• Each chunk is encoded by an embedding model into a vector and stored in a vector database. | The vector database holds the representations that the retrieval step will compare against the query vector. |\n| **Retrieval** | • The user’s query is encoded with the *same* embedding model used during indexing.<br>• Similarity scores are computed between the query vector and all chunk vectors.<br>• The system selects the top‑K chunks with the highest similarity. | The selected chunks become the expanded context that is concatenated with the query for the generation step. |\n| **Generation** | • The query and the retrieved chunks are combined into a prompt.<br>• A large language model (LLM) generates a response, either drawing on its internal knowledge or restricting itself to the supplied chunks.<br>• In multi‑turn dialogs, prior conversation history can also be added to the prompt. | The output is the final answer presented to the user. |\n\n---\n\n### Why chunking is required before retrieval  \n\n* **Context‑length limits** – LLMs can only process a limited number of tokens; splitting documents into smaller, digestible chunks ensures the retrieved material fits within those limits.  \n* **Efficient similarity search** – Vectors are computed for each chunk; searching a database of many small vectors is faster and more precise than comparing whole documents.  \n* **Noise control** – Smaller chunks contain less extraneous information, reducing the chance that irrelevant text will be retrieved. Larger chunks capture more context but “generate more noise, requiring longer processing time and higher costs” (Chunk 93).  \n* **Granularity for relevance** – Fixed‑size token chunks (e.g., 100, 256, 512) allow the system to retrieve the most pertinent pieces of information; without chunking, the retrieval phase would struggle with precision and recall, often selecting misaligned or irrelevant passages (Chunk 25, 94).  \n\nThus, chunking prepares the corpus for effective indexing, enables accurate retrieval, and ultimately supports the generation of coherent, context‑aware answers in Naive RAG.\n\nAdditional details:\n**Indexing**  \n- Raw documents (PDF, HTML, Word, Markdown, etc.) are first cleaned and extracted, then converted to a uniform plain‑text format.  \n- The text is split into smaller, manageable **chunks** so that it fits within the context window of downstream language models.  \n- Each chunk is passed through an **embedding model** to obtain a dense vector representation.  \n- These vectors are stored in a **vector database** (the index), enabling fast similarity search.  \n- In the *pre‑retrieval* stage, the index can be further improved by:  \n  1. Increasing data granularity (finer‑grained chunks).  \n  2. Optimizing the index structure itself.  \n  3. Adding metadata to chunks.  \n  4. Aligning content and using mixed‑retrieval strategies.  \n\n**Retrieval**  \n- When a user query arrives, the same embedding model used during indexing encodes the query into a vector.  \n- The system computes similarity scores between the query vector and all chunk vectors in the index.  \n- It **retrieves the top‑K chunks** with the highest similarity, providing the most relevant context for the query.  \n- *Post‑retrieval* refinements may be applied, such as:  \n  - **Re‑ranking** the retrieved chunks to place the most pertinent ones at the prompt’s edges.  \n  - **Context compression** to eliminate redundant or irrelevant material and keep the prompt concise.  \n\nTogether, indexing creates a searchable vector store of document fragments, and retrieval selects the most semantically similar fragments to augment the language model’s generation step.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 41,
+    "timestamp": "2026-04-18T02:47:58.572642",
+    "pdf": "SAMPLE_2",
+    "question": "What similarities and differences exist between the way the Transformer paper breaks computation into attention-based components and the way the RAG survey breaks a system into indexing, retrieval, and generation stages?",
+    "sub_questions": [
+      "What similarities and differences exist between the way the Transformer paper breaks computation into attention-based components and the way the RAG survey breaks a system into indexing, retrieval?",
+      "generation stages?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "**INSUFFICIENT CONTEXT**",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What similarities and differences exist between the way the Transformer paper breaks computation into attention-based components and the way the RAG survey breaks a system into indexing, retrieval?",
+      "generation stages?"
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and provides no information for any sub-question.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 42,
+    "timestamp": "2026-04-29T00:01:42.788366",
+    "pdf": "SAMPLE_2",
+    "question": "The Transformer paper mentions label smoothing as a regularization technique where \"the model learns to be more unsure, but improves accuracy.\" The RAG survey discusses \"Noise Robustness\" and \"Counterfactual Robustness\" as key evaluation abilities, and the GNHK dataset introduces special tokens like %SC% for \"illegible scribbles.\" Synthesizing these concepts, explain a strategy for training a robust RAG system on handwritten documents that leverages the philosophy of label smoothing during the post-retrieval generation phase to handle the inevitable noise (like %SC% tokens) and counterfactual information in the retrieved context.",
+    "sub_questions": [
+      "The Transformer paper mentions label smoothing as a regularization technique where \"the model learns to be more unsure, but improves accuracy.\" The RAG survey discusses \"Noise Robustness\" and \"Counterfactual Robustness\" as key evaluation abilities?",
+      "the GNHK dataset introduces special tokens like %SC% for \"illegible scribbles.\" Synthesizing these concepts, explain a strategy for training a robust RAG system on handwritten documents that leverages the philosophy of label smoothing during the post-retrieval generation phase to handle the inevitable noise (like %SC% tokens) and counterfactual information in the retrieved context.?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "**Strategy Overview**\n\n1. **Leverage Noise‑Robust Retrieval**  \n   - Ensure the retriever is evaluated for *Noise Robustness* (the ability to handle documents that contain irrelevant or corrupted symbols, such as illegible scribbles).  \n   - Use benchmarks that measure how well the system extracts useful passages despite the presence of noisy tokens.\n\n2. **Incorporate Counterfactual‑Robust Generation**  \n   - During the generation stage, test the model’s *Counterfactual Robustness*: its capacity to recognize and ignore contradictory or misleading information that may appear in the retrieved context.  \n   - Evaluation tools such as RAGAS, ARES, and TruLens can be employed to score how often the model discards known inaccuracies.\n\n3. **Adopt a “more‑unsure” Generation Philosophy**  \n   - Inspired by the label‑smoothing idea that a model learns to be less over‑confident, train the generator to output probability distributions that are slightly softened (i.e., not assigning all mass to a single token).  \n   - This encourages the model to keep alternative interpretations open, which helps it cope with noisy tokens (e.g., special markers for illegible scribbles) and contradictory facts.\n\n4. **Training Procedure for the Post‑Retrieval Generator**  \n   - **a. Retrieval Phase** – Retrieve passages from the handwritten‑document corpus, allowing noisy markers (such as `%SC%`) to remain in the text.  \n   - **b. Generation Phase** – Fine‑tune the generator on pairs of (retrieved passage, target answer) while applying a smoothing‑like loss that penalizes overly confident predictions.  \n   - **c. Robustness Checks** – Periodically evaluate on noise‑robustness and counterfactual‑robustness test sets; adjust the smoothing strength if the model becomes too hesitant or remains over‑confident.\n\n5. **Outcome**  \n   - The generator, trained to be modestly uncertain, is better equipped to **ignore illegible scribble tokens** and **reject misinformation** that may be present in the retrieved context, leading to higher answer relevance and faithfulness.\n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  }
+]

@@ -1,0 +1,95 @@
+{
+  "title": "A Survey on Retrieval-Augmented Generation: From Naive to Modular RAG",
+  "authors": [
+    "haofen.wang@tongji.edu.cn"
+  ],
+  "year": "unknown",
+  "venue": "unknown",
+  "tldr": "This survey provides a comprehensive overview of the evolution of Retrieval-Augmented Generation (RAG), categorizing its development into Naive, Advanced, and Modular paradigms.",
+  "abstract": "Large Language Models (LLMs) face significant challenges including hallucinations, outdated knowledge, and non-transparent reasoning, particularly in knowledge-intensive tasks. Retrieval-Augmented Generation (RAG) addresses these issues by integrating external knowledge from dynamic repositories into the LLM inference process. This paper categorizes the evolution of RAG into three main paradigms: Naive RAG, Advanced RAG, and Modular RAG, while analyzing key technologies in retrieval, generation, and augmentation. The survey also introduces an up-to-date evaluation framework and summarizes current assessment methods covering 26 tasks and nearly 50 datasets.",
+  "problem_statement": "LLMs suffer from hallucinations when handling queries beyond their training data and struggle with outdated or domain-specific information. Prior methods like unsupervised fine-tuning often fail to help LLMs learn new factual information effectively, creating a need for a system that can bridge the information gap using external databases.",
+  "key_contributions": [
+    "Categorized the RAG research landscape into three distinct paradigms: Naive RAG, Advanced RAG, and Modular RAG.",
+    "Provided a detailed technical analysis of the tripartite RAG foundation: Retrieval, Generation, and Augmentation.",
+    "Summarized current assessment methods, covering 26 tasks and nearly 50 datasets, and introduced an up-to-date evaluation framework.",
+    "Analyzed the evolution of RAG from inference-only stages to integrated fine-tuning and pre-training techniques."
+  ],
+  "architecture": {
+    "overview": "The RAG framework is built on a tripartite foundation consisting of retrieval, generation, and augmentation, evolving from a simple sequential pipeline to complex modular systems.",
+    "components": [
+      "Retrieval: Locates relevant document chunks using semantic similarity.",
+      "Generation: Synthesizes the query and retrieved context into a coherent response.",
+      "Augmentation: Integrates retrieved information into the prompt or model process."
+    ],
+    "key_design_choices": [
+      "Naive RAG uses a 'Retrieve-Read' framework for simplicity.",
+      "Advanced RAG introduces pre-retrieval and post-retrieval optimization to improve quality.",
+      "Modular RAG allows for non-sequential processing and module substitution for greater flexibility."
+    ]
+  },
+  "methods": [
+    "Indexing: Splitting documents into chunks, encoding them into vectors, and storing them in a vector databases.",
+    "Retrieval: Computing similarity scores between query vectors and stored chunk vectors to find Top-k results.",
+    "Query Optimization: Using methods like query rewriting, transformation, and expansion to improve retrieval.",
+    "Post-retrieval: Employing re-ranking and context compression to refine the information sent to the LLM.",
+    "Modular components: Utilizing specialized modules like Search (for engines/KGs), Memory (to guide retrieval), and TaskAdapter (for downstream tasks)."
+  ],
+  "training_details": {
+    "datasets_used": [
+      "Wikipedia",
+      "CommonCrawl",
+      "MSMARCO",
+      "FactoidWiki",
+      "C4",
+      "Pile",
+      "Arxiv",
+      "PubMed",
+      "BEIR"
+    ],
+    "optimizer": "not specified",
+    "hardware": "not specified",
+    "training_time": "not specified",
+    "other": [
+      "RAG research stages include pre-training, fine-tuning, and inference."
+    ]
+  },
+  "results": [
+    "RAG consistently outperforms unsupervised fine-tuning for both existing knowledge and entirely new knowledge in knowledge-intensive tasks.",
+    "Advanced and Modular RAG are noted to be cost-effective and surpass the performance of native LLMs."
+  ],
+  "baselines_compared": [
+    "Unsupervised Fine-Tuning — RAG outperforms this for learning new factual information.",
+    "Prompt Engineering — Differentiated by lower requirements for external knowledge and model adaptation.",
+    "Naive RAG — Used as a baseline for Advanced and Modular paradigms."
+  ],
+  "ablation_findings": [
+    "The paper notes that feeding all relevant documents directly into LLMs can lead to information overload and dilute focus on key details."
+  ],
+  "datasets": [
+    "Wikipedia — Primary retrieval source for many ODQA tasks.",
+    "CommonCrawl — Used in pre-training iterative RAG models like Atlas.",
+    "MSMARCO — Used for tuning in AAR.",
+    "HotpotQA — A version of the dataset dated 1st October, 2017.",
+    "DPR — A version dated 20th December, 2018."
+  ],
+  "limitations": [
+    "Retrieval challenges: Issues with precision, recall, selection of misaligned/irrelevant chunks, and missing crucial information.",
+    "Generation challenges: Hallucinations (content not supported by context), irrelevance, toxicity, or bias.",
+    "Augmentation challenges: Redundancy from multiple sources, difficulty mining significance, and maintaining stylistic/tonal consistency.",
+    "Semi-structured data: Conventional text splitting can corrupt tables in PDFs, complicating semantic searches."
+  ],
+  "future_work": [
+    "Integrating RAG with other technologies like reinforcement learning.",
+    "Improving the handling of semi-structured and structured data (Knowledge Graphs).",
+    "Refining the interaction between RAG and fine-tuning to achieve optimal results."
+  ],
+  "related_work_context": "RAG research emerged alongside the Transformer architecture and has evolved from early pre-training model (PTM) refinements to the paradigm shift caused by ChatGPT's in-context learning capabilities.",
+  "impact_and_significance": "This work provides a roadmap for the field, moving from simple retrieval-read pipelines to highly flexible modular architectures that enable real-time knowledge updates and high interpretability in LLMs.",
+  "keywords": [
+    "Large language model",
+    "retrieval-augmented generation",
+    "natural language processing",
+    "information retrieval"
+  ],
+  "_pdf_name": "SAMPLE_2"
+}

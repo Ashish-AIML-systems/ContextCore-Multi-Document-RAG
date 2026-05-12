@@ -1,0 +1,98 @@
+{
+  "title": "Attention Is All You Need",
+  "authors": [
+    "Ashish Vaswani",
+    "Noam Shazeer",
+    "Niki Parmar",
+    "Jakob Uszkoreit",
+    "Llion Jones",
+    "Aidan N. Gomez",
+    "Lukasz Kaiser",
+    "Illia Polosukhin"
+  ],
+  "year": "2017",
+  "venue": "NIPS 2017",
+  "tldr": "A new network architecture based entirely on attention mechanisms that replaces recurrence and convolutions to enable significantly more parallelization and faster training.",
+  "abstract": "The paper proposes the Transformer, a novel network architecture that dispenses with recurrence and convolutions entirely, relying solely on attention mechanisms. This approach allows for significantly more parallelization during training compared to dominant recurrent or convolutional models. By using multi-head self-attention, the model can capture global dependencies regardless of their distance in the sequence. The Transformer achieves state-of-the-art results on English-to-German and English-to-French translation tasks while requiring substantially less training time.",
+  "problem_statement": "Existing state-of-the-art sequence transduction models rely on recurrent neural networks (RNNs) or convolutional neural networks (CNNs), which suffer from sequential computation constraints. Recurrent models factor computation along symbol positions, precluding parallelization within training examples and making it difficult to learn long-range dependencies due to the linear path length between positions.",
+  "key_contributions": [
+    "Introduced the Transformer, the first transduction model to rely entirely on self-attention, eschewing recurrence and convolution.",
+    "Proposed Scaled Dot-Product Attention to improve computational efficiency and training stability.",
+    "Developed Multi-Head Attention to allow the model to jointly attend to information from different representation subspaces at different positions.",
+    "Achieved new state-of-the-art BLEU scores on WMT 2014 English-to-German (28.4) and English-to-French (41.8) tasks."
+  ],
+  "architecture": {
+    "overview": "An encoder-decoder structure consisting of stacked self-attention and point-wise, fully connected layers.",
+    "components": [
+      "Encoder: A stack of N=6 identical layers, each containing a multi-head self-attention mechanism and a position-wise feed-forward network.",
+      "Decoder: A stack of N=6 identical layers, each containing multi-head self-attention, an encoder-decoder attention layer, and a position-wise feed-forward network.",
+      "Multi-Head Attention: Parallel attention layers that project queries, keys, and values into different subspaces.",
+      "Position-wise Feed-Forward Networks (FFN): Two linear transformations with a ReLU activation applied to each position separately.",
+      "Positional Encodings: Sinusoidal functions added to embeddings to provide information about token positions."
+    ],
+    "key_design_choices": [
+      "Use of Scaled Dot-Product Attention to allow for highly optimized matrix multiplication.",
+      "Implementation of residual connections followed by layer normalization around each sub-layer to facilitate training.",
+      "Use of masking in the decoder to prevent positions from attending to subsequent positions, preserving the auto-regressive property.",
+      "Sinusoidal positional encodings to potentially allow the model to extrapolate to longer sequence lengths."
+    ]
+  },
+  "methods": [
+    "Scaled Dot-Product Attention — computes attention using the formula softmax(QK^T / sqrt(dk))V to handle large dk values and prevent small gradients.",
+    "Multi-Head Attention — linearly projects queries, keys, and values h times to allow joint attention to different subspaces.",
+    "Residual Dropout — applied to the output of each sub-layer before adding to the input and normalizing.",
+    "Label Smoothing — used with epsilon=0.1 to improve accuracy and BLEU scores by making the model less overconfident."
+  ],
+  "training_details": {
+    "datasets_used": [
+      "WMT 2014 English-to-German (4.5 million sentence pairs)",
+      "WMT 2014 English-to-French (36 million sentences)"
+    ],
+    "optimizer": "Adam with beta1=0.9, beta2=0.98, and epsilon=10^-9; learning rate follows a specific warmup schedule with 4000 warmup steps.",
+    "hardware": "8 NVIDIA P100 GPUs",
+    "training_time": "Base model: 12 hours (100,000 steps); Big model: 3.5 days (300,000 steps)",
+    "other": [
+      "Label smoothing with epsilon=0.1",
+      "Dropout rate P_drop=0.1 for base model",
+      "Beam search with beam size 4 and length penalty alpha=0.6"
+    ]
+  },
+  "results": [
+    "28.4 BLEU on WMT 2014 English-to-German, outperforming existing best results (including ensembles) by over 2 BLEU.",
+    "41.8 BLEU on WMT 2014 English-to-French, establishing a new single-model state-of-the-art.",
+    "Generalizes to English constituency parsing using both large and limited training data."
+  ],
+  "baselines_compared": [
+    "ByteNet — achieved 23.75 BLEU on EN-DE.",
+    "GNMT+RL — achieved 24.6 BLEU on EN-DE and 39.92 BLEU on EN-FR.",
+    "ConvS2S — achieved 25.16 BLEU on EN-DE and 40.46 BLEU on EN-FR.",
+    "MoE — achieved 26.03 BLEU on EN-DE and 40.56 BLEU on EN-FR.",
+    "Deep-Att+PosUnk Ensemble — achieved 40.4 BLEU on EN-DE."
+  ],
+  "ablation_findings": [
+    "Single-head attention is 0.9 BLEU worse than the best setting.",
+    "Reducing attention key size (dk) hurts model quality (Variation B).",
+    "Sinusoidal and learned positional embeddings produced nearly identical results."
+  ],
+  "datasets": [
+    "WMT 2014 English-to-German — 4.5M sentence pairs, byte-pair encoding, 37k vocabulary.",
+    "WMT 2014 English-to-French — 36M sentences, word-piece vocabulary, 32k tokens."
+  ],
+  "limitations": [
+    "The Transformer's constant number of operations in self-attention results in reduced effective resolution due to averaging attention-weighted positions.",
+    "Memory constraints still limit sequence lengths and batching across examples."
+  ],
+  "future_work": [
+    "Restricting self-attention to a neighborhood of size r to improve computational performance for very long sequences."
+  ],
+  "related_work_context": "The Transformer builds on the concept of attention mechanisms used in conjunction with RNNs but departs from them by removing recurrence and convolution entirely. It addresses the limitations of previous models like ByteNet and ConvS2S, which had linear or logarithmic growth in operations required to relate distant positions.",
+  "impact_and_significance": "The Transformer revolutionized sequence modeling by enabling massive parallelization and significantly reducing training time. It established a new state-of-the-art in translation quality and provided a highly efficient architecture that has since become the foundation for many modern deep learning models.",
+  "keywords": [
+    "Transformer",
+    "Attention Mechanism",
+    "Neural Machine Translation",
+    "Self-Attention",
+    "Parallelization"
+  ],
+  "_pdf_name": "1706.03762v7"
+}

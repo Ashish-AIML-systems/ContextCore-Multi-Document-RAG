@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-04-09T11:03:30.043502",
+    "pdf": "AI-Module 1",
+    "question": "Define Artificial Intelligence (AI) and explain its four approaches in detail.",
+    "sub_questions": [
+      "Define Artificial Intelligence (AI) and explain its four approaches in detail.?"
+    ],
+    "pipeline_used": "A",
+    "pipeline_name": "Dense/FAISS",
+    "answer": "Artificial Intelligence (AI) refers to systems—often called intelligent agents—that perceive their environment through sensors and act to achieve desired outcomes, such as finding routes in a GPS navigation system or planning moves in a chess game.\n\n**Four main AI approaches**\n\n1. **Search and Planning**  \n   - Agents explore possible actions to determine a sequence that leads from the current state to a goal (e.g., routing from point A to B while considering road conditions and user preferences).  \n   - These algorithms can become computationally expensive in complex environments, and agents may have difficulty prioritizing when multiple goals conflict.\n\n2. **Goal‑Based Agents**  \n   - Components: sensors, internal state, a model of how the world evolves, explicit goals, and decision logic that selects actions moving the agent toward its goal.  \n   - They “think ahead” by asking, “What will the world look like if I take this action?” and “Will that bring me closer to my goal?”\n\n3. **Utility‑Based Agents**  \n   - Assign a numerical utility score to each state, allowing comparison of states that all achieve the same goal.  \n   - The utility reflects how useful or desirable a state is, providing gradations rather than a simple binary “goal achieved / not achieved” evaluation.\n\n4. **Learning Agents**  \n   - Improve performance over time by learning from their experiences, adapting their behavior as they gather more data about the environment.\n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  }
+]

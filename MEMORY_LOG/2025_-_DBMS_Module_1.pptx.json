@@ -1,0 +1,117 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-04-18T00:53:35.483595",
+    "pdf": "2025 - DBMS Module 1.pptx",
+    "question": "Explain the three-tier architecture for modern web applications.",
+    "sub_questions": [
+      "Explain the three-tier architecture for modern web applications.?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "The three‑tier architecture separates a web application into:\n\n1. **Client (presentation) tier** – the web browser that displays pages to the user.  \n2. **Application (middle) tier** – an application server or web server that runs the application programs and stores the business rules (procedures or constraints) needed to process requests.  \n3. **Database (data) tier** – the database server that holds the persistent data accessed by the middle tier.  \n\nThe middle tier acts as an intermediary, handling business‑logic processing and mediating all data access between the client and the database. [PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "FIX A — PARTIAL CONTEXT with uncovered sub-questions (< 30% keyword overlap): ['Explain the three-tier architecture for modern web applications.?']",
+    "corrected_answer": "**Three‑Tier Architecture**\n\n1. **Presentation tier (client side)** – Consists of the web pages that are displayed in the user’s browser. This tier handles the user interface and interaction.  \n\n2. **Application tier (middle tier)** – Implemented by an application server or web server. It runs the application programs, stores business rules (procedures or constraints), and mediates all requests between the presentation tier and the data tier.  \n\n3. **Data tier (database server)** – Holds the persistent data. The application tier accesses this tier to read or modify data according to the business rules.  ",
+    "correcting_pipeline": "A",
+    "correcting_pipeline_name": "Dense/FAISS"
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-04-18T01:03:52.121323",
+    "pdf": "2025 - DBMS Module 1.pptx",
+    "question": "Explain the three-tier architecture for modern web applications",
+    "sub_questions": [
+      "Explain the three-tier architecture for modern web applications?"
+    ],
+    "pipeline_used": "B",
+    "pipeline_name": "BM25/Sparse",
+    "answer": "**Three‑tier architecture for modern web applications**\n\n1. **Presentation tier (client side)**\n   - Consists of the web pages that are displayed in the user’s browser.  \n   - It is the layer where users interact with the application, sending requests and receiving responses.\n\n2. **Application tier (middle tier)**\n   - Implemented by an **application server** or **Web server**, depending on the specific system.  \n   - Acts as an intermediary between the client and the database.  \n   - Executes the application programs and holds the business rules (procedures or constraints) that govern how data is accessed and manipulated.\n\n3. **Data tier (database server)**\n   - Stores the persistent data used by the application.  \n   - Responds to requests from the application tier to retrieve, insert, update, or delete data.\n\n**How the tiers work together**\n\n- The client sends a request (e.g., a form submission) to the application server.  \n- The application server processes the request using its business logic, then issues the appropriate queries to the database server.  \n- The database server returns the requested data to the application server, which formats the result and sends it back to the client for display.\n\nThis separation of concerns—presentation, business logic, and data storage—provides modularity, scalability, and easier maintenance for modern web applications.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-04-18T01:20:17.610709",
+    "pdf": "2025 - DBMS Module 1.pptx",
+    "question": "Explain the three-tier architecture for modern web applications from the DBMS material, including the role of each tier and how they interact.",
+    "sub_questions": [
+      "Explain the three-tier architecture for modern web applications from the DBMS material, including the role of each tier and how they interact.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Three‑tier architecture for modern Web applications**\n\n1. **Presentation tier (client)** – the user‑interface layer that runs in the Web browser.  \n   *It is the point where users issue queries or commands and view the results.*\n\n2. **Application tier (middle tier)** – the **application server** or **Web server**.  \n   *It acts as an intermediary: it runs the application programs, stores the business rules (procedures or constraints), and receives the client’s requests.*\n\n3. **Data tier (database server)** – the DBMS that holds the persistent data.  \n   *It executes the data‑access operations requested by the application tier.*\n\n**Interaction flow**\n\n- The client sends a query or command to the **application tier**.  \n- The application server applies the stored **business rules** and translates the request into data‑access operations.  \n- It forwards these operations to the **database server**, which retrieves or updates the required data.  \n- The database server returns the (often partially processed) result to the application server.  \n- The application server then passes the result back to the **client**, where it is presented to the user.\n\nThus the three tiers—**user interface**, **application logic**, and **data access**—work together, each handling a distinct responsibility while communicating through well‑defined interfaces.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-04-18T01:20:38.096490",
+    "pdf": "2025 - DBMS Module 1.pptx",
+    "question": "What implicit properties define a database according to the DBMS notes, and how do those properties distinguish a database from a random collection of data?",
+    "sub_questions": [
+      "What implicit properties define a database according to the DBMS notes?",
+      "how do those properties distinguish a database from a random collection of data?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Implicit properties that define a database**\n\n1. **Representation of a real‑world domain (miniworld/UoD)**  \n   - The data stored correspond to some aspect of the real world.  \n   - When the real‑world situation changes, the database is updated to reflect those changes.\n\n2. **Logical coherence and inherent meaning**  \n   - The collection of data is organized so that the items relate to one another in a meaningful way.  \n   - A random assortment of data lacks this logical structure and therefore cannot be correctly called a database.\n\n3. **Purpose‑driven design and intended users**  \n   - A database is deliberately designed, built, and populated for a specific purpose.  \n   - It has a defined group of users and pre‑conceived applications that those users will employ.\n\n4. **Size and complexity are unrestricted**  \n   - A database may be very small (a few hundred simple records) or extremely large and complex (e.g., a commercial system like Amazon.com).\n\n**How these properties separate a database from a random collection of data**\n\n- **Domain relevance:** A random data set does not necessarily model any real‑world entity, whereas a database explicitly mirrors a miniworld and is kept in sync with it.  \n- **Structured meaning:** Random data lacks the logical relationships and constraints that give a database its coherent meaning; without such structure the data cannot support reliable queries or applications.  \n- **Intentional construction:** Random data is not created with a specific purpose, user group, or application in mind, while a database is purpose‑built, targeting particular users and uses.  \n- **Scalability is irrelevant to the definition:** Both a tiny list of names and a massive commercial system satisfy the definition, showing that size alone does not determine “database‑ness.”  \n\nTogether, these implicit properties ensure that a database is a purposeful, coherent, and real‑world‑aligned collection of data, distinguishing it from an arbitrary pile of unrelated information.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-04-18T01:44:56.614130",
+    "pdf": "2025 - DBMS Module 1.pptx",
+    "question": "From the DBMS notes, explain the difference between the terms database, DBMS, and database system, and describe how users or applications interact with them.",
+    "sub_questions": [
+      "From the DBMS notes, explain the difference between the terms database, DBMS?",
+      "database system?",
+      "describe how users or applications interact with them.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Database vs. DBMS vs. Database system**\n\n| Term | What it is | What it contains | Role in the overall environment |\n|------|------------|------------------|---------------------------------|\n| **Database** | The persistent collection of data that an organization stores. | The actual data together with its logical structure (tables, records, relationships) and constraints. | It is the “what” – the information that users and applications need to retrieve or update. |\n| **DBMS (Database Management System)** | General‑purpose software that manages a database. | The engine that handles storage, retrieval, transaction processing, concurrency control, recovery, and the catalog (metadata) describing the database structure. | It is the “how” – it provides the mechanisms and services that make the database usable. |\n| **Database system** | The complete package formed by the database **plus** the DBMS software (including the catalog). | Data + DBMS + metadata (catalog). | It is the full environment that users and applications interact with. |\n\n**How users and applications interact**\n\n1. **User interfaces supplied by the DBMS** – The DBMS offers several kinds of front‑ends to accommodate different skill levels and purposes:  \n   * **Query languages** (e.g., SQL) for casual or analytical users.  \n   * **Programming language APIs** for application developers.  \n   * **Forms or command‑code interfaces** for parametric users.  \n   * **Menu‑driven screens** for stand‑alone (non‑programmer) users.  \n\n2. **Interaction flow**  \n   * A user or an application selects the appropriate interface and issues a request (query, update, transaction).  \n   * The DBMS receives the request, consults the **catalog** (metadata) to understand the database’s structure and constraints, and then performs the required storage or retrieval operations.  \n   * The underlying data and the DBMS files reside on disk; the operating system schedules the actual disk reads/writes, while the DBMS enforces consistency, concurrency, and recovery.\n\n3. **Result** – The requester obtains the desired data or confirmation that the update succeeded, without needing to know how the data are physically stored or how transactions are managed.\n\nIn summary, the **database** holds the data, the **DBMS** is the software that controls and manipulates that data, and together they form the **database system**—the complete environment through which users and applications access the information via the various interfaces the DBMS provides.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-04-18T01:47:00.315895",
+    "pdf": "2025 - DBMS Module 1.pptx",
+    "question": "According to the DBMS material, what implicit properties define a database, and which examples are used to show that a database can vary in size, complexity, and mode of maintenance?",
+    "sub_questions": [
+      "According to the DBMS material, what implicit properties define a database?",
+      "which examples are used to show that a database can vary in size, complexity?",
+      "mode of maintenance?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Implicit properties that define a database**\n\n1. **Representation of the real world (miniworld/UoD).**  \n   A database models some aspect of the real world; any change in that “miniworld” is reflected in the database.\n\n2. **Logical coherence and inherent meaning.**  \n   The data must form a logically coherent collection with meaning. A random assortment of data does **not** qualify as a database.\n\n3. **Purpose‑driven design.**  \n   A database is deliberately designed, built, and populated for a specific purpose. It has an intended group of users and predefined applications that those users will employ.\n\n**Examples illustrating variability in size and complexity (and implicitly in maintenance)**  \n\n- **Small, simple database:** a list of names and addresses containing only a few hundred records, each with a simple structure.  \n- **Large, commercial database:** the Amazon.com database, which exemplifies a massive, complex data set.\n\nThese two examples are used to demonstrate that a database can be **any size** (from a few hundred records to the scale of a global e‑commerce platform) and **any level of structural complexity** (simple flat records versus a highly intricate commercial system).  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "mode of maintenance?"
+    ],
+    "failure_reason": "The answer does not provide any information about the mode of maintenance examples.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  }
+]

@@ -1,0 +1,603 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-03-12T10:08:07.928436",
+    "pdf": "1706.03762v7",
+    "question": "What BLEU score did the Transformer big model achieve on the WMT 2014 English-to-German translation task?",
+    "sub_questions": [
+      "What BLEU score did the Transformer big model achieve on the WMT 2014 English-to-German translation task?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "The Transformer big model achieved a BLEU score of **28.4** on the WMT 2014 English‑to‑German translation task.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-03-12T10:08:19.035977",
+    "pdf": "1706.03762v7",
+    "question": "How many attention heads and what value of dk and dv does the base Transformer model use?",
+    "sub_questions": [
+      "How many attention heads and what value of dk and dv does the base Transformer model use?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "8 attention heads, with dk = dv = 64.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-03-12T10:08:35.496248",
+    "pdf": "1706.03762v7",
+    "question": "How long did it take to train the Transformer big model and on how many GPUs?",
+    "sub_questions": [
+      "How long did it take to train the Transformer big model and on how many GPUs?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "It took 3.5 days to train the Transformer big model, using 8 GPUs.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-03-12T10:08:57.211166",
+    "pdf": "1706.03762v7",
+    "question": "What optimizer was used to train the Transformer, what were the beta values, and what was the warmup steps setting?",
+    "sub_questions": [
+      "What optimizer was used to train the Transformer, what were the beta values, and what was the warmup steps setting?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "Adam optimizer with β₁ = 0.9, β₂ = 0.98, and a warmup_steps setting of 4000.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-03-12T10:09:06.550222",
+    "pdf": "1706.03762v7",
+    "question": "How does the Transformer's approach to handling long-range dependencies differ from recurrent and convolutional models, and why is this an advantage?",
+    "sub_questions": [
+      "How does the Transformer's approach to handling long-range dependencies differ from recurrent and convolutional models, and why is this an advantage?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "The Transformer handles long‑range dependencies with self‑attention, which links every position to every other position in a single layer so the number of operations needed to relate two arbitrary tokens is constant. Recurrent layers must process tokens sequentially, requiring O(n) steps, and convolutional layers need a number of steps that grows linearly (or logarithmically for some variants) with the distance between positions. Because the Transformer’s constant‑step, fully connected attention makes distant relationships as easy to learn as nearby ones, it trains faster and captures long‑range dependencies more effectively than recurrent or convolutional models.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-03-12T10:09:34.385539",
+    "pdf": "1706.03762v7",
+    "question": "According to Table 3, what happens to model quality when the number of attention heads is reduced to 1?",
+    "sub_questions": [
+      "According to Table 3, what happens to model quality when the number of attention heads is reduced to 1?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "According to Table 3, what happens to model quality when the number of attention heads is reduced to 1?"
+    ],
+    "failure_reason": "The response does not provide any answer to the sub-question; it states insufficient context and does not address the query.",
+    "corrected_answer": "Reducing the attention heads to a single head lowers model quality, resulting in a drop of about 0.9 BLEU compared with the best‑performing setting.",
+    "correcting_pipeline": "D",
+    "correcting_pipeline_name": "Dense+Reranker"
+  },
+  {
+    "id": 7,
+    "timestamp": "2026-03-12T10:09:46.451215",
+    "pdf": "1706.03762v7",
+    "question": "What does Table 4 show about the Transformer's performance on English constituency parsing compared to semi-supervised methods?",
+    "sub_questions": [
+      "What does Table 4 show about the Transformer's performance on English constituency parsing compared to semi-supervised methods?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "Table 4 reports F1 scores on the WSJ 23 test set.  \n- A 4‑layer Transformer trained only on the WSJ (discriminative) attains **91.3 %**, which is equal to the semi‑supervised results of Zhu et al. (2013) and Huang & Harper (2009) and only slightly below the best WSJ‑only model (Dyer et al. 2016, 91.7 %).  \n- When the same Transformer is used in a semi‑supervised setting, it reaches **92.7 %**, surpassing the other semi‑supervised baselines listed (e.g., McClosky et al. 2006 and Vinyals & Kaiser 2014 at 92.1 %) and approaching the top multi‑task (93.0 %) and generative (93.3 %) systems.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 8,
+    "timestamp": "2026-03-12T10:10:31.598106",
+    "pdf": "1706.03762v7",
+    "question": "The Transformer paper proposes self-attention as a replacement for recurrence. How does the RAG survey's description of embedding models and dense retrieval relate to the self-attention mechanism introduced in the Transformer?",
+    "sub_questions": [
+      "The Transformer paper proposes self-attention as a replacement for recurrence. How does the RAG survey's description of embedding models and dense retrieval relate to the self-attention mechanism introduced in the Transformer?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "The Transformer paper proposes self-attention as a replacement for recurrence. How does the RAG survey's description of embedding models and dense retrieval relate to the self-attention mechanism introduced in the Transformer?"
+    ],
+    "failure_reason": "The response states insufficient context and does not address the sub-question at all.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 9,
+    "timestamp": "2026-03-15T19:19:34.178545",
+    "pdf": "1706.03762v7",
+    "question": "2. Convert Table 3 into JSON.",
+    "sub_questions": [
+      "2. Convert Table 3 into JSON.?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "2. Convert Table 3 into JSON."
+    ],
+    "failure_reason": "The response indicates insufficient context and does not provide the requested JSON conversion, leaving the sub-question unanswered.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 10,
+    "timestamp": "2026-03-18T10:14:19.267309",
+    "pdf": "1706.03762v7",
+    "question": "\"What is the BLEU score of the Transformer (big) model on the English-to-German translation task?\"",
+    "sub_questions": [
+      "\"What is the BLEU score of the Transformer (big) model on the English-to-German translation task?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "28.4 BLEU.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 11,
+    "timestamp": "2026-03-18T10:14:50.157295",
+    "pdf": "1706.03762v7",
+    "question": "\"How many images are in the GNHK dataset and how many regions were they collected from?\"",
+    "sub_questions": [
+      "\"How many images are in the GNHK dataset and how many regions were they collected from?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "\"How many images are in the GNHK dataset and how many regions were they collected from?"
+    ],
+    "failure_reason": "FIX 2 — Numerical completeness check failed: the answer contains no numeric values for sub-questions that explicitly require numbers or counts: ['\"How many images are in the GNHK dataset and how many regions were they collected from?']",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 12,
+    "timestamp": "2026-03-18T10:15:31.348782",
+    "pdf": "1706.03762v7",
+    "question": "What are the recall, precision, and f-measure scores for both Mask R-CNN and Faster R-CNN on the GNHK text localisation benchmark?",
+    "sub_questions": [
+      "What are the recall, precision, and f-measure scores for both Mask R-CNN and Faster R-CNN on the GNHK text localisation benchmark?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "What are the recall, precision, and f-measure scores for both Mask R-CNN and Faster R-CNN on the GNHK text localisation benchmark?"
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and provides no numeric scores, leaving the sub-question unanswered.",
+    "corrected_answer": "- **Mask R-CNN**: Recall 0.8237, Precision 0.9079, F‑measure 0.864  \n- **Faster R-CNN**: Recall 0.8077, Precision 0.9215, F‑measure 0.860",
+    "correcting_pipeline": "C",
+    "correcting_pipeline_name": "Hybrid"
+  },
+  {
+    "id": 13,
+    "timestamp": "2026-03-18T10:19:25.355102",
+    "pdf": "1706.03762v7",
+    "question": "Can you explain in detail the complete training setup used for the Transformer base model, including the dataset size, hardware used, number of training steps, optimizer, learning rate schedule, and regularization techniques applied?",
+    "sub_questions": [
+      "Can you explain in detail the complete training setup used for the Transformer base model, including the dataset size, hardware used, number of training steps, optimizer, learning rate schedule, and regularization techniques applied?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "Can you explain in detail the complete training setup used for the Transformer base model, including the dataset size, hardware used, number of training steps, optimizer, learning rate schedule, and regularization techniques applied?"
+    ],
+    "failure_reason": "Answer contains insufficiency signal. (heuristic fallback — Groq error: Client error '429 Too Many Requests' for url 'https://api.groq.com/openai/v1/chat/completions'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429)",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 14,
+    "timestamp": "2026-03-18T11:48:53.854553",
+    "pdf": "1706.03762v7",
+    "question": "In the RAG survey, what are the two main challenges that semi-structured data like PDFs pose for conventional RAG systems, and what two solution approaches are mentioned?",
+    "sub_questions": [
+      "In the RAG survey, what are the two main challenges that semi-structured data like PDFs pose for conventional RAG systems, and what two solution approaches are mentioned?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [
+      "In the RAG survey, what are the two main challenges that semi-structured data like PDFs pose for conventional RAG systems, and what two solution approaches are mentioned?"
+    ],
+    "failure_reason": "The answer explicitly states insufficient context and does not provide any information about the challenges or solution approaches.",
+    "corrected_answer": "- **Challenges**\n  1. Text‑splitting can unintentionally break tables, corrupting the data during retrieval.  \n  2. The presence of tables complicates semantic‑similarity searches.\n\n- **Solution approaches**\n  1. Use the code capabilities of LLMs to run Text‑2‑SQL queries on tables (e.g., TableGPT).  \n  2. Transform tables into plain text and apply text‑based methods.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Hybrid+Reranker"
+  },
+  {
+    "id": 15,
+    "timestamp": "2026-03-18T12:08:59.354740",
+    "pdf": "1706.03762v7",
+    "question": "In the Transformer paper, how does the BLEU score change when reducing attention heads to 1, and how does that compare to the base model performance?",
+    "sub_questions": [
+      "In the Transformer paper, how does the BLEU score change when reducing attention heads to 1?",
+      "how does that compare to the base model performance?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "The base Transformer model attains **28.4 BLEU** on the WMT 2014 English‑German translation task (and **41.8 BLEU** on English‑French).  \nThe retrieved passages do not provide the BLEU score obtained when the number of attention heads is reduced to 1, so the exact change cannot be reported from this context.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 16,
+    "timestamp": "2026-03-18T12:10:07.577112",
+    "pdf": "1706.03762v7",
+    "question": "How does the role of attention in Transformer architecture differ from its implicit role in RAG retrieval mechanisms?",
+    "sub_questions": [
+      "How does the role of attention in Transformer architecture differ from its implicit role in RAG retrieval mechanisms?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "In a Transformer, attention is an explicit computational layer that maps a query and a set of key‑value pairs to an output. Self‑attention lets every position in the encoder (or decoder) attend to all positions in the previous layer, while encoder‑decoder attention lets each decoder position attend to all encoder positions. These mechanisms are realized with multi‑head attention modules that weight values according to query‑key similarity.  \n\nThe provided chunks do not describe how attention functions within Retrieval‑Augmented Generation (RAG) retrieval mechanisms, so a direct comparison cannot be fully drawn from the available context.  \n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 17,
+    "timestamp": "2026-03-18T12:53:47.879571",
+    "pdf": "1706.03762v7",
+    "question": "\"What is the BLEU score of the Transformer big model on English-to-German, and how many training steps did it run?\"",
+    "sub_questions": [
+      "\"What is the BLEU score of the Transformer big model on English-to-German?",
+      "how many training steps did it run?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "The Transformer big model achieves a BLEU score of **28.4** on the WMT 2014 English‑to‑German translation task.  \nThe retrieved context does not provide the number of training steps used.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer does not provide the number of training steps; it explicitly states the information is missing.",
+    "corrected_answer": "- Base model: 100 K training steps  \n- Big model: 300 K training steps  ",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Hybrid+Reranker"
+  },
+  {
+    "id": 18,
+    "timestamp": "2026-03-19T10:45:27.713467",
+    "pdf": "1706.03762v7",
+    "question": "In the Transformer architecture variations table, what BLEU score is achieved with 1 attention head, and what does the base model achieve with 8 heads?",
+    "sub_questions": [
+      "In the Transformer architecture variations table, what BLEU score is achieved with 1 attention head?",
+      "what does the base model achieve with 8 heads?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "- With 1 attention head the model attains a BLEU score of 24.9.  \n- The base model, which uses 8 heads, achieves a BLEU score of 25.8.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 19,
+    "timestamp": "2026-03-19T10:46:10.246728",
+    "pdf": "1706.03762v7",
+    "question": "How does the role of attention in the Transformer architecture differ from how embeddings are used for retrieval in RAG systems?\"",
+    "sub_questions": [
+      "How does the role of attention in the Transformer architecture differ from how embeddings are used for retrieval in RAG systems?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "- **Attention in the Transformer** – An attention function maps a *query* and a set of *key‑value* pairs to an output, allowing each position in the sequence to attend to (i.e., weight) information from other positions. This mechanism is built into every encoder and decoder sub‑layer and is the core way the model computes its internal representations.\n\n- **Embeddings in RAG systems** – RAG separates the process into three parts: *Retrieval*, *Generation*, and *Augmentation*. The retrieval part uses a *retriever* that can be fine‑tuned and that selects external documents to augment the generation step. Retrieval is therefore an external step that brings in additional knowledge before the language model generates an answer.\n\n**Key difference** – Attention operates *inside* the Transformer to compute contextual representations from the model’s own tokens, whereas embeddings in RAG are used by an external retriever to fetch relevant external documents that are then supplied to the generation component.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 20,
+    "timestamp": "2026-03-19T11:04:11.290221",
+    "pdf": "1706.03762v7",
+    "question": "What is the exact label smoothing value used in Transformer training, and on which page of the paper is the regularization section?",
+    "sub_questions": [
+      "What is the exact label smoothing value used in Transformer training?",
+      "on which page of the paper is the regularization section?"
+    ],
+    "pipeline_used": "E",
+    "pipeline_name": "Page Index",
+    "answer": "- Label smoothing value used: ϵₗₛ = 0.1  \n- The regularization section appears on page 8 of the paper.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 21,
+    "timestamp": "2026-03-19T11:58:35.958873",
+    "pdf": "1706.03762v7",
+    "question": "\"In the Transformer paper, explain why the model uses residual connections and layer normalization around each sub-layer, and what output dimension do all sub-layers produce?\"",
+    "sub_questions": [
+      "\"In the Transformer paper, explain why the model uses residual connections and layer normalization around each sub-layer?",
+      "what output dimension do all sub-layers produce?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "The Transformer wraps each sub‑layer (the multi‑head attention and the feed‑forward network) with a residual connection and then applies layer‑normalization, computing the sub‑layer output as  \n\n**LayerNorm(x + Sublayer(x))**.  \n\nAll sub‑layers (and the embedding layers) produce outputs of dimension **d = 512**.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer describes that residual connections and layer normalization are applied, but does not explain why they are used, missing the required explanation.",
+    "corrected_answer": "The Transformer adds a residual connection around each sub‑layer, computing the sum of the sub‑layer’s input x and its output Sublayer(x), and then applies LayerNorm to that sum (LayerNorm(x + Sublayer(x))).  This arrangement lets the model combine the original representation with the transformed one while keeping all sub‑layers (and the embedding layers) at the same dimensionality (d = 512), which is required for the residual addition.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "A",
+    "correcting_pipeline_name": "Dense/FAISS"
+  },
+  {
+    "id": 22,
+    "timestamp": "2026-03-19T12:00:18.255627",
+    "pdf": "1706.03762v7",
+    "question": "\"What does the Transformer paper say about how multi-head attention is applied in three different ways in the model?\"",
+    "sub_questions": [
+      "\"What does the Transformer paper say about how multi-head attention is applied in three different ways in the model?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "- The paper describes **Multi‑Head Attention** as a set of attention layers that operate in parallel (Figure 2, right side).  \n- It replaces the recurrent layers traditionally used in encoder‑decoder architectures with **multi‑headed self‑attention** throughout the model.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "FIX A — PARTIAL CONTEXT with uncovered sub-questions (< 30% keyword overlap): ['\"What does the Transformer paper say about how multi-head attention is applied in three different ways in the model?']",
+    "corrected_answer": "- **Encoder‑decoder attention** – In these layers the queries come from the previous decoder layer, while the keys and values come from the encoder’s output, allowing every decoder position to attend to all positions of the input sequence.  \n\n- **Encoder self‑attention** – All queries, keys, and values are taken from the same source: the output of the preceding encoder layer. Each encoder position can therefore attend to every other position in the previous encoder layer.  \n\n- **Decoder self‑attention** – Queries, keys, and values are drawn from the decoder itself. Each decoder position attends to all earlier (and the current) decoder positions, with a mask that blocks attention to subsequent positions to preserve the auto‑regressive property.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 23,
+    "timestamp": "2026-03-19T12:05:47.096739",
+    "pdf": "1706.03762v7",
+    "question": "“How does the Transformer replace recurrence and what trade-offs does it introduce in terms of computational complexity and sequence modeling?”",
+    "sub_questions": [
+      "“How does the Transformer replace recurrence and what trade-offs does it introduce in terms of computational complexity and sequence modeling?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "The Transformer eliminates recurrence by computing hidden representations for every input and output position **in parallel** using only self‑attention layers, so it never relies on sequence‑aligned RNNs or convolutions.  \nBecause self‑attention relates any two positions with a **constant number of operations**, the cost of linking distant tokens no longer grows with their distance (unlike the linear growth in ConvS2S or the logarithmic growth in ByteNet).  \n\nThe trade‑off is that this constant‑operation, fully parallel approach comes **at the cost of reduced effective resolution** for modeling fine‑grained positional relationships, since the model does not process tokens sequentially.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "FIX A — PARTIAL CONTEXT with uncovered sub-questions (< 30% keyword overlap): ['“How does the Transformer replace recurrence and what trade-offs does it introduce in terms of computational complexity and sequence modeling?']",
+    "corrected_answer": "The Transformer removes recurrence by discarding RNN layers entirely and using stacked self‑attention (multi‑head) layers to relate every token to every other token in a single step. Because there is no recurrence, positional information is injected separately through sinusoidal (or learned) positional encodings added to the input embeddings.\n\n**Trade‑offs**\n\n| Aspect | Self‑Attention (Transformer) | Recurrent (RNN) |\n|--------|-----------------------------|-----------------|\n| Computational complexity per layer | **O(n²·d)** (quadratic in sequence length *n*) | **O(n·d²)** (linear in *n*) |\n| Minimum sequential operations (parallelism) | **O(1)** – all positions processed simultaneously | **O(n)** – must be computed step‑by‑step |\n| Maximum path length for long‑range dependencies | **O(1)** – any two positions are directly connected | **O(n)** – information must travel through *n* steps |\n\nThus, replacing recurrence gives the Transformer full parallelism and very short paths for learning long‑range dependencies, but at the cost of higher per‑layer compute when the sequence is long (quadratic vs. linear complexity). [PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 24,
+    "timestamp": "2026-03-19T12:06:01.510937",
+    "pdf": "1706.03762v7",
+    "question": "“Compare positional encoding with recurrence: why is positional encoding necessary and how is it mathematically applied?”",
+    "sub_questions": [
+      "“Compare positional encoding with recurrence: why is positional encoding necessary and how is it mathematically applied?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "Positional encoding is required because the Transformer computes hidden representations **in parallel for all input and output positions** rather than processing tokens sequentially as recurrent models do.  \nWithout an explicit notion of order, the model’s linear transformations are identical across positions, making it difficult to learn dependencies that rely on the relative distance between tokens. Positional encoding injects position‑specific information so the model can distinguish where each token occurs in the sequence.\n\nMathematically, a positional encoding vector is **added to (or combined with) the token embedding** before the self‑attention layers, giving each position a unique representation that the attention mechanism can use when relating tokens.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 25,
+    "timestamp": "2026-03-19T12:06:13.759274",
+    "pdf": "1706.03762v7",
+    "question": "“Explain how residual connections and layer normalization work together in the Transformer architecture.”",
+    "sub_questions": [
+      "“Explain how residual connections and layer normalization work together in the Transformer architecture.”?"
+    ],
+    "pipeline_used": "A",
+    "pipeline_name": "Dense/FAISS",
+    "answer": "In each Transformer sub‑layer (the multi‑head self‑attention block or the position‑wise feed‑forward network), the input **x** is first processed by the sub‑layer function **Sublayer(x)**. A residual connection adds the original input to this result, forming **x + Sublayer(x)**. The sum is then passed through layer normalization, yielding the final output **LayerNorm(x + Sublayer(x))**. All sub‑layers and the embedding layers produce vectors of the same dimension (e.g., d = 512) so that the addition in the residual connection is well‑defined. This combination lets each sub‑layer modify the representation while preserving the original signal, and layer normalization stabilizes the scale of the combined output.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 26,
+    "timestamp": "2026-03-19T12:06:36.159548",
+    "pdf": "1706.03762v7",
+    "question": "“Why is multi-head attention more effective than single-head attention according to the paper?”",
+    "sub_questions": [
+      "“Why is multi-head attention more effective than single-head attention according to the paper?"
+    ],
+    "pipeline_used": "A",
+    "pipeline_name": "Dense/FAISS",
+    "answer": "Multi‑head attention is more effective because it lets the model **jointly attend to information from different representation subspaces at different positions**. With a single attention head the attention‑weighted positions are averaged, which reduces effective resolution; multiple heads avoid this averaging. The paper also observes that **individual heads learn distinct tasks and capture different syntactic and semantic structures**, providing richer representations while keeping the total computational cost comparable to single‑head attention.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 27,
+    "timestamp": "2026-03-19T15:54:05.341829",
+    "pdf": "1706.03762v7",
+    "question": "\"What BLEU score did the Transformer big model achieve on English-to-German, and how many training steps did it run?\"",
+    "sub_questions": [
+      "\"What BLEU score did the Transformer big model achieve on English-to-German?",
+      "how many training steps did it run?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "- BLEU score on the WMT 2014 English‑to‑German task: **28.4**  \n- Number of training steps: **not specified in the provided chunks**  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "FIX A — PARTIAL CONTEXT with uncovered sub-questions (< 30% keyword overlap): ['\"What BLEU score did the Transformer big model achieve on English-to-German?']",
+    "corrected_answer": "The Transformer big model achieved a BLEU score of **28.4** on English-to-German.",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 28,
+    "timestamp": "2026-04-18T01:18:59.072215",
+    "pdf": "1706.03762v7",
+    "question": "What problem does the Transformer paper claim to solve, and what makes the Transformer architecture different from recurrent or convolutional models?",
+    "sub_questions": [
+      "What problem does the Transformer paper claim to solve?",
+      "what makes the Transformer architecture different from recurrent or convolutional models?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Problem the paper aims to solve**  \nThe Transformer paper targets the inefficiency of existing sequence‑to‑sequence (transduction) models—especially for machine‑translation—whose recurrent or convolutional layers force sequential computation, making training slow and limiting scalability. It seeks a model that can achieve state‑of‑the‑art translation quality while being **much faster to train** and more parallelizable.\n\n**How the Transformer differs from recurrent or convolutional models**\n\n1. **Architecture built only on attention**  \n   - The model replaces the recurrent (RNN) and convolutional layers that dominate encoder‑decoder designs with **multi‑headed self‑attention** mechanisms.  \n   - No sequence‑aligned RNNs or convolutions are used to compute representations of inputs or outputs.\n\n2. **Elimination of recurrence and convolution**  \n   - By dispensing with recurrence, the Transformer removes the inherent step‑by‑step processing of RNNs.  \n   - By dispensing with convolutions, it avoids the locality constraints of CNNs.\n\n3. **Full parallelism**  \n   - Because attention operations can be applied to all positions simultaneously, the architecture is **highly parallelizable**, allowing much shorter training times compared with recurrent or convolutional counterparts.\n\n4. **Performance gains**  \n   - Experiments on WMT 2014 English‑German and English‑French translation tasks show the Transformer achieves superior translation quality (e.g., 28.4 BLEU) while requiring **significantly less training time** than models based on recurrent or convolutional layers.  \n\nIn summary, the Transformer solves the speed and scalability bottleneck of traditional sequence‑transduction models by using an entirely attention‑based design that forgoes recurrence and convolution, enabling faster, parallel training and improved translation performance.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 29,
+    "timestamp": "2026-04-18T01:19:14.256245",
+    "pdf": "1706.03762v7",
+    "question": "According to the Transformer paper, how does scaled dot-product attention work, and why is the scaling term used?",
+    "sub_questions": [
+      "According to the Transformer paper, how does scaled dot-product attention work?",
+      "why is the scaling term used?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Scaled dot‑product attention** computes a weighted sum of the value vectors \\(V\\) where the weights are obtained from the similarity between queries \\(Q\\) and keys \\(K\\).\n\n1. **Computation**  \n   - Form the matrix of dot products between every query and every key: \\(QK^{\\top}\\).  \n   - Scale each dot product by the factor \\(\\frac{1}{\\sqrt{d_k}}\\), where \\(d_k\\) is the dimensionality of the queries and keys.  \n   - Apply the softmax function to the scaled scores to obtain attention weights.  \n   - Multiply the weights by the value matrix \\(V\\) to produce the output:\n\n\\[\n\\text{Attention}(Q,K,V)=\\operatorname{softmax}\\!\\left(\\frac{QK^{\\top}}{\\sqrt{d_k}}\\right)V .\n\\]\n\n   In practice the three matrices \\(Q\\), \\(K\\) and \\(V\\) are processed in parallel, allowing many queries to be handled at once.\n\n2. **Why the scaling term \\(\\frac{1}{\\sqrt{d_k}}\\) is used**  \n   - Each component of a query and a key is roughly a zero‑mean random variable with variance 1. The dot product \\(q\\cdot k = \\sum_{i=1}^{d_k} q_i k_i\\) therefore has variance \\(d_k\\). As \\(d_k\\) grows, the raw dot‑product values become large in magnitude.  \n   - Large magnitudes push the softmax into its saturated regime, where the gradients are extremely small. This hampers learning because the attention weights change very little with respect to the parameters.  \n   - Dividing by \\(\\sqrt{d_k}\\) normalizes the variance of the dot products to 1, keeping the softmax inputs in a range where gradients remain healthy. Thus the scaling term stabilizes training, especially for larger key/query dimensions.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 30,
+    "timestamp": "2026-04-18T01:19:32.065923",
+    "pdf": "1706.03762v7",
+    "question": "What are the three main stages of a basic RAG pipeline described in the RAG survey, and what happens in each stage?",
+    "sub_questions": [
+      "What are the three main stages of a basic RAG pipeline described in the RAG survey?",
+      "what happens in each stage?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "**INSUFFICIENT CONTEXT**",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer explicitly states it cannot answer, providing no information for either sub-question.",
+    "corrected_answer": "**The basic RAG pipeline (Naïve RAG) is built from three sequential stages:**\n\n1. **Indexing** – The knowledge source (e.g., a document collection) is processed and organized into a searchable index. This prepares the data so that relevant passages can be located quickly when a query arrives.\n\n2. **Retrieval** – Given a user query, the system searches the index and pulls out the most relevant pieces of information (documents or passages). These retrieved items constitute the external knowledge that will inform the answer.\n\n3. **Generation** – The language model receives the original query together with the retrieved content and generates a response that integrates the external knowledge with its own internal knowledge.  \n\nTogether, these three stages enable a Retrieval‑Augmented Generation system to produce answers that are both grounded in up‑to‑date external data and fluently expressed.",
+    "correcting_pipeline": "D",
+    "correcting_pipeline_name": "Dense+Reranker"
+  },
+  {
+    "id": 31,
+    "timestamp": "2026-04-18T01:43:00.553507",
+    "pdf": "1706.03762v7",
+    "question": "In the Transformer paper, explain how the encoder and decoder stacks are structured, including the number of layers, the role of residual connections, and how masking is used in the decoder.",
+    "sub_questions": [
+      "In the Transformer paper, explain how the encoder and decoder stacks are structured, including the number of layers, the role of residual connections?",
+      "how masking is used in the decoder.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Encoder stack**\n\n* **Depth** – The encoder consists of **\\(N = 6\\) identical layers**.  \n* **Sub‑layers per layer** – Each layer contains two sub‑layers:  \n  1. A **multi‑head self‑attention** mechanism.  \n  2. A **position‑wise fully‑connected feed‑forward** network.  \n* **Residual connections** – Every sub‑layer (and the embedding layer) is wrapped with a **residual (skip) connection** followed by **layer‑normalization**. This lets the model propagate the original input forward while still learning a transformation, stabilizing training.\n\n**Decoder stack**\n\n* **Depth** – The decoder also has **\\(N = 6\\) identical layers**.  \n* **Sub‑layers per layer** – Each decoder layer contains three sub‑layers:  \n  1. **Masked multi‑head self‑attention** (operating on the previously generated outputs).  \n  2. **Multi‑head encoder‑decoder attention** (queries from the decoder, keys/values from the encoder output).  \n  3. The same **position‑wise feed‑forward** network as in the encoder.  \n* **Residual connections** – As in the encoder, each of the three sub‑layers is surrounded by a residual connection and a layer‑normalization step.\n\n**Masking in the decoder**\n\n* The **self‑attention sub‑layer of the decoder** is modified with a **mask** that blocks each position from attending to any **subsequent (future) positions** in the output sequence.  \n* Together with the fact that the output embeddings are shifted by one position, this mask guarantees that the prediction for position *i* can depend **only on already generated tokens at positions \\< i**, preserving the autoregressive property required for sequence generation.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 32,
+    "timestamp": "2026-04-18T01:43:14.104534",
+    "pdf": "1706.03762v7",
+    "question": "According to the Transformer paper, compare scaled dot-product attention with additive attention, and explain why scaling becomes important for large values of d_k",
+    "sub_questions": [
+      "According to the Transformer paper, compare scaled dot-product attention with additive attention?",
+      "explain why scaling becomes important for large values of d_k?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Comparison**\n\n| Aspect | Scaled Dot‑Product Attention | Additive (a.k.a. “Bahdanau”) Attention |\n|--------|-----------------------------|--------------------------------------|\n| Compatibility function | \\( \\text{score}(q,k)=\\frac{q\\!\\cdot\\!k}{\\sqrt{d_k}} \\) (dot product of query and key, then scaled) | \\( \\text{score}(q,k)=\\text{FFN}(q,k) \\) – a feed‑forward network with a single hidden layer that takes the concatenation (or sum) of \\(q\\) and \\(k\\) as input |\n| Computational cost | Implemented with matrix multiplications; highly optimized, thus **much faster** and **more space‑efficient** | Requires extra weight matrices and non‑linearities; similar theoretical complexity but slower in practice |\n| Typical performance | Comparable to additive when \\(d_k\\) is small | When \\(d_k\\) is small the two behave similarly |\n| Scaling factor | Explicit division by \\(\\sqrt{d_k}\\) (the “scaled” part) | No scaling factor is applied |\n\n**Why scaling matters for large \\(d_k\\)**  \n\n- The dot product of two \\(d_k\\)-dimensional vectors grows in magnitude with the dimension.  \n  If the components of \\(q\\) and \\(k\\) are independent random variables with mean 0 and variance 1, then  \n\n  \\[\n  q\\!\\cdot\\!k = \\sum_{i=1}^{d_k} q_i k_i\n  \\]\n\n  has variance \\(d_k\\). Hence the typical size of the dot product is on the order of \\(\\sqrt{d_k}\\).  \n\n- Large dot‑product values push the subsequent **softmax** into regions where its gradients are extremely small. This makes learning difficult because the gradient signal that flows back through the attention weights vanishes.  \n\n- Dividing the dot product by \\(\\sqrt{d_k}\\) normalizes its magnitude, keeping the softmax input in a range where gradients remain healthy. Consequently, the scaled version restores stable training for large key/query dimensions, whereas unscaled dot‑product attention degrades and additive attention (which does not suffer from this magnitude growth) performs better.\n\nThus, scaled dot‑product attention retains the computational efficiency of pure dot products while mitigating the gradient‑vanishing problem that appears when the key/query dimension \\(d_k\\) becomes large.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "id": 1,
+    "timestamp": "2026-03-12T09:58:47.073451",
+    "pdf": "en-whs08-full",
+    "question": "What is the author's personal opinion on the ethical implications?",
+    "sub_questions": [
+      "What is the author's personal opinion on the ethical implications?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What is the author's personal opinion on the ethical implications?"
+    ],
+    "failure_reason": "The response states insufficient context and does not provide the author's personal opinion, leaving the sub-question unanswered.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 2,
+    "timestamp": "2026-03-18T12:14:23.947251",
+    "pdf": "en-whs08-full",
+    "question": "What is the capital of France, and is this information present in any of the provided documents?",
+    "sub_questions": [
+      "What is the capital of France?",
+      "is this information present in any of the provided documents?"
+    ],
+    "pipeline_used": "C",
+    "pipeline_name": "Hybrid",
+    "answer": "The capital of France is not mentioned in any of the provided documents; therefore, this information is not present in the given chunks.",
+    "result": "bad",
+    "unanswered_sub_questions": [
+      "What is the capital of France?"
+    ],
+    "failure_reason": "The answer does not provide the capital of France, only states it is not mentioned in the documents, thus failing to give the concrete value requested.",
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 3,
+    "timestamp": "2026-03-19T12:09:39.791127",
+    "pdf": "en-whs08-full",
+    "question": "“How does income distribution vary across different demographic groups according to the tables?”",
+    "sub_questions": [
+      "“How does income distribution vary across different demographic groups according to the tables?"
+    ],
+    "pipeline_used": "A",
+    "pipeline_name": "Dense/FAISS",
+    "answer": "- **Upper‑middle‑income groups** show a wide range of values across the tables:  \n  - In one table the percentages are high (e.g., 95 %–98 %) for many groups, while in another they are low (e.g., 6.2 %–10.0 %) and in a third they vary from the mid‑40s to the mid‑90s.  \n  - This indicates that the share of the population classified as upper‑middle‑income differs markedly between demographic categories.\n\n- **High‑income groups** are consistently near the top of the scale:  \n  - Most entries are 97 %–100 % across the tables, with only a few lower values (e.g., 22 %–51 % in one set).  \n  - The high‑income share is therefore generally higher than the upper‑middle‑income share for the same demographic groups.\n\n- **Global (overall) figures** fall between the two:  \n  - Values range from the low 30s to the high 80s, depending on the table, showing an intermediate level of income distribution compared with the specific upper‑middle‑ and high‑income categories.\n\nOverall, the tables illustrate that income distribution is not uniform: high‑income shares are usually the highest, upper‑middle‑income shares vary widely, and global averages sit in the middle.  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer provides generic ranges for income categories but does not detail how distribution varies across specific demographic groups as requested.",
+    "corrected_answer": "- The tables are stratified by **place of residence** and **educational level of the mother** (derived from Demographic and Health Survey data).  \n- They show clear **differences according to wealth status**:  \n  * In malaria‑related data, children in the **wealthiest households** are more likely to be protected by bednets, while poorer households have lower usage.  \n  * In breast‑cancer screening data, women in the **richest income quintile** are several times more likely to have had a mammogram than women in the **poorest group**; in some European countries the gap narrows, but the pattern still reflects higher screening among higher‑income women.  \n- Geographic variation is noted: the direction and magnitude of these income‑related differences can differ between countries (e.g., Ghana versus Eritrea and Gabon).  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "correcting_pipeline": "B",
+    "correcting_pipeline_name": "BM25/Sparse"
+  },
+  {
+    "id": 4,
+    "timestamp": "2026-03-19T12:09:56.136497",
+    "pdf": "en-whs08-full",
+    "question": "“Which group shows the largest percentage change and how is it calculated?”",
+    "sub_questions": [
+      "“Which group shows the largest percentage change and how is it calculated?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "Cambodia shows the largest percentage change, with a 33 % change reported.  \nThe percentage change is derived from the change in the coverage gap (or intervention coverage) over the period, expressed as a proportion of the baseline value (i.e., [(final – initial) ÷ initial] × 100).  \n\n[PARTIAL CONTEXT — answer may be incomplete]",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  },
+  {
+    "id": 5,
+    "timestamp": "2026-03-19T12:10:37.282721",
+    "pdf": "en-whs08-full",
+    "question": "“What conclusions can be drawn from combining Table A and Table B?”",
+    "sub_questions": [
+      "“What conclusions can be drawn from combining Table A and Table B?"
+    ],
+    "pipeline_used": "F",
+    "pipeline_name": "Table-Aware (pdfplumber)",
+    "answer": "INSUFFICIENT CONTEXT: The retrieved chunks do not contain enough information to answer this question. Try rephrasing your query or asking about a specific aspect.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": "The answer explicitly states insufficient context and cannot provide the requested conclusions.",
+    "corrected_answer": "- **Broad methodological diversity:** Table I shows that Retrieval‑Augmented Generation (RAG) methods differ in retrieval source (e.g., Wikipedia, dataset‑base, search engine, KG), data type (text, KG, code, tabular), granularity (phrase, sentence, chunk, document, item, sub‑graph), augmentation stage (pre‑training, tuning, inference) and retrieval process (once, iterative, adaptive, recursive).  \n\n- **Wide applicability across tasks:** Table II lists many downstream tasks—single‑hop and multi‑hop QA, long‑form QA, dialog generation, recommendation, information extraction, reasoning, language modeling, code search, robustness evaluation, math, translation, etc.—and connects each task to the RAG methods that have been evaluated on it.  \n\n- **Cross‑task flexibility of methods:** Because the same RAG methods (identified by citation numbers) appear under multiple, very different tasks, the tables together indicate that a single retrieval strategy can be reused for diverse applications, from question answering to code search and from commonsense reasoning to medical QA.  \n\n- **Task‑specific method selection:** The pairing of tasks with particular methods suggests that certain retrieval characteristics (e.g., iterative chunk‑level inference, KG‑based retrieval) are favored for specific problem domains such as graph QA, dialog generation, or fact‑checking.  \n\n- **Overall conclusion:** Combining the two tables demonstrates that the RAG research landscape comprises a rich set of retrieval mechanisms that are empirically validated on a broad spectrum of NLP and multimodal downstream tasks, highlighting both the versatility of RAG approaches and the importance of matching retrieval design to task requirements.  ",
+    "correcting_pipeline": "E",
+    "correcting_pipeline_name": "Page Index"
+  },
+  {
+    "id": 6,
+    "timestamp": "2026-04-18T01:48:16.727584",
+    "pdf": "en-whs08-full",
+    "question": "Using World Health Statistics 2008, identify the major categories of indicators listed in the report and explain how mortality, health service coverage, risk factors, and health expenditure fit within the broader indicator framework.",
+    "sub_questions": [
+      "Using World Health Statistics 2008, identify the major categories of indicators listed in the report and explain how mortality, health service coverage, risk factors?",
+      "health expenditure fit within the broader indicator framework.?"
+    ],
+    "pipeline_used": "D",
+    "pipeline_name": "Dense+Reranker",
+    "answer": "**Major indicator categories in World Health Statistics 2008**\n\nThe report groups its more than 70 key health indicators into the following broad categories:\n\n1. **Mortality and burden of disease**  \n2. **Health‑service coverage**  \n3. **Risk factors**  \n4. **Health‑systems resources**  \n5. **Inequities in health‑care coverage and health outcome**  \n6. **Basic demographic and socioeconomic statistics**  \n\nThese categories were chosen for their relevance to global health monitoring and for the availability, accuracy and comparability of the underlying data.\n\n---\n\n### How the specific topics fit into this framework  \n\n| Topic | Placement in the indicator framework | Explanation |\n|-------|--------------------------------------|-------------|\n| **Mortality** | *Mortality and burden of disease* | This category captures deaths, cause‑specific mortality and related burden measures, providing a direct view of population health outcomes. |\n| **Health‑service coverage** | *Health‑service coverage* | Coverage is defined as “the percentage of people receiving a specific intervention among those who need it” and is used as a key health‑system output to monitor service performance. |\n| **Risk factors** | *Risk factors* | This group includes prevalence of behaviours or conditions (e.g., tobacco use, obesity) that increase the likelihood of disease and death. |\n| **Health expenditure** | *Health‑systems resources* | Expenditure is a core resource indicator for health systems; it is reported under the “health‑systems resources” category, alongside other inputs such as workforce and infrastructure. |\n\nTogether, these categories provide a structured, comprehensive picture of health status, service delivery, determinants of health, system capacity, equity, and the demographic context across WHO’s 193 Member States.",
+    "result": "good",
+    "unanswered_sub_questions": [],
+    "failure_reason": null,
+    "corrected_answer": null,
+    "correcting_pipeline": null,
+    "correcting_pipeline_name": null
+  }
+]

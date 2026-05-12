@@ -1,0 +1,1328 @@
+[
+  {
+    "chunk_id": 0,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 1,
+    "text": "Database Management System\nModule 1"
+  },
+  {
+    "chunk_id": 1,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 3,
+    "text": "Introduction\nDatabase systems have become an essential component of life in modern society, in that many\nfrequently occurring events trigger the accessing of at least one database\nTraditional vs. more recent applications of databases\n● \"Traditional\" ones use rigidly-structured textual and numeric data.\n● Recent advances have led to the application of database technology to a wider class of\ndata. Examples include multimedia databases (involving pictures, video clips, and sound"
+  },
+  {
+    "chunk_id": 2,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 3,
+    "text": "data. Examples include multimedia databases (involving pictures, video clips, and sound\nmessages) and geographic databases (involving maps, satellite images).\nA database is a collection of related data.\nA data mean known facts that can be recorded and that have implicit meaning."
+  },
+  {
+    "chunk_id": 3,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 4,
+    "text": "Employees are accessing Data through DBMS"
+  },
+  {
+    "chunk_id": 4,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 5,
+    "text": "A database has the following implicit properties:\n1. A database represents some aspect of the real world, sometimes called the miniworld or the universe of\ndiscourse (UoD). Changes to the miniworld are reflected in the database.\n2. A database is a logically coherent collection of data with some inherent meaning. A random assortment of\ndata cannot correctly be referred to as a database.\n3. A database is designed, built, and populated with data for a specific purpose. It has an intended group of"
+  },
+  {
+    "chunk_id": 5,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 5,
+    "text": "3. A database is designed, built, and populated with data for a specific purpose. It has an intended group of\nusers and some preconceived applications in which these users are interested.\nOther properties:\n1. A database can be of any size and complexity. For example, the list of names and addresses referred to earlier\nmay consist of only a few hundred records, each with a simple structure. An example of a large commercial\ndatabase is Amazon.com."
+  },
+  {
+    "chunk_id": 6,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 5,
+    "text": "may consist of only a few hundred records, each with a simple structure. An example of a large commercial\ndatabase is Amazon.com.\n2. A database may be generated and maintained manually or it may be computerized. For example, a library\ncard catalog is a database that may be created and maintained manually. A computerized database may be\ncreated and maintained either by a group of application programs written specifically for that task or by a\ndatabase management system."
+  },
+  {
+    "chunk_id": 7,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 6,
+    "text": "The DBMS is a general-purpose software system\nthat facilitates the processes of defining,\nconstructing, manipulating, and sharing databases\namong various users and applications."
+  },
+  {
+    "chunk_id": 8,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 7,
+    "text": "● Defining a database involves specifying the data types, structures, and constraints of the data to\nbe stored in the database. The database definition or descriptive information is also stored by the\nDBMS in the form of a database catalog or dictionary; it is called meta-data.\n● Constructing the database is the process of storing the data on some storage medium that is\ncontrolled by the DBMS.\n● Manipulating a database includes functions such as querying the database to retrieve specific"
+  },
+  {
+    "chunk_id": 9,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 7,
+    "text": "controlled by the DBMS.\n● Manipulating a database includes functions such as querying the database to retrieve specific\ndata, updating the database to reflect changes in the miniworld, and generating reports from the\ndata.\n● Sharing a database allows multiple users and programs to access the database simultaneously\n● An application program accesses the database by sending queries or requests for data to the\nDBMS."
+  },
+  {
+    "chunk_id": 10,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 7,
+    "text": "● An application program accesses the database by sending queries or requests for data to the\nDBMS.\n● A query typically causes some data to be retrieved; a transaction may cause some data to be read\nand some data to be written into the database.\n● Protection includes system protection against hardware or software malfunction (or crashes) and\nsecurity protection against unauthorized or malicious access.\n● A typical large database may have a life cycle of many years, so the DBMS must be able to"
+  },
+  {
+    "chunk_id": 11,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 7,
+    "text": "● A typical large database may have a life cycle of many years, so the DBMS must be able to\nmaintain the database system by allowing the system to evolve as requirements change over\ntime.\n● Database and DBMS software together a Database system."
+  },
+  {
+    "chunk_id": 12,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 8,
+    "text": "A simplified database system environment"
+  },
+  {
+    "chunk_id": 13,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 9,
+    "text": "A database that stores\nstudent and course\ninformation."
+  },
+  {
+    "chunk_id": 14,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 10,
+    "text": "● The database is organized as five files, each of which stores data records of the same\ntype.\n● To define this database, we must specify the structure of the records of each file by\nspecifying the different types of data elements to be stored in each record.\n● We must also specify a data type for each data element within a record.\n● Most medium-size and large databases include many types of records and have many\nrelationships among the records."
+  },
+  {
+    "chunk_id": 15,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 11,
+    "text": "Database manipulation involves querying and updating. Examples of queries are as follows:\n● Retrieve the transcript—a list of all courses and grades—of ‘Smith’\n● List the names of students who took the section of the ‘Database’ course offered in fall 2008 and their grades\nin that section\n● List the prerequisites of the ‘Database’ course\nExamples of updates include the following:\n● Change the class of ‘Smith’ to sophomore\n● Create a new section for the ‘Database’ course for this semester"
+  },
+  {
+    "chunk_id": 16,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 11,
+    "text": "● Change the class of ‘Smith’ to sophomore\n● Create a new section for the ‘Database’ course for this semester\n● Enter a grade of ‘A’ for ‘Smith’ in the ‘Database’ section of last semester\nOf course, a query/update must be conveyed to the DBMS in a precise way (via the query language of the DBMS)\nin order to be processed"
+  },
+  {
+    "chunk_id": 17,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 12,
+    "text": "The Information Technology (IT) department within a company designs and maintains an\ninformation system consisting of various computers, storage systems, application software, and\ndatabases.\nDesign of a new application for an existing database or design of a brand new database starts off\nwith a phase called requirements specification and analysis.\nThese requirements are documented in detail and transformed into a conceptual design that can"
+  },
+  {
+    "chunk_id": 18,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 12,
+    "text": "These requirements are documented in detail and transformed into a conceptual design that can\nbe represented and manipulated using some computerized tools so that it can be easily\nmaintained, modified, and transformed into a database implementation.\nThe design is then translated to a logical design that can be expressed in a data model\nimplemented in a commercial DBMS. The final stage is physical design, during which further\nspecifications are provided for storing and accessing the database."
+  },
+  {
+    "chunk_id": 19,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 12,
+    "text": "specifications are provided for storing and accessing the database.\nThe database design is implemented, populated with actual data, and continuously maintained to\nreflect the state of the miniworld."
+  },
+  {
+    "chunk_id": 20,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 13,
+    "text": "Characteristics of the Database Approach\nThe main characteristics of the database approach versus the file-processing approach are the\nfollowing:\n● Self-describing nature of a database system\n● Insulation between programs and data, and data abstraction\n● Support of multiple views of the data\n● Sharing of data and multiuser transaction processing"
+  },
+  {
+    "chunk_id": 21,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 14,
+    "text": "Self-describing nature of a database system\nDB approach\n● A fundamental characteristic of the database approach is that the database system contains not only the database\nitself but also a complete definition or description of the database structure and constraints.\n● This definition is stored in the DBMS catalog, which contains information such as the structure of each file, the\ntype and storage format of each data item, and various constraints on the data."
+  },
+  {
+    "chunk_id": 22,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 14,
+    "text": "type and storage format of each data item, and various constraints on the data.\n● The information stored in the catalog is called meta-data, and it describes the structure of the primary database.\n● Whenever a request is made to access, say, the Name of a STUDENT record, the DBMS software refers to the\ncatalog to determine the structure of the STUDENT file and the position and size of the Name data item within a\nSTUDENT record\nTraditional file processing"
+  },
+  {
+    "chunk_id": 23,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 14,
+    "text": "STUDENT record\nTraditional file processing\n● In traditional file processing, data definition is typically part of the application programs themselves. Hence, these\nprograms are constrained to work with only one specific database, whose structure is declared in the application\nprograms.\n● In a typical file-processing application, the file structure and, in the extreme case, the exact location of Name\nwithin a STUDENT record are already coded within each program that accesses this data item"
+  },
+  {
+    "chunk_id": 24,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 15,
+    "text": "An example of a\ndatabase catalog for\nthe database"
+  },
+  {
+    "chunk_id": 25,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 16,
+    "text": "Insulation between programs and data, and data abstraction\n● In traditional file processing, the structure of data files is embedded in the application programs, so any\nchanges to the structure of a file may require changing all programs that access that file.\n● For example, a file access program may be written in such a way that it can access only STUDENT records\nof the structure,If we want to add another piece of data to each STUDENT record, say the Birth_date, such a"
+  },
+  {
+    "chunk_id": 26,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 16,
+    "text": "of the structure,If we want to add another piece of data to each STUDENT record, say the Birth_date, such a\nprogram will no longer work and must be changed\n● By contrast, DBMS access programs do not require such changes in most cases. The structure of data files is\nstored in the DBMS catalog separately from the access programs. We call this property program-data\nindependence.\n● By contrast, in a DBMS environment, we only need to change the description of STUDENT records in the"
+  },
+  {
+    "chunk_id": 27,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 16,
+    "text": "independence.\n● By contrast, in a DBMS environment, we only need to change the description of STUDENT records in the\ncatalog to reflect the inclusion of the new data item Birth_date; no programs are changed. The next time a\nDBMS program refers to the catalog, the new structure of STUDENT records will be accessed and used\nData Abstraction:\nA data model is used to hide storage details and present the users with a conceptual view of the database."
+  },
+  {
+    "chunk_id": 28,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 16,
+    "text": "Data Abstraction:\nA data model is used to hide storage details and present the users with a conceptual view of the database.\nPrograms refer to the data model constructs rather than data storage details"
+  },
+  {
+    "chunk_id": 29,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 17,
+    "text": "Internal storage format for a STUDENT record,\nbased on the database catalog of Slide No. 15."
+  },
+  {
+    "chunk_id": 30,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 18,
+    "text": "Support of multiple views of the data\n● A database typically has many types of users, each of whom may require a different\nperspective or view of the database.\n● A view may be a subset of the database or it may contain virtual data that is derived\nfrom the database files but is not explicitly stored.\n● A multiuser DBMS whose users have a variety of distinct applications must provide\nfacilities for defining multiple views."
+  },
+  {
+    "chunk_id": 31,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 18,
+    "text": "● A multiuser DBMS whose users have a variety of distinct applications must provide\nfacilities for defining multiple views.\n● For example, one user of the database may be interested only in accessing and\nprinting the transcript of each student. A second user, who is interested only in\nchecking that students have taken all the prerequisites of each course for which the\nstudent registers, may require the view"
+  },
+  {
+    "chunk_id": 32,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 19,
+    "text": "[SCANNED PAGE OCR]: TRANSCRIPT\nStudent_name a\n081810\nSmith 08\nrown\nosssz0 [| 8 | Swing | 08 | 102\nbi osssso [A | Fal | 08 | 138\nCOURSE_PREREQUISITES\nCS3320\nDatabase CS3380\nMATH2410\n_ ossazo | 0si870"
+  },
+  {
+    "chunk_id": 33,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 20,
+    "text": "Sharing of data and multiuser transaction processing\n● A multiuser DBMS, as its name implies, must allow multiple users to access the database at the\nsame time.\n● This is essential if data for multiple applications is to be integrated and maintained in a single\ndatabase.\n● A fundamental role of multiuser DBMS software is to ensure that concurrent transactions\noperate correctly and efficiently.\n● A transaction is an executing program or process that includes one or more database accesses,"
+  },
+  {
+    "chunk_id": 34,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 20,
+    "text": "operate correctly and efficiently.\n● A transaction is an executing program or process that includes one or more database accesses,\nsuch as reading or updating of database records.\n● The DBMS must enforce several transaction properties. The isolation property ensures that\neach transaction appears to execute in isolation from other transactions, even though hundreds of\ntransactions may be executing concurrently. The atomicity property ensures that either all the"
+  },
+  {
+    "chunk_id": 35,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 20,
+    "text": "transactions may be executing concurrently. The atomicity property ensures that either all the\ndatabase operations in a transaction are executed or none are."
+  },
+  {
+    "chunk_id": 36,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 21,
+    "text": "Database Users\nThese apply to \"large\" databases, not \"personal\" databases that are defined, constructed, and used by a\nsingle person via, say, Microsoft Access.\nUsers may be divided into\n● Those who actually use and control the database content, and those who design, develop and\nmaintain database applications (called ―Actors on the Scene),\n● Those who design and develop the DBMS software and related tools, and the computer systems\noperators (called ―Workers Behind the Scene)."
+  },
+  {
+    "chunk_id": 37,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 22,
+    "text": "1. Database Administrator (DBA): This is the chief administrator, who oversees and manages the database\nsystem (including the data and software). Duties include authorizing users to access the database,\ncoordinating/monitoring its use, acquiring hardware/software for upgrades, etc. In large organizations, the DBA\nmight have a support staff.\n2. Database Designers: They are responsible for identifying the data to be stored and for choosing an appropriate"
+  },
+  {
+    "chunk_id": 38,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 22,
+    "text": "might have a support staff.\n2. Database Designers: They are responsible for identifying the data to be stored and for choosing an appropriate\nway to organize it. They also define views for different categories of users. The final design must be able to\nsupport the requirements of all the user sub-groups.\n3. End Users: These are persons who access the database for querying, updating, and report generation. They are\nmain reason for database existence!"
+  },
+  {
+    "chunk_id": 39,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 22,
+    "text": "3. End Users: These are persons who access the database for querying, updating, and report generation. They are\nmain reason for database existence!\nCasual end users: Use database occasionally, needing different information each time; use query\nlanguage to specify their requests; typically middle- or high-level managers.\nNaive/Parametric end users: Typically the biggest group of users; frequently query/update the database"
+  },
+  {
+    "chunk_id": 40,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 22,
+    "text": "Naive/Parametric end users: Typically the biggest group of users; frequently query/update the database\nusing standard canned transactions that have been carefully programmed and tested in advance.\nSophisticated end users: Engineers, scientists, business analysts who implement their own applications to\nmeet their complex needs.\nStand-alone users: Use \"personal\" databases, possibly employing a special- purpose (e.g., financial)"
+  },
+  {
+    "chunk_id": 41,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 22,
+    "text": "meet their complex needs.\nStand-alone users: Use \"personal\" databases, possibly employing a special- purpose (e.g., financial)\nsoftware package. Mostly maintain personal databases using ready-to-use packaged applications.\nAn example is a tax program user that creates its own internal database.\nAnother example is maintaining an address book"
+  },
+  {
+    "chunk_id": 42,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 23,
+    "text": "4. System Analysts, Application Programmers, Software Engineers:\n- System Analysts: determine needs of end users, especially naive and parametric users, and develop\nspecifications for canned transactions that meet these needs.\n- Application Programmers: Implement, test, document, and maintain programs that satisfy the\nspecifications mentioned above."
+  },
+  {
+    "chunk_id": 43,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 24,
+    "text": "Workers behind the Scene\nPersons are typically not interested in the database content itself known as workers behind the scene, and they\ninclude the following categories:\nDBMS system designers and implementers design and implement the DBMS modules and interfaces as a\nsoftware package.\nTool developers design and implement tools—the software packages that facilitate database modeling and\ndesign, database system design, and improved performance. They include packages for database design,"
+  },
+  {
+    "chunk_id": 44,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 24,
+    "text": "design, database system design, and improved performance. They include packages for database design,\nperformance monitoring, natural language or graphical interfaces, prototyping, simulation, and test data\ngeneration.\nOperators and maintenance personnel (system administration personnel) are responsible for the actual running\nand maintenance of the hardware and software environment for the database system."
+  },
+  {
+    "chunk_id": 45,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 25,
+    "text": "Advantages of Using the DBMS Approach\n1. Controlling Redundancy:\nData redundancy (such as tends to occur in the \"file processing\" approach) leads to wasted\nstorage space, duplication of effort (when multiple copies of a data need to be updated), and a\nhigher likelihood of the introduction of inconsistency. On the other hand, redundancy can be used\nto improve performance of queries. Indexes, for example, are entirely redundant, but help the\nDBMS in processing queries more quickly."
+  },
+  {
+    "chunk_id": 46,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 25,
+    "text": "to improve performance of queries. Indexes, for example, are entirely redundant, but help the\nDBMS in processing queries more quickly.\nA DBMS should provide the capability to automatically enforce the rule that no inconsistencies\nare introduced when data is updated.\n2. Restricting Unauthorized Access:\nA DBMS should provide a security and authorization subsystem, which the DBA uses to create\naccounts and to specify account restrictions. Then, the DBMS should enforce these restrictions"
+  },
+  {
+    "chunk_id": 47,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 25,
+    "text": "accounts and to specify account restrictions. Then, the DBMS should enforce these restrictions\nautomatically."
+  },
+  {
+    "chunk_id": 48,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 26,
+    "text": "[SCANNED PAGE OCR]: GRADE_REPORT\n[Smith [2 | MaTHas10 |B\nBrown [88 [anata\n8 Brown [ef esisio—f\n8 [Brown [toa | 080820 [\n\n@ [8 | Bown [195 | 8aa60 [A\nGRADE_REPORT\n\nwb 7 [Bom | 2 | aTHe10 |B\n\nI"
+  },
+  {
+    "chunk_id": 49,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 27,
+    "text": "3. Providing Persistent Storage for Program Objects:\nObject-oriented database systems make it easier for complex runtime objects (e.g., lists,\ntrees) to be saved in secondary storage so as to survive beyond program termination and to\nbe retrievable at a later time.\n4. Providing Storage Structures and Search Techniques for Efficient Query\nProcessing:\nDatabase systems must provide capabilities for efficiently executing queries and updates."
+  },
+  {
+    "chunk_id": 50,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 27,
+    "text": "Processing:\nDatabase systems must provide capabilities for efficiently executing queries and updates.\nThe query processing and optimization module of the DBMS is responsible for\nchoosing an efficient query execution plan for each query based on the existing storage\nstructures."
+  },
+  {
+    "chunk_id": 51,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 28,
+    "text": "5. Providing Backup and Recovery:\nA DBMS must provide facilities for recovering from hardware or software failures. The backup and\nrecovery subsystem of the DBMS is responsible for recovery.\nThe recovery subsystem could ensure that the transaction is resumed from the point at which it was\ninterrupted so that its full effect is recorded in the database.\n6. Providing Multiple User Interfaces:\nMany types of users with varying levels of technical knowledge use a database, a DBMS should"
+  },
+  {
+    "chunk_id": 52,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 28,
+    "text": "6. Providing Multiple User Interfaces:\nMany types of users with varying levels of technical knowledge use a database, a DBMS should\nprovide a variety of user interfaces. For example, query languages for casual users, programming\nlanguage interfaces for application programmers, forms and/or command codes for parametric users,\nmenu-driven interfaces for stand- alone users.\n7. Representing Complex Relationships Among Data:"
+  },
+  {
+    "chunk_id": 53,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 28,
+    "text": "menu-driven interfaces for stand- alone users.\n7. Representing Complex Relationships Among Data:\nA DBMS must have the capability to represent a variety of complex relationships among the data, to\ndefine new relationships as they arise, and to retrieve and update related data easily and efficiently."
+  },
+  {
+    "chunk_id": 54,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 29,
+    "text": "8. Enforcing Integrity Constraints:\nMost database applications have certain integrity constraints that must hold for the data. The simplest type of\nintegrity constraint involves specifying a data type for each data item.\nA more complex type of constraint that frequently occurs involves specifying that a record in one file must be\nrelated to records in other files.This is known as a referential integrity constraint."
+  },
+  {
+    "chunk_id": 55,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 29,
+    "text": "related to records in other files.This is known as a referential integrity constraint.\nAnother type of constraint specifies uniqueness on data item values, this is known as a key or uniqueness\nconstraint.\n9. Permitting Inferencing and Actions Via Rules:\nIn a deductive database system, one may specify declarative rules that allow the database to infer new data!\nE.g., Figure out which students are on academic probation. Such capabilities would take the place of"
+  },
+  {
+    "chunk_id": 56,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 29,
+    "text": "E.g., Figure out which students are on academic probation. Such capabilities would take the place of\napplication programs that would be used to as certain such information otherwise.\nActive database systems go one step further by allowing \"active rules\" that can be used to initiate actions\nautomatically."
+  },
+  {
+    "chunk_id": 57,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 30,
+    "text": "A Brief History of Database Applications\n● Early Database Applications:\n- The Hierarchical and Network Models were introduced in mid 1960s and dominated\nduring the 70’s\n- A bulk of the worldwide database processing still occurs using these models\n● Relational Model based Systems:\n- Relational model was originally introduced in 1970, was heavily researched and\nexperimented with in\n- IBM Research and several universities"
+  },
+  {
+    "chunk_id": 58,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 30,
+    "text": "- Relational model was originally introduced in 1970, was heavily researched and\nexperimented with in\n- IBM Research and several universities\nObject-oriented and emerging applications: Object-Oriented Database Management Systems\n(OODBMSs) were introduced in late 1980s and early 1990s to cater to the need of complex data\nprocessing in CAD and other applications."
+  },
+  {
+    "chunk_id": 59,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 31,
+    "text": "● Their use has not taken off much.\nMany relational DBMSs have incorporated object database concepts, leading to a new category called\nobject-relational DBMSs (ORDBMSs)\nExtended relational systems add further capabilities (e.g. for multimedia data, XML, and other data\ntypes)\n● Relational DBMS Products emerged in the 1980s\n● Data on the Web and E-commerce Applications\n● Web contains data in HTML (Hypertext markup language) with links among pages."
+  },
+  {
+    "chunk_id": 60,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 31,
+    "text": "● Data on the Web and E-commerce Applications\n● Web contains data in HTML (Hypertext markup language) with links among pages.\n● This has given rise to a new set of applications and E-commerce is using new standards like\nXML (eXtended Markup Language)"
+  },
+  {
+    "chunk_id": 61,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 32,
+    "text": "● Script programming languages such as PHP and JavaScript allow\ngeneration of dynamic Web pages that are partially generated\nfrom a database\n● New functionality is being added to DBMSs in the following\nareas:\n- Scientific Applications\n- XML (extensible Markup Language)\n- Image Storage and Management\n- Audio and Video data management\n- Data Warehousing and Data Mining\n- Spatial data management\n- Time Series and Historical Data Management"
+  },
+  {
+    "chunk_id": 62,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 32,
+    "text": "- Audio and Video data management\n- Data Warehousing and Data Mining\n- Spatial data management\n- Time Series and Historical Data Management\n- The above gives rise to new research and development in incorporating\nnew data types, complex data structures, new operations and storage and\nindexing schemes in database systems.\n- Also allow database updates through Web pages"
+  },
+  {
+    "chunk_id": 63,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 33,
+    "text": "When Not to Use a DBMS\n● Main inhibitors (costs) of using a DBMS:\nHigh initial investment and possible need for additional hardware.\nOverhead for providing generality, security, concurrency control, recovery, and integrity functions.\n● When a DBMS may be unnecessary:\nIf the database and applications are simple, well defined, and not expected to change.\nIf there are stringent real-time requirements that may not be met because of DBMS overhead.\nIf access to data by multiple users is not required."
+  },
+  {
+    "chunk_id": 64,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 33,
+    "text": "If there are stringent real-time requirements that may not be met because of DBMS overhead.\nIf access to data by multiple users is not required.\n● When no DBMS may suffice:\nIf the database system is not able to handle the complexity of data because of modeling limitations.\nIf the database users need special operations not supported by the DBMS."
+  },
+  {
+    "chunk_id": 65,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 34,
+    "text": "QUESTIONS\n1.Define the following terms:\ni. Data and database\nii. DBMS\niii. Database catalog and meta-data\niv. Canned transaction\nv. Persistent stored object\n2. Discuss the main characteristics of the database approach and how it differs from traditional file\nsystems.\n3. What are the responsibilities of the DBA and the database designers?\n4. What are the different types of database end users? Discuss the main activities of each."
+  },
+  {
+    "chunk_id": 66,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 34,
+    "text": "4. What are the different types of database end users? Discuss the main activities of each.\n5. Discuss about main advantages of Database system over traditional file processing system.\n6. List and describe roles of workers behind the scene.\n7. Describe the advantages of DBMS."
+  },
+  {
+    "chunk_id": 67,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 35,
+    "text": "OVERVIEW OF DATABASE\nLANGUAGES AND\nARCHITECTURES"
+  },
+  {
+    "chunk_id": 68,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 36,
+    "text": "Data Models, Schemas, and Instances\nData abstraction generally refers to the suppression of details of data organization and storage, and the\nhighlighting of the essential features for an improved understanding of data.\nOne of the main characteristics of the database approach is to support data abstraction so that different users can\nperceive data at their preferred level of detail.\nA data model—a collection of concepts that can be used to describe the structure of a database—provides the"
+  },
+  {
+    "chunk_id": 69,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 36,
+    "text": "A data model—a collection of concepts that can be used to describe the structure of a database—provides the\nnecessary means to achieve this abstraction"
+  },
+  {
+    "chunk_id": 70,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 37,
+    "text": "Categories of Data Models\n1. High-level or conceptual data models\n- provide concepts that are close to the way many users perceive data\n- use concepts such as entities, attributes, and relationships.\nAn entity represents a real-world object or concept, An attribute represents some property of interest that\nfurther describes an entity, A relationship among two or more entities represents an association among the\nentities.\nEntity-relationship model (ER) is popular high-level conceptual data model."
+  },
+  {
+    "chunk_id": 71,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 37,
+    "text": "entities.\nEntity-relationship model (ER) is popular high-level conceptual data model.\n2. Low-level or physical data models\n- provide concepts that describe the details of how data is stored on the computer storage media,\ntypically magnetic disks.\n- Concepts provided by low-level data models are generally meant for computer specialists, not for end\nusers"
+  },
+  {
+    "chunk_id": 72,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 38,
+    "text": "3. Representational (or implementation) data models\n- provide concepts that may be easily understood by end users but that are not too far removed from the way\ndata is organized in computer storage\n- in between high level and low level\n- hide many details of data storage on disk but can be implemented on a computer system directly\n- Record-based model"
+  },
+  {
+    "chunk_id": 73,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 39,
+    "text": "[SCANNED PAGE OCR]: Relation name ‘ “e\nrf be\né 7\nSTUDENT ROLL_NO | NAME AGE PHONE |\n] | David 18 9525364936\nTuples —- po +—— -—— | |\n| 2 Benjamin | 19 3526699663"
+  },
+  {
+    "chunk_id": 74,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 40,
+    "text": "Schemas, Instances, and Database State\nOne must distinguish between the description of a database and the database itself. The former is called the database\nschema, which is specified during design and is not expected to change often.\nApplication requirements change occasionally, which is one of the reasons why software maintenance is important. On such\noccasions, a change to a database's schema may be called for. Making changes to a database schema is known as schema\nevolution."
+  },
+  {
+    "chunk_id": 75,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 41,
+    "text": "DBMS Architecture and Data Independence\nThree-Schema Architecture: The goal is to separate user applications and the physical database."
+  },
+  {
+    "chunk_id": 76,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 42,
+    "text": "Internal level: has an internal/physical schema that describes the physical storage structure of the database using a\nlow-level data model)\nConceptual level: has a conceptual schema describing the (logical) structure of the whole database for a community of\nusers. It hides physical storage details, concentrating upon describing entities, data types, relationships, user operations,\nand constraints. Can be described using either high-level or implementational data model."
+  },
+  {
+    "chunk_id": 77,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 42,
+    "text": "and constraints. Can be described using either high-level or implementational data model.\nExternal/view level: includes a number of external schemas (or user views), each of which describes part of the database\nthat a particular category of users is interested in, hiding rest of database. Can be described using either high-level or\nimplementational data model. (In practice, usually described using same model as is the conceptual schema)"
+  },
+  {
+    "chunk_id": 78,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 42,
+    "text": "implementational data model. (In practice, usually described using same model as is the conceptual schema)\nUsers (including application programs) submit queries that are expressed with respect to the external level. It is the\nresponsibility of the DBMS to transform such a query into one that is expressed with respect to the internal level (and to\ntransform the result, which is at the internal level, into its equivalent at the external level).\nBy virtue of mappings between the levels:"
+  },
+  {
+    "chunk_id": 79,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 42,
+    "text": "transform the result, which is at the internal level, into its equivalent at the external level).\nBy virtue of mappings between the levels:\n- external/conceptual mapping (providing logical data independence)\n- conceptual/internal mapping (providing physical data independence)"
+  },
+  {
+    "chunk_id": 80,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 43,
+    "text": "Data Independence\nData independence, which can be defined as the capacity to change the schema at one level of a database\nsystem without having to change the schema at the next higher level. We can define two types of data\nindependence:\n1. Logical data independence\n- capacity to change the conceptual schema without having to change external schemas or application\nprograms\n- change the conceptual schema to expand the database, to change constraints, or to reduce the database"
+  },
+  {
+    "chunk_id": 81,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 43,
+    "text": "programs\n- change the conceptual schema to expand the database, to change constraints, or to reduce the database\nchanges to constraints can be applied to the conceptual schema without affecting the external schemas or\napplication programs\n2. Physical data independence\n- capacity to change the internal schema without having to change the conceptual schema. Hence, the\nexternal schemas need not be changed as well by creating additional access structures—to improve the"
+  },
+  {
+    "chunk_id": 82,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 43,
+    "text": "external schemas need not be changed as well by creating additional access structures—to improve the\nperformance of retrieval or update."
+  },
+  {
+    "chunk_id": 83,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 44,
+    "text": "Database Languages and Interfaces\nDBMS Languages\nDBMS packages provide an integrated feature of above languages into a single language called\nStructured Query Language.\nData definition language (DDL), is used by the DBA and by database designers to define both schemas.\nStorage definition language (SDL), is used to specify the internal schema.\nView definition language (VDL), to specify user views and their mappings to the conceptual schema."
+  },
+  {
+    "chunk_id": 84,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 44,
+    "text": "View definition language (VDL), to specify user views and their mappings to the conceptual schema.\nData manipulation language(DML) provides set of operations like retrieval, insertion, deletion, and\nmodification of the data."
+  },
+  {
+    "chunk_id": 85,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 45,
+    "text": "A high-level or non procedural DML\n● can be used on its own to specify complex database operations concisely many DBMS\n● high-level DML statements either to be entered interactively from a display monitor or terminal or to be\nembedded in a general-purpose programming language.\n● can specify and retrieve many records in a single DML statement; therefore, they are called set-at-a-time or\nset-oriented DMLs\n● declarative language\nA low-level or procedural DML"
+  },
+  {
+    "chunk_id": 86,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 45,
+    "text": "set-oriented DMLs\n● declarative language\nA low-level or procedural DML\n● must be embedded in a general-purpose programming language\n● retrieves individual records or objects from the database and processes each separately\n● to retrieve and process each record from a set of records. Low-level DMLs are also called record-at-a-time\nDMLs"
+  },
+  {
+    "chunk_id": 87,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 46,
+    "text": "DBMS Interfaces\n● Menu-Based Interfaces for Web Clients or Browsing. These interfaces present the user with lists of options\n(called menus) that lead the user through the formulation of a request.\n● Forms-Based Interfaces displays a form to each user. Users can fill out all of the form entries to insert new\ndata, or they can fill out only certain entries, in which case the DBMS will retrieve matching data for the\nremaining entries."
+  },
+  {
+    "chunk_id": 88,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 46,
+    "text": "data, or they can fill out only certain entries, in which case the DBMS will retrieve matching data for the\nremaining entries.\n● Graphical User Interfaces displays a schema to the user in diagrammatic form. The user then can specify a\nquery by manipulating the diagram. GUIs utilize both menus and forms.\n● Natural Language Interfaces accepts requests written in English or some other language and attempt to\nunderstand them."
+  },
+  {
+    "chunk_id": 89,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 46,
+    "text": "● Natural Language Interfaces accepts requests written in English or some other language and attempt to\nunderstand them.\n● Speech Input and Output use of speech as an input query and speech as an answer to a question or result.\nThe speech input is detected using a library of predefined words and used to set up the parameters that are\nsupplied to the queries.\n● Interfaces for Parametric Users such as bank tellers, often have a small set of operations that they must\nperform repeatedly."
+  },
+  {
+    "chunk_id": 90,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 46,
+    "text": "● Interfaces for Parametric Users such as bank tellers, often have a small set of operations that they must\nperform repeatedly.\n● Interfaces for the DBA. DBA use privileged commands. These include commands for creating accounts,\nsetting system parameters, granting account authorization, changing a schema, and reorganizing the storage\nstructures of a database."
+  },
+  {
+    "chunk_id": 91,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 47,
+    "text": "The Database System Environment"
+  },
+  {
+    "chunk_id": 92,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 48,
+    "text": "● The figure is divided into two parts.\n● The top part of the figure refers to the various users of the database environment and their\ninterfaces. The lower part shows the internals of the DBMS responsible for storage of data and\nprocessing of transactions.\n● The database and the DBMS catalog are usually stored on disk. Access to the disk is controlled\nprimarily by the operating system (OS), which schedules disk read/write."
+  },
+  {
+    "chunk_id": 93,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 48,
+    "text": "primarily by the operating system (OS), which schedules disk read/write.\n● Many DBMSs have their own buffer management module to schedule disk read/write.\n● Stored data manager controls access to DBMS information that is stored on disk, whether it is\npart of the database or the catalog.\nTop part:\n- it shows interfaces for the DBA staff, casual users who work with interactive interfaces to\nformulate queries\n- application programmers who create programs using some host programming languages"
+  },
+  {
+    "chunk_id": 94,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 48,
+    "text": "formulate queries\n- application programmers who create programs using some host programming languages\n- parametric users who do data entry work by supplying parameters to predefined transactions.\n- the DBA staff works on defining the database and tuning it by making changes to its definition\nusing the DDL and other privileged commands"
+  },
+  {
+    "chunk_id": 95,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 49,
+    "text": "In the lower part of Figure,\n● the runtime database processor executes\n- the privileged commands\n- the executable query plans, and\n- the canned transactions with runtime parameters.\n● It works with the system catalog and may update it with statistics\n● It also works with the stored data manager, which in turn uses basic operating system services for\ncarrying out\n● low-level input/output (read/write) operations between the disk and main memory"
+  },
+  {
+    "chunk_id": 96,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 49,
+    "text": "carrying out\n● low-level input/output (read/write) operations between the disk and main memory\n● The runtime database processor handles other aspects of data transfer, such as management of\nbuffers concurrency control and backup and recovery systems, integrated into the working of the\nruntime database processor for purposes of transaction management"
+  },
+  {
+    "chunk_id": 97,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 50,
+    "text": "Database System Utilities\nDBMSs have database utilities (Program) that help the DBA manage the database system.\nCommon utilities have the following types of functions:\nLoading\n- used to load existing data files—such as text files or sequential files—into the database\n- automatically reformats the data and stores it in the database\n- for loading programs, conversion tools are available like IDMS (Computer Associates), SUPRA (Cincom), and\nIMAGE (HP)\nBackup"
+  },
+  {
+    "chunk_id": 98,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 50,
+    "text": "- for loading programs, conversion tools are available like IDMS (Computer Associates), SUPRA (Cincom), and\nIMAGE (HP)\nBackup\n- creates a backup copy of the database, by dumping the entire database onto tape\n- used to restore the database in case of catastrophic disk failure\n- Incremental backups are also often used, to save space"
+  },
+  {
+    "chunk_id": 99,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 51,
+    "text": "Database storage reorganization\n- used to reorganize a set of database files into different file organizations to improve performance\nPerformance monitoring\n- monitors database usage and provides statistics to the DBA.\n- Statistics used for making decisions"
+  },
+  {
+    "chunk_id": 100,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 52,
+    "text": "Tools, Application Environments, and Communications Facilities\nCASE (Computer-Aided Software Engineering Tools) tools are used in the design phase of database systems\nData dictionary (or data repository) system for storing catalog information about schemas and constraints\nInformation repository stores information such as design decisions, usage standards, application program\ndescriptions, and user information"
+  },
+  {
+    "chunk_id": 101,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 52,
+    "text": "Information repository stores information such as design decisions, usage standards, application program\ndescriptions, and user information\nApplication development environment systems provide an environment for developing database applications,\nincluding database design, GUI development, querying and updating, and application program development\nCommunications software, whose function is to allow users at locations remote from the database system site to"
+  },
+  {
+    "chunk_id": 102,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 52,
+    "text": "Communications software, whose function is to allow users at locations remote from the database system site to\naccess the database through computer terminals, workstations, or personal computers\nThese are connected to the database site through data communications hardware such as Internet routers, phone lines,\nlong-haul networks, local networks, or satellite communication devices\nThe integrated DBMS and data communications system is called a DB/DC system"
+  },
+  {
+    "chunk_id": 103,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 53,
+    "text": "Centralized DBMSs Architecture"
+  },
+  {
+    "chunk_id": 104,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 54,
+    "text": "● Earlier architectures used mainframe computers to provide the main processing for all system functions\n● These mainframes replaced by users with their terminals with PCs and workstations\n● DB systems used these computers similarly to how they had used display terminals\n● So that the DBMS itself was still a centralized DBMS in which all the DBMS functionality,\napplication program execution, and user interface processing were carried out on one machine"
+  },
+  {
+    "chunk_id": 105,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 54,
+    "text": "application program execution, and user interface processing were carried out on one machine\n● Gradually, DBMS systems started to exploit the available processing power at the user side, which led\nto client/server DBMS architectures"
+  },
+  {
+    "chunk_id": 106,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 55,
+    "text": "Basic Client/Server Architectures"
+  },
+  {
+    "chunk_id": 107,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 56,
+    "text": "● The client/server architecture was developed to deal with computing environments in which a large\nnumber of PCs, workstations, file servers, printers, database servers, Web servers, e-mail servers, and\nother software and equipment are connected via a network.\n● The idea is to define specialized servers with specific functionalities\n● It is possible to connect a number of PCs or small workstations as clients to a file server that maintains\nthe files of the client machines"
+  },
+  {
+    "chunk_id": 108,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 56,
+    "text": "● It is possible to connect a number of PCs or small workstations as clients to a file server that maintains\nthe files of the client machines\n● Another machine can be designated as a printer server by being connected to various printers; all print\nrequests by the clients are forwarded to this machine\n● Web servers or e-mail servers also fall into the specialized server category. The resources provided by\nspecialized servers can be accessed by many client machines"
+  },
+  {
+    "chunk_id": 109,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 56,
+    "text": "specialized servers can be accessed by many client machines\n● The client machines provide the user with the appropriate interfaces to utilize these servers, as well as\nwith local processing power to run local applications.\n● This concept can be carried over to other software packages, with specialized programs—such as a CAD\n(computer-aided design) package"
+  },
+  {
+    "chunk_id": 110,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 57,
+    "text": "Physical two-tier client/server architecture"
+  },
+  {
+    "chunk_id": 111,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 58,
+    "text": "● Some machines would be client sites only, other machines would be dedicated servers, and\nothers would have both client and server functionality\n● The concept of client/server architecture assumes an underlying framework that consists of\nmany PCs and workstations as well as a smaller number of mainframe machines, connected\nvia LANs and other types of computer networks\n● A client machine provides user machine that provides user interface capabilities and local\nprocessing"
+  },
+  {
+    "chunk_id": 112,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 58,
+    "text": "via LANs and other types of computer networks\n● A client machine provides user machine that provides user interface capabilities and local\nprocessing\n● A server is a system containing both hardware and software that can provide services to the\nclient machines, such as file access, printing, archiving, or database access.\n● In general, some machines install only client software, others only server software, and still\nothers may include both client and server software"
+  },
+  {
+    "chunk_id": 113,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 59,
+    "text": "Three-Tier and n-Tier Architectures for Web Applications"
+  },
+  {
+    "chunk_id": 114,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 60,
+    "text": "● Many Web applications use an architecture called the three-tier architecture, which adds an\nintermediate layer between the client and the database server\n● This intermediate layer or middle tier is called the application server or the Web server, depending\non the application\n● This server plays an intermediary role by running application programs and storing business rules\n(procedures or constraints) that are used to access data from the database server"
+  },
+  {
+    "chunk_id": 115,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 60,
+    "text": "(procedures or constraints) that are used to access data from the database server\n● It can also improve database security by checking a client’s credentials before forwarding a request to\nthe database server\n● Clients contain GUI interfaces and some additional application-specific business rules\n● The intermediate server accepts requests from the client, processes the request and sends database\nqueries and commands to the database server, and then acts as a conduit for passing (partially)"
+  },
+  {
+    "chunk_id": 116,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 60,
+    "text": "queries and commands to the database server, and then acts as a conduit for passing (partially)\nprocessed data from the database server to the clients\n● Thus, the user interface, application rules, and data access act as the three tiers"
+  },
+  {
+    "chunk_id": 117,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 61,
+    "text": "● The presentation layer displays information to the user and allows data entry\n● The business logic layer handles intermediate rules and constraints before data is passed up to the user\nor down to the DBMS\n● The bottom layer includes all data management services. The middle layer can also act as a Web\nserver, which retrieves query results from the database server and formats them into dynamic Web\npages that are viewed by the Web browser at the client side"
+  },
+  {
+    "chunk_id": 118,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 61,
+    "text": "pages that are viewed by the Web browser at the client side\n● If business logic layer is divided into multiple layer, then called as n-tier architecture"
+  },
+  {
+    "chunk_id": 119,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 62,
+    "text": "Classification of Database Management Systems\nData Model\n- Used in commercial DBMS [eg: relational data model, object data model]\n- Many legacy applications still run on database systems based on the hierarchical and network data\nmodels\nNumber of users\n- Single-user systems support only one user at a time and are mostly used with PCs\n- Multiuser systems, which include the majority of DBMSs, support concurrent multiple users\nNumber of sites"
+  },
+  {
+    "chunk_id": 120,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 62,
+    "text": "- Multiuser systems, which include the majority of DBMSs, support concurrent multiple users\nNumber of sites\n- Centralized DBMS : the data is stored at a single computer site\n- Distributed DBMS [DDBMS] : DBMS software distributed over many sites"
+  },
+  {
+    "chunk_id": 121,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 63,
+    "text": "Cost\n- Open source like MYSQL & PostgreSQL\n- 30 day copy versions\n- Sold in form of licenses\nTypes of access path\n- inverted file structures\n- general purpose or special purpose\n- online transaction processing (OLTP) system\nOther important data models\nNetwork model\n- represents data as record types and also represents a limited type of 1:N relationship, called a set\ntype\nHierarchical model\n- represents data as hierarchical tree structures\n- Each hierarchy represents a number of related records"
+  },
+  {
+    "chunk_id": 122,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 64,
+    "text": "QUESTIONS\n1. Define the following:\na. Data model\nb. Schema and snapshot\nc. Intension and extension\n2. With neat diagram, explain three schema architecture along with its disadvantage.\n3. Differentiate between physical data independence and logical data independence.\n4. List and explain different types of DBMS interfaces.\n5. With neat diagram, explain the components module of database system.\n6. Differentiate two-tier and three tier client-server architectures."
+  },
+  {
+    "chunk_id": 123,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 65,
+    "text": "Conceptual Data Modeling and\nDatabase Design"
+  },
+  {
+    "chunk_id": 124,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 66,
+    "text": "Main phases of\nDatabase Design."
+  },
+  {
+    "chunk_id": 125,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 67,
+    "text": "Conceptual modeling is a very important phase in designing a successful database application.\nThe main phases of database design are:\nRequirements Collection and Analysis: purpose is to produce a description of the users'\nrequirements.\nConceptual Design: purpose is to produce a conceptual schema for the database, including detailed\ndescriptions of entity types, relationship types, and constraints. All these are expressed in terms\nprovided by the data model being used. Eg: ER model"
+  },
+  {
+    "chunk_id": 126,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 67,
+    "text": "provided by the data model being used. Eg: ER model\nLogical Design: purpose is to transform the conceptual schema (which is at a high/abstract level) into\na (lower-level) representational/implementational model supported by whatever DBMS is to be used.\nPhysical Design: purpose is to decide upon the internal storage structures, access paths (indexes),\netc., that will be used in realizing the representational model produced in previous phase."
+  },
+  {
+    "chunk_id": 127,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 68,
+    "text": "[SCANNED PAGE OCR]: CName_) <>\nae\naaiicen <Number_of_employees—] DEPARTMENT\n1\n1 1 or\nC Hours) i\n———| PROJECT\nSupervisor Supervisee 1 Som\n1 << N C Name >)\nDEPENDENTS_OF Number “> oat\n|N\n_ <Te>"
+  },
+  {
+    "chunk_id": 128,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 69,
+    "text": "1. The company is organized into departments. Each department has a unique name, a unique\nnumber, and a particular employee who manages the department. We keep track of the start date\nwhen that employee began managing the department. A department may have several locations.\n2. A department controls a number of projects, each of which has a unique name, a unique\nnumber, and a single location.\n3. The database will store each employee’s name, Social Security number, address, salary, sex"
+  },
+  {
+    "chunk_id": 129,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 69,
+    "text": "number, and a single location.\n3. The database will store each employee’s name, Social Security number, address, salary, sex\n(gender), and birth date. An employee is assigned to on department, but may work on several\nprojects, which are not necessarily controlled by the same department. It is required to keep\ntrack of the current number of hours per week that an employee works on each project, as well\nas the direct supervisor of each employee (who is another employee)."
+  },
+  {
+    "chunk_id": 130,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 69,
+    "text": "as the direct supervisor of each employee (who is another employee).\n4. The database will keep track of the dependents of each employee for insurance purposes,\nincluding each dependent’s first name, sex, birth date, and relationship to the employee."
+  },
+  {
+    "chunk_id": 131,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 70,
+    "text": "[SCANNED PAGE OCR]: Symbol Meaning\n<> Relationship\n© Indentifying Relationship\n—C > Attribute\n—_> Key Attribute\n—C)» Multivalued Attribute\n‘ : oe Composite Attribute\n— ~ “y Derived Attribute\nOa== Total Participation of E, in R\nCardinality Ratio 1: N for E,: Eoin R\n(min, max)\nStructural Constraint (min, max)"
+  },
+  {
+    "chunk_id": 132,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 71,
+    "text": "[SCANNED PAGE OCR]: Relation name ‘ “e\nrf be\né 7\nSTUDENT ROLL_NO | NAME AGE PHONE |\n] | David 18 9525364936\nTuples —- po +—— -—— | |\n| 2 Benjamin | 19 3526699663"
+  },
+  {
+    "chunk_id": 133,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 72,
+    "text": "1. The basic concept that the ER model represents is an entity, which is a thing or object in the real world with\nan independent existence. An entity may be an object with a physical existence (for example, a particular\nperson, car, house, or employee) or it may be an object with a conceptual existence (for instance, a company,\na job, or a university course).\n2. Each entity has attributes—the particular properties that describe it. For example, an EMPLOYEE entity may"
+  },
+  {
+    "chunk_id": 134,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 72,
+    "text": "a job, or a university course).\n2. Each entity has attributes—the particular properties that describe it. For example, an EMPLOYEE entity may\nbe described by the employee’s name, age, address, salary, and job.\nTypes of attributes occur in the ER model\n- Simple versus Composite\n- Single valued versus Multivalued\n- Stored versus Derived\n- Complex Attributes."
+  },
+  {
+    "chunk_id": 135,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 73,
+    "text": "Two entities, EMPLOYEE e , and COMPANY c , and their attributes.\n1 1"
+  },
+  {
+    "chunk_id": 136,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 74,
+    "text": "Composite versus Simple (Atomic) Attributes.\nThe value of a composite attribute is the concatenation of the values of its component simple attributes."
+  },
+  {
+    "chunk_id": 137,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 75,
+    "text": "Composite attributes can be divided into smaller subparts.\nFor eg: the Address attribute of the EMPLOYEE entity can be subdivided into\nStreet_address, City, State, and Zip, 3 with the values ‘2311 Kirby’, ‘Houston’, ‘Texas’,\nand ‘77001’.\nAttributes that are not divisible are called simple or atomic attributes.\nFor eg: attribute Age cannot be divided"
+  },
+  {
+    "chunk_id": 138,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 76,
+    "text": "Single-valued - Most attributes have a single value for a particular entity\nFor eg: Age is a single-valued attribute of a person\nMultivalued - An entity having multiple values for that attribute\nFor eg: color of a color color={black,red} Person’s degree degree={BE, MTech,\nPhD}\nStored and Derived attribute\nTwo (or more) attribute values are related—for eg: the Age and Birth_date attributes\nof a person\nThe value of Age can be determined from the current (today’s) date and the value of"
+  },
+  {
+    "chunk_id": 139,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 76,
+    "text": "of a person\nThe value of Age can be determined from the current (today’s) date and the value of\nthat person’s\nBirth_date\nThe Age attribute is hence called a derived attribute\nBirth_date attribute is called a stored attribute"
+  },
+  {
+    "chunk_id": 140,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 77,
+    "text": "NULL Values\nIn some cases, a particular entity may not have an applicable value for an attribute. eg: the\nApartment_number attribute of an address applies only to addresses that are in apartment buildings and not to\nother types of residences, such as single-family homes, College_degrees attribute applies only to people with\ncollege degrees.\nNULL can also be used if we do not know the value of an attribute for a particular entity— for example, if we\ndo not know the home phone number of a person."
+  },
+  {
+    "chunk_id": 141,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 77,
+    "text": "do not know the home phone number of a person.\nThe meaning of the former type of NULL is not applicable, whereas the meaning of the latter is unknown.\nThe unknown category of NULL can be further classified into two cases.\n1. The first case arises when it is known that the attribute value exists but is missing—for instance, if the\nHeight attribute of a person is listed as NULL.\n2. The second case arises when it is not known whether the attribute value exists—for example, if the"
+  },
+  {
+    "chunk_id": 142,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 77,
+    "text": "Height attribute of a person is listed as NULL.\n2. The second case arises when it is not known whether the attribute value exists—for example, if the\nHome_phone attribute of a person is NULL."
+  },
+  {
+    "chunk_id": 143,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 78,
+    "text": "Complex Attributes\nComposite and multivalued attributes can be nested arbitrarily\nArbitrary nesting by grouping components of a composite attribute between parentheses ( ) and separating the\ncomponents with commas, and by displaying multivalued attributes between braces { }. Such attributes are called\ncomplex attributes\nFor example, if a person can have more than one residence and each residence can have a single address and multiple\nphones, an attribute Address_phone for a person"
+  },
+  {
+    "chunk_id": 144,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 79,
+    "text": "[SCANNED PAGE OCR]: Types of Attribute\nName | DOB Address Age |Phone\nsin vy\nwy . —_ abe\n: = , st a i ay] —\nO. ath = aoe ~"
+  },
+  {
+    "chunk_id": 145,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 80,
+    "text": "Entity Types, Entity Sets, Keys, and Value Sets\n- Entity type defines a collection (or set) of entities that have the same attributes\n- Each entity type in the database is described by its name and attributes\n- Below figure shows two entity types: EMPLOYEE and COMPANY, and a list of some of the attributes for\neach"
+  },
+  {
+    "chunk_id": 146,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 81,
+    "text": "- The collection of all entities of a particular entity type in the database at any point in time\nis called an entity set or entity collection\n- Entity set is usually referred to using the same name as the entity type\n- An entity type is represented in ER diagrams as a rectangular box\n- Attribute names are enclosed in ovals and are attached to their entity type by straight\nlines\n- Composite attributes are attached to their component attributes by straight lines"
+  },
+  {
+    "chunk_id": 147,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 81,
+    "text": "lines\n- Composite attributes are attached to their component attributes by straight lines\n- Multivalued attributes are displayed in double ovals\n- Collection of entities of a particular entity type is grouped into an entity set, which is also\ncalled the extension of the entity type"
+  },
+  {
+    "chunk_id": 148,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 82,
+    "text": "Key Attributes of an Entity Type\nImportant constraint on the entities of an entity type is the key or uniqueness constraint on\nattributes\n1. An entity type usually has one or more attributes whose values are distinct for each\nindividual entity in the entity set. Such an attribute is called a key attribute, and its values\ncan be used to identify each entity uniquely\n2. For eg, the Name attribute is a key of the COMPANY entity type in because no two\ncompanies are allowed to have the same name"
+  },
+  {
+    "chunk_id": 149,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 82,
+    "text": "2. For eg, the Name attribute is a key of the COMPANY entity type in because no two\ncompanies are allowed to have the same name\nFor the PERSON entity type, a typical key attribute is Ssn\n1. Specifying that an attribute is a key of an entity type means that the preceding uniqueness\nproperty must hold for every entity set of the entity type\n2. Hence, it is a constraint that prohibits any two entities from having the same value for the\nkey attribute at the same time"
+  },
+  {
+    "chunk_id": 150,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 82,
+    "text": "2. Hence, it is a constraint that prohibits any two entities from having the same value for the\nkey attribute at the same time\n3. Some entity types have more than one key attribute"
+  },
+  {
+    "chunk_id": 151,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 83,
+    "text": "For eg, each of the Vehicle_id and Registration attributes of the entity type CAR is a key in\nits own right"
+  },
+  {
+    "chunk_id": 152,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 84,
+    "text": "Value Sets (Domains) of Attributes\n- Each simple attribute of an entity type is associated with a value set (or\ndomain of values), which specifies the set of values that may be assigned\nto that attribute for each individual entity\n- If the range of ages allowed for employees is between 16 and 70, we can\nspecify the value set of the Age attribute of EMPLOYEE to be the set of\ninteger numbers between 16 and 70\n- Value sets are not typically displayed in basic ER diagrams and are"
+  },
+  {
+    "chunk_id": 153,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 84,
+    "text": "integer numbers between 16 and 70\n- Value sets are not typically displayed in basic ER diagrams and are\nsimilar to the basic data types available in most programming languages,\nsuch as integer, string, Boolean, float, enumerated type, subrange, and so\non"
+  },
+  {
+    "chunk_id": 154,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 85,
+    "text": "[SCANNED PAGE OCR]: Examples of Value Sets (Domains) for Attributes\n\nAttribute Value Set (Domain) Example\n| Age | Integers between 0 and 120 |\n\nGender {Male, Female, Other}\n\nSalary Decimal values greater than 0\n\nEmail Valid email format (€.9.. xyz@example.com }\n\nJoinfate Date format { yvY¥-M4-Db }\n\nGrade fA, 8, C, 0, F} (fixed set of letter grades}"
+  },
+  {
+    "chunk_id": 155,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 86,
+    "text": "Weak Entity Types\n● Entity types that do not have key attributes of their own are called weak entity types\n● A Weak Entity is an entity type that cannot exist independently and relies on a strong entity (or\nowner) for identification.\n● In contrast, regular entity types that do have a key attribute—are called strong entity types\n● Entities that belong to a weak entity type are identified by being related to specific entities from"
+  },
+  {
+    "chunk_id": 156,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 86,
+    "text": "● Entities that belong to a weak entity type are identified by being related to specific entities from\nanother entity type in combination with one of their attribute values. This entity type is called an\nidentifying or owner entity type.\n● The relationship that relates the identifying entity type with the weak entity type is called an\nidentifying relationship.\n● A weak entity type always has a total participation constraint with respect to the identifying"
+  },
+  {
+    "chunk_id": 157,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 86,
+    "text": "identifying relationship.\n● A weak entity type always has a total participation constraint with respect to the identifying\nrelationship, because a weak entity cannot exist without its owner.\n● A weak entity type normally has a partial key, which is the attribute that can uniquely identify\nweak entities that are related to the same owner entity. For example, the attribute Name of\nDEPENDENT is the partial key."
+  },
+  {
+    "chunk_id": 158,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 87,
+    "text": "Dependent (Weak Entity) → Employee (Strong Entity)\n● Scenario: Employees can have dependents (spouse, children) covered under\ncompany benefits.\n● Weak Entity: Dependent (Cannot exist without an Employee).\n● Strong Entity: Employee (Each dependent belongs to an employee).\n● Partial Key: DependentName (A name is unique only within an employee\nbut not across all employees)."
+  },
+  {
+    "chunk_id": 159,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 88,
+    "text": "Project Task (Weak Entity) → Project (Strong Entity)\n● Scenario: Each project consists of multiple tasks assigned to employees.\n● Weak Entity: ProjectTask (A task cannot exist without a project).\n● Strong Entity: Project (A project has multiple tasks).\n● Partial Key: TaskID (Unique within a project but not across all projects)."
+  },
+  {
+    "chunk_id": 160,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 89,
+    "text": "[SCANNED PAGE OCR]: errr\nEntity-Relationship (E-R) Diagram\nStrong\nEntity Set\nWeak\nEntity Set Composite\nAttributes\nStrong y\nRelationship a\nRelationship Derived ee.\nWeak\nRelationship ne |__|\nNNN"
+  },
+  {
+    "chunk_id": 161,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 90,
+    "text": "Initial Conceptual Design of the COMPANY Database"
+  },
+  {
+    "chunk_id": 162,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 91,
+    "text": "Relationship Types, Relationship Sets, Roles, and Structural Constraints\nWhenever an attribute of one entity type refers to another entity type, some relationship\nexists.\nFor example, the attribute Manager of DEPARTMENT refers to an employee who manages the\ndepartment, the attribute Controlling_department of PROJECT refers to the department that\ncontrols the project in the ER model, these references should not be represented as attributes\nbut as relationships."
+  },
+  {
+    "chunk_id": 163,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 92,
+    "text": "Relationship Types, Sets, and Instances\n- A relationship type R among n entity types E1, E2, . . . , En defines a set of associations—or a relationship\nset—among entities from these entity types\n- Entity types and entity sets, a relationship type and its corresponding relationship set are customarily referred\nto by the same name, R\n- Mathematically, the relationship set R is a set of relationship instances r, where each r associates n individual\ni i"
+  },
+  {
+    "chunk_id": 164,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 92,
+    "text": "to by the same name, R\n- Mathematically, the relationship set R is a set of relationship instances r, where each r associates n individual\ni i\nentities (e1, e2, . . . , en), and each entity e in r is a member of entity set E , 1 ≤ j ≤ n\nj i j\n- A relationship set is a mathematical relation on E1, E2, . . . , En; alternatively, it can be defined as a subset of\nthe Cartesian product of the entity sets E1 × E2 × . . . × En"
+  },
+  {
+    "chunk_id": 165,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 92,
+    "text": "the Cartesian product of the entity sets E1 × E2 × . . . × En\n- Each of the entity types E1, E2, . . . , En is said to participate in the relationship type R\n- Each of the individual entities e1, e2, . . , en is said to participate in the relationship instance\nr = (e1, e2, . . , en)\ni"
+  },
+  {
+    "chunk_id": 166,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 93,
+    "text": "Some instances in WORKS_FOR relationship set, which represents a relation type WORKS_FOR between\nEMPLOYEE and DEPARTMENT."
+  },
+  {
+    "chunk_id": 167,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 94,
+    "text": "Relationship Degree, Role Names, and Recursive Relationships\nDegree of a Relationship Type. The degree of a relationship type is the number of participating entity\ntypes.\nA relationship type of degree two is called binary, and one of degree three is called ternary."
+  },
+  {
+    "chunk_id": 168,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 95,
+    "text": "Some relationship instances in the SUPPLY ternary relationship set."
+  },
+  {
+    "chunk_id": 169,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 96,
+    "text": "Role Names and Recursive Relationships\n● Each entity type in a relationship plays a particular role. The role name specifies the\nrole that a participating entity type plays in the relationship and explains what the\nrelationship means.\n● For example, in the WORKS_FOR relationship type, EMPLOYEE plays the role of\nemployee or worker and DEPARTMENT plays the role of department or employer\n● Same entity type participates more than once in a relationship type in different roles,"
+  },
+  {
+    "chunk_id": 170,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 96,
+    "text": "● Same entity type participates more than once in a relationship type in different roles,\nsuch relationship types are called recursive relationships or self-referencing\nrelationships."
+  },
+  {
+    "chunk_id": 171,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 97,
+    "text": "For example, in the Company schema, each employee has a supervisor, we need to include the\nrelationship “Supervises”, however a supervisor is also an employee, therefore the employee\nentity type participates twice in the relationship, once as an employee and once as a supervisor,\nand therefore we can specify two roles, employee and supervisor.\nA recursive relationship SUPERVISION between EMPLOYEE in the supervisor role (1) and EMPLOYEE in\nthe subordinate role (2)."
+  },
+  {
+    "chunk_id": 172,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 98,
+    "text": "Constraints on Binary Relationship Types\n● Relationship types have certain constraints that limit the possible combination of\nentities that may participate in relationship.\n● There are two main types of relationship constraints cardinality ratio and\nparticipation.\nCardinality for Binary Relationship\n● The cardinality ratio specifies the maximum number of relationship instances that an\nentity can participate in."
+  },
+  {
+    "chunk_id": 173,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 98,
+    "text": "Cardinality for Binary Relationship\n● The cardinality ratio specifies the maximum number of relationship instances that an\nentity can participate in.\n● The possible cardinality ratios for binary relationship types are: 1:1, 1:N, N:1, M:N."
+  },
+  {
+    "chunk_id": 174,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 99,
+    "text": "One-to-one − when only one instance of an entity is associated with the relationship, it is\nmarked as '1:1'.\nIn 1:1 an employee can manage at most one department and a department can have at most\none manager"
+  },
+  {
+    "chunk_id": 175,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 100,
+    "text": "One-to-many − When more than one instance of an entity is associated with a relationship, it is marked as\n'1:N'.\nFor example, in the WORKS_FOR binary relationship type, DEPARTMENT: EMPLOYEE is of cardinality\nratio 1:N, meaning that each department can have any number of employees, but an employee work for\nonly one department."
+  },
+  {
+    "chunk_id": 176,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 101,
+    "text": "Many-to-one − When more than one instance of entity is associated with the relationship,\nit is marked as 'N:1'.\nFor example, in the WORKS_FOR binary relationship type, EMPLOYEE:\nDEPARTMENT is of cardinality ratio N:1, meaning that many number of employees work\nfor one department."
+  },
+  {
+    "chunk_id": 177,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 102,
+    "text": "Many-to-Many The relationship type WORKS_ON is of cardinality ratio M:N, an\nemployee can work on several projects and in a project there might be several employees."
+  },
+  {
+    "chunk_id": 178,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 103,
+    "text": "[SCANNED PAGE OCR]: 1 1\na —— MANAGES ——$____ PAR MIT\nN 1\n, -—__——- WORKS_FOR ————— DEPA NI\nM N\nUl t —== STUDIES = =)"
+  },
+  {
+    "chunk_id": 179,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 104,
+    "text": "Participation Constraints and Existence Dependencies\n● The participation constraint specifies whether the existence of an\nentity depends on its being related to another entity via the\nrelationship type.\n● The constraint specifies the minimum number of relationship\ninstances that each entity can participate in - Minimum cardinality\nconstraint.\n● There are two types of participation constraints:\n- Total Participation.\n- Partial Participation."
+  },
+  {
+    "chunk_id": 180,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 105,
+    "text": "Total Participation\n● Total Participation is when each entity in the entity set occurs in at least one\nrelationship in that relationship set.\n● If a company policy states that every employee must work for a department, then\nan employee entity can exist only if it participates in at least one WORKS_FOR\nrelationship instance.\n● Thus, the participation of EMPLOYEE in WORKS_FOR is called total\nparticipation, meaning that every entity in the total set of employee entities must"
+  },
+  {
+    "chunk_id": 181,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 105,
+    "text": "participation, meaning that every entity in the total set of employee entities must\nbe related to a department entity via WORKS_FOR.\n● It is also sometimes called an existence dependency.\n● Total participation is represented by a double line, going from the relationship to\nthe dependent entity."
+  },
+  {
+    "chunk_id": 182,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 106,
+    "text": "Partial Participation\n● If only a part of the set of entities participate in a relationship, then it is called partial\nparticipation.\n● Using the Company example, every employee will not be a manager of a department, so the\nparticipation of an employee in the “Manages” relationship is partial.\n● Partial participation is represented by a single line.\n● We do not expect every employee to manage a department, so the participation of"
+  },
+  {
+    "chunk_id": 183,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 106,
+    "text": "● Partial participation is represented by a single line.\n● We do not expect every employee to manage a department, so the participation of\nEMPLOYEE in the MANAGES relationship type is partial, meaning that some or part of the\nset of employee entities are related to some department entity via MANAGES, but not\nnecessarily all."
+  },
+  {
+    "chunk_id": 184,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 107,
+    "text": "[SCANNED PAGE OCR]: |\n- — MANAGES — -\n* . *\n. « *\ns . .\n*"
+  },
+  {
+    "chunk_id": 185,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 108,
+    "text": "Attributes of Relationship Types\n● Relationships can have attributes similar to entity types.\n● For example, in the relationship Works_On, between the Employee entity and the\nDepartment entity we would like to keep track of the number of hours an employee\nworks on a project. Therefore we can include Number of Hours as an attribute of the\nrelationship.\n● Another example is for the “manages” relationship between employee and department; we"
+  },
+  {
+    "chunk_id": 186,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 108,
+    "text": "relationship.\n● Another example is for the “manages” relationship between employee and department; we\ncan add Start Date as an attribute of the Manages relationship.\n● For some relationships (1:1, or 1: N), the attribute can be placed on one of the\nparticipating entity types. For example the “Manages” relationship is 1:1; StartDate can\neither be migrated to Employee or Department."
+  },
+  {
+    "chunk_id": 187,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 109,
+    "text": "[SCANNED PAGE OCR]: Attributes of Relationship Types\ne Attributes of 1:1 or 1:N relationship types can be migrated to\none of the participating entity types.\n> In 1:1 relationship type, attributes can be migrated to\neither of the entity types.\n> InJ:N or N:1 relationship type, attributes are migrated\nonly to the entity type on the N-side of the relationship.\n@ In M:N relationship type,\nsome attributes can be\ndetermined by a combination"
+  },
+  {
+    "chunk_id": 188,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 110,
+    "text": "[SCANNED PAGE OCR]: : MANAGES P\natt\nR RELATONSHIP\nWORKS ON = —"
+  },
+  {
+    "chunk_id": 189,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 111,
+    "text": "● Consider the entity type DEPENDENT, related to EMPLOYEE,\nthe attributes of DEPENDENT are Name, Birth_date, Sex, and\nRelationship (to the employee). The dependents are identified as\ndistinct entities only after determining the particular employee\nentity to which each dependent is related.\n● In ER diagrams, both a weak entity type and its identifying\nrelationship are distinguished by surrounding their boxes and\ndiamonds with double lines. The partial key attribute is"
+  },
+  {
+    "chunk_id": 190,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 111,
+    "text": "relationship are distinguished by surrounding their boxes and\ndiamonds with double lines. The partial key attribute is\nunderlined with a dashed or dotted line."
+  },
+  {
+    "chunk_id": 191,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 112,
+    "text": "ER Diagrams, Naming Conventions, and Design Issues\nProper Naming of Schema Constructs\n● Choose names that convey the meanings attached to the different constructs in the schema\n● Use singular names for entity types, rather than plural ones\n● Use the convention that entity type and relationship type names are in uppercase letters,\nattribute names have their initial letter capitalized, and role names are in lowercase\nletters"
+  },
+  {
+    "chunk_id": 192,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 112,
+    "text": "attribute names have their initial letter capitalized, and role names are in lowercase\nletters\n● Nouns appearing in the narrative tend to give rise to entity type names, and the verbs tend to\nindicate names of relationship types\n● Choosing binary relationship names to make the ER diagram of the schema readable from\nleft to right and from top to bottom"
+  },
+  {
+    "chunk_id": 193,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 113,
+    "text": "Design Choices for ER Conceptual Design\nSchema design process should be considered an iterative refinement process, where an\ninitial design is created and then iteratively refined until the most suitable design is reached.\nSome of the refinements that are often used include the following:\n● A concept may be first modeled as an attribute and then refined into a relationship because it is determined\nthat the attribute is a reference to another entity type"
+  },
+  {
+    "chunk_id": 194,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 113,
+    "text": "that the attribute is a reference to another entity type\n● Similarly, an attribute that exists in several entity types may be elevated or promoted to an independent\nentity type. For example, suppose that each of several entity types in a UNIVERSITY database, such as\nSTUDENT, INSTRUCTOR, and COURSE, has an attribute Department in the initial design; the designer\nmay then choose to create an entity type DEPARTMENT with a single attribute Dept_name and relate it to"
+  },
+  {
+    "chunk_id": 195,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 113,
+    "text": "may then choose to create an entity type DEPARTMENT with a single attribute Dept_name and relate it to\nthe three entity types (STUDENT, INSTRUCTOR, and COURSE) via appropriate relationships\n● An inverse refinement to the previous case may be applied—for example, if an entity type DEPARTMENT\nexists in the initial design with a single attribute Dept_name and is related to only one other entity type,\nSTUDENT. In this case, DEPARTMENT may be reduced or demoted to an attribute of STUDENT"
+  },
+  {
+    "chunk_id": 196,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 114,
+    "text": "[SCANNED PAGE OCR]: Symbol Meaning\n<> Relationship\n© Indentifying Relationship\n—C > Attribute\n—_> Key Attribute\n—C)» Multivalued Attribute\n‘ : oe Composite Attribute\n— ~ “y Derived Attribute\nOa== Total Participation of E, in R\nCardinality Ratio 1: N for E,: Eoin R\n(min, max)\nStructural Constraint (min, max)"
+  },
+  {
+    "chunk_id": 197,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 115,
+    "text": "UML - Unified Modelling Language"
+  },
+  {
+    "chunk_id": 198,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 116,
+    "text": "ER Diagram UML Class Diagram\nEntity Types Classes\nEntity Objects\nOperations not specified Class name, Attributes, Operations\nData Type Domain name as :\nComposite attribute Structured domain\nMultivalued attribute Separate class\nRelationship Types Associations\nRelationship instances Links\nBinary relationship type Binary association\nRelationship attribute Link attribute"
+  },
+  {
+    "chunk_id": 199,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 117,
+    "text": "(min,max(*)) notation Multiplicities\n- Unidirectional, bidirectional\nWeak entities Qualified association\nPartial Key attribute Discriminator"
+  },
+  {
+    "chunk_id": 200,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 118,
+    "text": "Relationship Types of Degree Higher than Two\n● Relationship types of degree 2 are called binary\n● Relationship types of degree 3 are called ternary and of degree n are called n-ary\n● An n-ary relationship is not equivalent to n binary relationships\n● In general, 3 binary relationships can represent different information than a single\nternary relationship\n● The relationship set of SUPPLY is a set of relationship instances (s, j, p), where s is a"
+  },
+  {
+    "chunk_id": 201,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 118,
+    "text": "ternary relationship\n● The relationship set of SUPPLY is a set of relationship instances (s, j, p), where s is a\nSUPPLIER who is currently supplying a PART p to a PROJECT j."
+  },
+  {
+    "chunk_id": 202,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 119,
+    "text": "[SCANNED PAGE OCR]: In Figure 7.17(a), The relationship set of SUPPLY is a set of relationship instances (s, j,\nPp), Where s is a SUPPLIER who is currently supplying a PART p to a PROJECT j.\n@) —S\n| X"
+  },
+  {
+    "chunk_id": 203,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 120,
+    "text": "● The Figure shows an ER diagram for three binary relationship types CAN_SUPPLY, USES, and SUPPLIES. In\ngeneral, a ternary relationship type represents different information than do three binary relationship types.\nConsider the three binary relationship types CAN_SUPPLY, USES, and SUPPLIES. Suppose that\nCAN_SUPPLY, between SUPPLIER and PART, includes an instance (s, p) whenever supplier s can supply part"
+  },
+  {
+    "chunk_id": 204,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 120,
+    "text": "CAN_SUPPLY, between SUPPLIER and PART, includes an instance (s, p) whenever supplier s can supply part\np (to any project); USES, between PROJECT and PART, includes an instance ( j, p) whenever project j uses\npart p; and SUPPLIES, between SUPPLIER and PROJECT, includes an instance (s, j) whenever supplier s\nsupplies."
+  },
+  {
+    "chunk_id": 205,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 121,
+    "text": "● The designer must decide whether a relationship of degree n or should be broken down into\nsmaller degrees based on the semantics or meaning of the particular situation"
+  },
+  {
+    "chunk_id": 206,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 122,
+    "text": "Refining the ER Design for the COMPANY Database\n● There is one alternative ER notation for specifying structural constraints on\nrelationships, which replaces the cardinality ratio (1:1, 1:N, M:N) and\nsingle/double line notation for participation constraints.\n● This notation involves associating a pair of integer numbers (min, max) with each\nparticipation of an entity type E in a relationship type R, where 0 ≤min ≤max and\nmax ≥1."
+  },
+  {
+    "chunk_id": 207,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 122,
+    "text": "participation of an entity type E in a relationship type R, where 0 ≤min ≤max and\nmax ≥1.\n● The numbers mean that for each entity e in E, e must participate in at least min and\nat most max relationship instances in R at any point in time.\n● In this method, min = 0 implies partial participation, whereas min > 0 implies\ntotal participation. Figure displays the COMPANY database schema using the\n(min, max) notation."
+  },
+  {
+    "chunk_id": 208,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 123,
+    "text": "[SCANNED PAGE OCR]: | ewptovee | MANAGES = DEPARTMENT"
+  },
+  {
+    "chunk_id": 209,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 124,
+    "text": "[SCANNED PAGE OCR]: Coa 76 ee cre diagrare\nER diagrams for the company schema, with structural con-\nName > straints specified using (min, max) notation and role names.\n<Sa> <>\nWORKS _FOR (4.N)\n(1,1) Name > | (Number >\nEmployee Department\n0,1 Department (O,N) | Controlling\nManager = Managed (1,1) Department\n(1.N) ¢ Hours > Sonn\nWorker\n(O,N) (0,1) (4,1) a\nso WORKS_ON > Preiect\n(0,N)\nane <>\nDEPENDENTS_OF\n(1,1) ) Dependent"
+  },
+  {
+    "chunk_id": 210,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 125,
+    "text": "QUESTIONS\n1. With neat diagram, describe different phases of database design.\n2. Define the following with respect to ER diagram:\na. Entity\nb. Relationship\nc. Attributes and types\nd. Weak entity\ne. Identifying relationship type\n3. List and explain different types of constraints on relationship types.\n4. Write the notations of ER diagrams.\n5. Write ER diagram for COMPANY database, MOVIE database, AIRLINE\nreservation database, library management database and movie database by"
+  },
+  {
+    "chunk_id": 211,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 125,
+    "text": "5. Write ER diagram for COMPANY database, MOVIE database, AIRLINE\nreservation database, library management database and movie database by\nconsidering miniworld requirements.\n6. Describe specialization and generalization with example."
+  },
+  {
+    "chunk_id": 212,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 126,
+    "text": "[SCANNED PAGE OCR]: errr\n“¢ Enhanced ER Model\n* Generalization: Se ,\n\ne Bottom-up approach where two vA, \\ [z=\nlower level entities combine to — -\nform a higher level entity. SAVING CURRENT\n\n* Specialization: a\n\n@ Top-down approach where it Ww oh\ndefines set of subclasses of an we | —_—\nentity type. eh"
+  },
+  {
+    "chunk_id": 213,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 128,
+    "text": "[SCANNED PAGE OCR]: CFname > Figure 8.1\nF\nname > Minit) Clname > EER diagram\n= subclasses and\nEMPLOYEE | specialization.\nTyping speed\nSECRETARY || TECHNICIAN|| ENGINEER || MANAGER CSalary | HOURLY_EMPLOYEE\nSALARIED EMPLOYEE\nThree specializations of EMPLOYEE:\n{SECRETARY, TECHNICIAN, ENGINEER} BELONGS_TO\n{MANAGER}\n{HOURLY EMPLOYEE, SALARIED EMPLOYEE}\n= TRADE_UNION"
+  },
+  {
+    "chunk_id": 214,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 129,
+    "text": "[SCANNED PAGE OCR]: = Attributes that apply only to entities of a particular subclass such as Typing Speed of SECRETARY\nare attached to the rectangle representing that subclass. These are called specific attributes of the\nsubclass.\nFigure 8.2 shows entity instances that belong to subclasses of the {SECRETARY,\nENGINEER, TECHNICIAN} specialization.\nSECRETARY Figure 8.2\nInstances of a specialization.\ne1\ne4\n€5\nEMPLOYEE .\nCe | :\ne9 ENGINEER\n@4 <|\nes\ne7\n€g\n= TECHNICIAN\n€2\n€s"
+  },
+  {
+    "chunk_id": 215,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 129,
+    "text": "SECRETARY Figure 8.2\nInstances of a specialization.\ne1\ne4\n€5\nEMPLOYEE .\nCe | :\ne9 ENGINEER\n@4 <|\nes\ne7\n€g\n= TECHNICIAN\n€2\n€s\n= There are two main reasons for including class/subclass relationships and specializations in a data"
+  },
+  {
+    "chunk_id": 216,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 130,
+    "text": "[SCANNED PAGE OCR]: = The first is that certain attributes may apply to some but not all entities of the superclass. For\nexample, in Figure 8.1 the SECRETARY subclass has the specific attribute Typing_speed,\nwhereas the ENGINEER subclass has the specific attribute Eng_type, but SECRETARY and\nENGINEER share their other inherited attributes from the EMPLOYEE entity type.\n= The second reason for using subclasses is that some relationship types may be participated in only"
+  },
+  {
+    "chunk_id": 217,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 130,
+    "text": "= The second reason for using subclasses is that some relationship types may be participated in only\nby entities that are members of the subclass. For example, if only HOURLY_EMPLOYEES can\nbelong to a trade union, we can represent that fact by creating the subclass HOURLY_EMPLOYEE\nof EMPLOYEE and relating the subclass to an entity type TRADE_UNION via the BELONGS_TO\nrelationship type,\n= In summary, the specialization process allows us to do the following:"
+  },
+  {
+    "chunk_id": 218,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 130,
+    "text": "relationship type,\n= In summary, the specialization process allows us to do the following:\no Define a set of subclasses of an entity type\no Establish additional specific attributes with each subclass\no Establish additional specific relationship types between each subclass and other entity\nJ types or other subclasses"
+  },
+  {
+    "chunk_id": 219,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 132,
+    "text": "[SCANNED PAGE OCR]: \" The reverse process of abstraction suppresses the differences among entity types, identify their\ncommon features, and generalize them into a single superclass of which the original entity types are\nspecial subclasses.\n\n(a)\nNo_of_passengers\n|\nNo_of_passengers id)\nFigure 8.3\nGeneralization. (a) Two entity types, CAR and TRUCK. (b)\nee Generalizing CAR and TRUCK into the superclass VEHICLE."
+  },
+  {
+    "chunk_id": 220,
+    "pdf_name": "2025 - DBMS Module 1.pptx",
+    "page": 133,
+    "text": "[SCANNED PAGE OCR]: For example, consider the entity types CAR and TRUCK. Because they have several\ncommon attributes, they can be generalized into the entity type VEHICLE, as shown in Figure\n8.3(b). Both CAR and TRUCK are now subclasses of the generalized superclass VEHICLE.\n\n* An arrow pointing to the generalized superclass represents a generalization, whereas arrows pointing\nto the specialized subclasses represent a specialization."
+  }
+]
