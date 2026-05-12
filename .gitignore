@@ -2,3 +2,11 @@
 __pycache__/
 *.py[cod]
 .vscode/
+
+router_failure_log.json
+DATA/
+DOC/
+*.npy
+*.index
+*.faiss
+*.pkl
